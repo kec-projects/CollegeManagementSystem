@@ -1,45 +1,50 @@
 package com.collegemanagementsystem.Entity;
 
-import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.Collection;
 
 @Entity
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Table(name="User",uniqueConstraints = @UniqueConstraint(columnNames = "User_email"))
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE , generator = "id_gen")
-    @SequenceGenerator(name="id_gen",initialValue = 1290,allocationSize = 10)
-    @Column(name="userid")
-    private Integer userId;
-    @Column(name="name")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "User_userid")
+    private Long userId;
+    @Column(name = "User_name")
     private String name;
-    @Column(name="email")
+    @Column(name = "User_email")
     private String email;
-    @Column(name="password")
+    @Column(name = "User_password")
     private String password;
-    @Column(name="accountstatus")
+    @Column(name = "User_accountstatus")
     private String accountStatus;
-    @Column(name="registeredon")
-    private Date registeredOn;
-    public void setRegisteredOn(Date registeredOn) {
-        this.registeredOn = registeredOn;
+    @Column(name = "User_registeredDate")
+    private Date registeredDate;
+    @Column(name = "User_updatedDate")
+    private Date updatedDate;
+
+    public Date getRegisteredDate() {
+        return registeredDate;
     }
 
+    public void setRegisteredDate(Date registeredDate) {
+        this.registeredDate = registeredDate;
+    }
+
+    public Date getUpdatedDate() {
+        return updatedDate;
+    }
+
+    public void setUpdatedDate(Date updatedDate) {
+        this.updatedDate = updatedDate;
+    }
     public User() {
-
     }
-
-    public Date getRegisteredOn() {
-        return registeredOn;
-    }
-
-
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
-    public void setUserId(Integer userId) {
+
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -74,7 +79,6 @@ public class User {
     public void setAccountStatus(String accountStatus) {
         this.accountStatus = accountStatus;
     }
-
 
 
 }

@@ -3,28 +3,32 @@ package com.collegemanagementsystem.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "User_roles")
+@Table(name = "UserRoles")
 public class UserRole {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private Integer userid;
-    private String role_name;
-    public Integer getUserid() {
-        return userid;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="UserRoles_sr")
+    private Long sr;
+    @Column(name="UserRoles_userId")
+    private Long userId;
+    @Column(name="UserRoles_roleName")
+    private String roleName;
+
+    public Long getUserid() {
+        return userId;
     }
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
+    public void setUserid(Long userid) {
+        this.userId = userid;
     }
 
-    public String getRole_name() {
-        return role_name;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setRole_name(String role_name) {
-        this.role_name = role_name;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
 
