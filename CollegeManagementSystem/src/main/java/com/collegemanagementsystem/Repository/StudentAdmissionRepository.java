@@ -1,6 +1,5 @@
 package com.collegemanagementsystem.Repository;
 
-import com.collegemanagementsystem.Entity.Role;
 import com.collegemanagementsystem.Entity.StudentAdmission;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

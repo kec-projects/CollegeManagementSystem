@@ -1,21 +1,24 @@
 package com.collegemanagementsystem.Dto;
 
+import javax.persistence.Column;
+
 public class UserRoleDto {
-    private Integer userid;
-    private String role_name;
-    public Integer getUserid() {
-        return userid;
+    private Long sr;
+    private Long userId;
+    private String roleName;
+    public Long getUserid() {
+        return userId;
     }
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
+    public void setUserid(Long userid) {
+        this.userId = userid;
     }
 
-    public String getRole_name() {
-        return role_name;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setRole_name(String role_name) {
-        this.role_name = role_name;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 }

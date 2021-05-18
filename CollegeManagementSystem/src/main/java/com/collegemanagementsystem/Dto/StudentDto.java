@@ -1,35 +1,35 @@
 package com.collegemanagementsystem.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import java.sql.Date;
 
-@Entity
-@Table(name = "Student")
 public class StudentDto {
-    @Id
-    @GeneratedValue
-    private long userID;
-    private long registrationNo;
-    private long rollNo;
+    private Long sr;
+    private Byte[] profilePic;
+    private Long userId;
+    private String registrationNo;
+    private Long rollNo;
     private String name;
     private String department;
-    private long batch;
+    private String batch;
     private String category;
     private String fatherName;
     private String motherName;
-    private long fatherContactNo;
-    private long emergencyContactNo;
-    private long aadhaarNo;
-    private String dateOfBirth;
+    private Long fatherContactNo;
+    private Long aadhaarNo;
+    private Date dateOfBirth;
     private String bloodGroup;
+    private Integer sem;
 
     public StudentDto() {
+
     }
 
-    public StudentDto(long userID, long registrationNo, long rollNo, String name, String department, long batch, String category, String fatherName, String motherName, long fatherContactNo, long emergencyContactNo, long aadhaarNo, String dateOfBirth, String bloodGroup) {
-        this.userID = userID;
+    public StudentDto(Long sr, Byte[] profilePic, Long userId, String registrationNo, Long rollNo, String name, String department, String batch, String category, String fatherName, String motherName, Long fatherContactNo, Long aadhaarNo, Date dateOfBirth, String bloodGroup, Integer sem) {
+        this.sr = sr;
+        this.profilePic = profilePic;
+        this.userId = userId;
         this.registrationNo = registrationNo;
         this.rollNo = rollNo;
         this.name = name;
@@ -39,33 +39,49 @@ public class StudentDto {
         this.fatherName = fatherName;
         this.motherName = motherName;
         this.fatherContactNo = fatherContactNo;
-        this.emergencyContactNo = emergencyContactNo;
         this.aadhaarNo = aadhaarNo;
         this.dateOfBirth = dateOfBirth;
         this.bloodGroup = bloodGroup;
+        this.sem = sem;
     }
 
-    public long getUserID() {
-        return userID;
+    public Long getSr() {
+        return sr;
     }
 
-    public void setUserID(long userID) {
-        this.userID = userID;
+    public void setSr(Long sr) {
+        this.sr = sr;
     }
 
-    public long getRegistrationNo() {
+    public Byte[] getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(Byte[] profilePic) {
+        this.profilePic = profilePic;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public String getRegistrationNo() {
         return registrationNo;
     }
 
-    public void setRegistrationNo(long registrationNo) {
+    public void setRegistrationNo(String registrationNo) {
         this.registrationNo = registrationNo;
     }
 
-    public long getRollNo() {
+    public Long getRollNo() {
         return rollNo;
     }
 
-    public void setRollNo(long rollNo) {
+    public void setRollNo(Long rollNo) {
         this.rollNo = rollNo;
     }
 
@@ -85,11 +101,11 @@ public class StudentDto {
         this.department = department;
     }
 
-    public long getBatch() {
+    public String getBatch() {
         return batch;
     }
 
-    public void setBatch(long batch) {
+    public void setBatch(String batch) {
         this.batch = batch;
     }
 
@@ -117,35 +133,27 @@ public class StudentDto {
         this.motherName = motherName;
     }
 
-    public long getFatherContactNo() {
+    public Long getFatherContactNo() {
         return fatherContactNo;
     }
 
-    public void setFatherContactNo(long fatherContactNo) {
+    public void setFatherContactNo(Long fatherContactNo) {
         this.fatherContactNo = fatherContactNo;
     }
 
-    public long getEmergencyContactNo() {
-        return emergencyContactNo;
-    }
-
-    public void setEmergencyContactNo(long emergencyContactNo) {
-        this.emergencyContactNo = emergencyContactNo;
-    }
-
-    public long getAadhaarNo() {
+    public Long getAadhaarNo() {
         return aadhaarNo;
     }
 
-    public void setAadhaarNo(long aadhaarNo) {
+    public void setAadhaarNo(Long aadhaarNo) {
         this.aadhaarNo = aadhaarNo;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -155,5 +163,13 @@ public class StudentDto {
 
     public void setBloodGroup(String bloodGroup) {
         this.bloodGroup = bloodGroup;
+    }
+
+    public Integer getSem() {
+        return sem;
+    }
+
+    public void setSem(Integer sem) {
+        this.sem = sem;
     }
 }

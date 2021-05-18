@@ -1,46 +1,56 @@
 package com.collegemanagementsystem.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "faculty")
+
+import javax.validation.constraints.NotEmpty;
+import java.sql.Date;
+
 public class FacultyDto {
-    @Id
-    @GeneratedValue
-    private long userID;
-    private  String name;
-    private long employmentID;
+    private Long sr;
+    
+    private Long userId;
+    private String name;
+    private String employmentId;
     private String department;
-    private String dateOfBirth;
-    private String dateOfJoining;
+    private Date dateOfBirth;
+    private Date dateOfJoining;
+    private Date dateOfLeaving;
     private String bloodGroup;
-    private long emergencyContactNo;
-    private long aadhaarNo;
+    private Long aadhaarNo;
+    private Byte[] profilePic;
+
 
     public FacultyDto() {
     }
 
-    public FacultyDto(long userID, String name, long employmentID, String department, String dateOfBirth, String dateOfJoining, String bloodGroup, long emergencyContactNo, long aadhaarNo) {
-        this.userID = userID;
+    public FacultyDto(Long sr, Long userId, String name, String employmentId, String department, Date dateOfBirth, Date dateOfJoining, Date dateOfLeaving, String bloodGroup, Long aadhaarNo, Byte[] profilePic) {
+        this.sr = sr;
+        this.userId = userId;
         this.name = name;
-        this.employmentID = employmentID;
+        this.employmentId = employmentId;
         this.department = department;
         this.dateOfBirth = dateOfBirth;
         this.dateOfJoining = dateOfJoining;
+        this.dateOfLeaving = dateOfLeaving;
         this.bloodGroup = bloodGroup;
-        this.emergencyContactNo = emergencyContactNo;
         this.aadhaarNo = aadhaarNo;
+        this.profilePic = profilePic;
     }
 
-    public long getUserID() {
-        return userID;
+    public Long getSr() {
+        return sr;
     }
 
-    public void setUserID(long userID) {
-        this.userID = userID;
+    public void setSr(Long sr) {
+        this.sr = sr;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getName() {
@@ -51,12 +61,12 @@ public class FacultyDto {
         this.name = name;
     }
 
-    public long getEmploymentID() {
-        return employmentID;
+    public String getEmploymentId() {
+        return employmentId;
     }
 
-    public void setEmploymentID(long employmentID) {
-        this.employmentID = employmentID;
+    public void setEmploymentId(String employmentId) {
+        this.employmentId = employmentId;
     }
 
     public String getDepartment() {
@@ -67,20 +77,28 @@ public class FacultyDto {
         this.department = department;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getDateOfJoining() {
+    public Date getDateOfJoining() {
         return dateOfJoining;
     }
 
-    public void setDateOfJoining(String dateOfJoining) {
+    public void setDateOfJoining(Date dateOfJoining) {
         this.dateOfJoining = dateOfJoining;
+    }
+
+    public Date getDateOfLeaving() {
+        return dateOfLeaving;
+    }
+
+    public void setDateOfLeaving(Date dateOfLeaving) {
+        this.dateOfLeaving = dateOfLeaving;
     }
 
     public String getBloodGroup() {
@@ -91,19 +109,19 @@ public class FacultyDto {
         this.bloodGroup = bloodGroup;
     }
 
-    public long getEmergencyContactNo() {
-        return emergencyContactNo;
-    }
-
-    public void setEmergencyContactNo(long emergencyContactNo) {
-        this.emergencyContactNo = emergencyContactNo;
-    }
-
-    public long getAadhaarNo() {
+    public Long getAadhaarNo() {
         return aadhaarNo;
     }
 
-    public void setAadhaarNo(long aadhaarNo) {
+    public void setAadhaarNo(Long aadhaarNo) {
         this.aadhaarNo = aadhaarNo;
+    }
+
+    public Byte[] getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(Byte[] profilePic) {
+        this.profilePic = profilePic;
     }
 }

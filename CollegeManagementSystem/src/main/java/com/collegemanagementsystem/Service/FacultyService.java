@@ -1,7 +1,7 @@
 package com.collegemanagementsystem.Service;
 
 import com.collegemanagementsystem.Dto.FacultyDto;
-import com.collegemanagementsystem.Entity.Faculty;
+import com.collegemanagementsystem.Entity.profileEntity.Faculty;
 import com.collegemanagementsystem.Repository.FacultyRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class FacultyService {
         return  faculty.stream().map(x-> mapper.map(x, FacultyDto.class)).collect(Collectors.toList());
     }
 
-    public FacultyDto FindById(long UserID) {
+    public FacultyDto FindById(Long UserID) {
         ModelMapper mapper= new ModelMapper();
         Faculty orElse = repo.findById(UserID).orElse(null);
         return mapper.map(orElse, FacultyDto.class);
@@ -35,7 +35,7 @@ public class FacultyService {
         return mapper.map(faculties, FacultyDto.class);
     }
 
-    public String delete(long UserID){
+    public String delete(Long UserID){
         repo.deleteById(UserID);
         return "deleted";
     }

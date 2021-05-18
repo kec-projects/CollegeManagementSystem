@@ -1,42 +1,55 @@
 package com.collegemanagementsystem.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import java.sql.Date;
 
-@Entity
-@Table(name = "NonTeachingStaff")
+
 public class NonTeachingStaffDto {
-    @Id
-    private long userID;
+    private Long sr;
+    private Long userId;
     private String name;
-    private long employeeID;
+    private String employeeId;
     private String bloodGroup;
-    private long aadhaarNo;
+    private Long aadhaarNo;
     private String designation;
-    private String dateOfJoining;
-    private String dateOfBirth;
+    private Date dateOfJoining;
+    private Date dateOfBirth;
+    private Date dateOfLeaving;
+    private Byte[] profilePic;
+
 
     public NonTeachingStaffDto() {
     }
 
-    public NonTeachingStaffDto(long userID, String name, long employeeID, String bloodGroup, long aadhaarNo, String designation, String dateOfJoining, String dateOfBirth) {
-        this.userID = userID;
+    public NonTeachingStaffDto(Long sr, Long userId, String name, String employeeId, String bloodGroup, Long aadhaarNo, String designation, Date dateOfJoining, Date dateOfBirth, Date dateOfLeaving, Byte[] profilePic) {
+        this.sr = sr;
+        this.userId = userId;
         this.name = name;
-        this.employeeID = employeeID;
+        this.employeeId = employeeId;
         this.bloodGroup = bloodGroup;
         this.aadhaarNo = aadhaarNo;
         this.designation = designation;
         this.dateOfJoining = dateOfJoining;
         this.dateOfBirth = dateOfBirth;
+        this.dateOfLeaving = dateOfLeaving;
+        this.profilePic = profilePic;
     }
 
-    public long getUserID() {
-        return userID;
+    public Long getSr() {
+        return sr;
     }
 
-    public void setUserID(long userID) {
-        this.userID = userID;
+    public void setSr(Long sr) {
+        this.sr = sr;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getName() {
@@ -47,12 +60,12 @@ public class NonTeachingStaffDto {
         this.name = name;
     }
 
-    public long getEmployeeID() {
-        return employeeID;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
-    public void setEmployeeID(long employeeID) {
-        this.employeeID = employeeID;
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 
     public String getBloodGroup() {
@@ -63,11 +76,11 @@ public class NonTeachingStaffDto {
         this.bloodGroup = bloodGroup;
     }
 
-    public long getAadhaarNo() {
+    public Long getAadhaarNo() {
         return aadhaarNo;
     }
 
-    public void setAadhaarNo(long aadhaarNo) {
+    public void setAadhaarNo(Long aadhaarNo) {
         this.aadhaarNo = aadhaarNo;
     }
 
@@ -79,19 +92,35 @@ public class NonTeachingStaffDto {
         this.designation = designation;
     }
 
-    public String getDateOfJoining() {
+    public Date getDateOfJoining() {
         return dateOfJoining;
     }
 
-    public void setDateOfJoining(String dateOfJoining) {
+    public void setDateOfJoining(Date dateOfJoining) {
         this.dateOfJoining = dateOfJoining;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public Date getDateOfLeaving() {
+        return dateOfLeaving;
+    }
+
+    public void setDateOfLeaving(Date dateOfLeaving) {
+        this.dateOfLeaving = dateOfLeaving;
+    }
+
+    public Byte[] getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(Byte[] profilePic) {
+        this.profilePic = profilePic;
     }
 }

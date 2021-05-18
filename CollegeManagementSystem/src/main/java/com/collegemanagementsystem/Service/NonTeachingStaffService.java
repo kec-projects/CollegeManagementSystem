@@ -1,7 +1,7 @@
 package com.collegemanagementsystem.Service;
 
 import com.collegemanagementsystem.Dto.NonTeachingStaffDto;
-import com.collegemanagementsystem.Entity.NonTeachingStaff;
+import com.collegemanagementsystem.Entity.profileEntity.NonTeachingStaff;
 import com.collegemanagementsystem.Repository.NonTeachingStaffRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class NonTeachingStaffService {
         return  nonteachingstaff.stream().map(x-> mapper.map(x, NonTeachingStaffDto.class)).collect(Collectors.toList());
     }
 
-    public NonTeachingStaffDto FindById(long UserID) {
+    public NonTeachingStaffDto FindById(Long UserID) {
         ModelMapper mapper= new ModelMapper();
         NonTeachingStaff orElse = repository.findById(UserID).orElse(null);
         return mapper.map(orElse, NonTeachingStaffDto.class);
@@ -36,7 +36,7 @@ public class NonTeachingStaffService {
         return mapper.map(Nonteachingstaff, NonTeachingStaffDto.class);
     }
 
-    public String delete(long UserID){
+    public String delete(Long UserID){
         repository.deleteById(UserID);
         return "deleted";
     }

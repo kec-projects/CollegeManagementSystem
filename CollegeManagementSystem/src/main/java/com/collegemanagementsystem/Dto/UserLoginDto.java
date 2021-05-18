@@ -5,6 +5,8 @@ import javax.validation.constraints.NotEmpty;
 public class UserLoginDto {
     @NotEmpty
     private String email;
+    @NotEmpty
+    private String password;
 
     public String getEmail() {
         return email;
@@ -21,6 +23,5 @@ public class UserLoginDto {
     public void setPassword(String password) {
         this.password = password;
     }
-@NotEmpty
-    private String password;
+
 }

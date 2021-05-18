@@ -1,20 +1,23 @@
 package com.collegemanagementsystem.Dto;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 public class StudentAdmissionDto {
-    private Integer sid;
+    private Long id;
     @NotEmpty
     private String name;
     @NotEmpty
     private String email;
+@NotNull
+    private Long mobile;
 
-    public Integer getSid() {
-        return sid;
+    public Long getId() {
+        return id;
     }
 
-    public void setSid(Integer sid) {
-        this.sid = sid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -33,5 +36,11 @@ public class StudentAdmissionDto {
         this.email = email;
     }
 
+    public Long getMobile() {
+        return mobile;
+    }
 
+    public void setMobile(Long mobile) {
+        this.mobile = mobile;
+    }
 }
