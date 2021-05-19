@@ -1,10 +1,19 @@
 package com.collegemanagementsystem.Entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
 @Table(name="User",uniqueConstraints = @UniqueConstraint(columnNames = "User_email"))
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,62 +32,6 @@ public class User {
     @Column(name = "User_updatedDate")
     private Date updatedDate;
 
-    public Date getRegisteredDate() {
-        return registeredDate;
-    }
-
-    public void setRegisteredDate(Date registeredDate) {
-        this.registeredDate = registeredDate;
-    }
-
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
-    }
-    public User() {
-    }
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getAccountStatus() {
-        return accountStatus;
-    }
-
-    public void setAccountStatus(String accountStatus) {
-        this.accountStatus = accountStatus;
-    }
 
 
 }

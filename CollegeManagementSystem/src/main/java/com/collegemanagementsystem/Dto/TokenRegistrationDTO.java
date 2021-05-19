@@ -9,17 +9,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
-@Entity
-@Table(name = "Token")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class TokenRegistrationDTO {
-    @Id
+
     private String token;
-    private int uid;
+    private Long userId;
 
 
 }

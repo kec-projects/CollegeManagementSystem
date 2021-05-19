@@ -1,27 +1,21 @@
 package com.collegemanagementsystem.Dto;
 
-import javax.validation.constraints.NotEmpty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.validation.constraints.NotEmpty;
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserLoginDto {
     @NotEmpty
     private String email;
     @NotEmpty
     private String password;
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
 }

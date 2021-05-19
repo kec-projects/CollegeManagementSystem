@@ -22,11 +22,11 @@ public class UserRoleServiceImpl implements UserRoleService {
     @Override
     public Map save(UserRoleDto userRoleDto) {
         Map<String,String> msg=new HashMap();
-        UserRole userRole= userRoleRepository.checkRole(userRoleDto.getUserid(),userRoleDto.getRoleName());
+        UserRole userRole= userRoleRepository.checkRole(userRoleDto.getUserId(),userRoleDto.getRoleName());
         if(userRole==null){
             UserRole userRole1=new UserRole();
             userRole1.setRoleName(userRoleDto.getRoleName());
-            userRole1.setUserid(userRoleDto.getUserid());
+            userRole1.setUserId(userRoleDto.getUserId());
             userRoleRepository.save(userRole1);
             msg.put("status","Successful");
             msg.put("message","User Role Relation Added Successfully");

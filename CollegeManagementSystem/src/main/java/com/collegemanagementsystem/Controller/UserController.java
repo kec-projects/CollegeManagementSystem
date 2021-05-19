@@ -35,7 +35,7 @@ public class UserController {
     @RequestMapping(value = "/getUserRole", method = RequestMethod.POST)
     @ResponseBody
     public List<UserRoleDto> alluserrole(@RequestBody @Valid UserRoleDto userRoleDto) {
-        List<UserRoleDto> userRoleDtos = userRoleService.allRole(userRoleDto.getUserid());
+        List<UserRoleDto> userRoleDtos = userRoleService.allRole(userRoleDto.getUserId());
         return userRoleDtos;
     }
 

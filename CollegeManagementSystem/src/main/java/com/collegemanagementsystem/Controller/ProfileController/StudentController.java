@@ -1,7 +1,7 @@
 package com.collegemanagementsystem.Controller.ProfileController;
 
 import com.collegemanagementsystem.Dto.StudentDto;
-import com.collegemanagementsystem.Service.interfaceClass.StudentService;
+import com.collegemanagementsystem.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

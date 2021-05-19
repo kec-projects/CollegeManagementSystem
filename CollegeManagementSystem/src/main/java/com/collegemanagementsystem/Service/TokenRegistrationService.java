@@ -17,15 +17,15 @@ public class TokenRegistrationService {
     @Autowired
     ModelMapper mapper;
 
-    public TokenRegistrationDTO addStudent(TokenRegistrationDTO dto) {
+    public TokenRegistrationDTO addToken(TokenRegistrationDTO dto) {
         TokenRegistration student= mapper.map(dto, TokenRegistration.class);
         studentDao.save(student);
         return mapper.map(student, TokenRegistrationDTO.class);
     }
 
-    public List<TokenRegistrationDTO> getStudent(){
-        List<TokenRegistration> getStudent = (List<TokenRegistration>) studentDao.findAll();
-        return getStudent.stream().map(x-> mapper.map(x, TokenRegistrationDTO.class)).collect(Collectors.toList());
+    public List<TokenRegistrationDTO> getToken(Long uid){
+        List<TokenRegistration> getToken =  studentDao.getById(uid);
+        return getToken.stream().map(x-> mapper.map(x, TokenRegistrationDTO.class)).collect(Collectors.toList());
     }
 
     public String delete(){
@@ -33,15 +33,9 @@ public class TokenRegistrationService {
         return "All data deleted";
     }
 
-    public String deleteById(int id){
-        studentDao.deleteById(id);
+    public String deleteById(Long uid){
+        studentDao.deleteById(Math.toIntExact(uid));
         return "deleted";
-    }
-
-    public TokenRegistrationDTO FindById(int id ){
-        TokenRegistration student=studentDao.findById(id).orElse(null);
-        return mapper.map(student, TokenRegistrationDTO.class);
-
     }
 
 

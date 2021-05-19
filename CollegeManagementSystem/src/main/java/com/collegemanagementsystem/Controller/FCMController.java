@@ -2,11 +2,10 @@ package com.collegemanagementsystem.Controller;
 import com.collegemanagementsystem.Entity.PushNotificationRequest;
 import com.collegemanagementsystem.Entity.PushNotificationResponse;
 import com.collegemanagementsystem.Service.FCMService;
+import com.google.firebase.messaging.FirebaseMessagingException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.ExecutionException;
 
@@ -26,8 +25,18 @@ public class FCMController {
     }
 
     @PostMapping(value = "/notification/topic")
-    public  ResponseEntity sendNotification(@RequestBody PushNotificationRequest request) throws ExecutionException, InterruptedException {
+    public  ResponseEntity sendTopicNotification(@RequestBody PushNotificationRequest request) throws ExecutionException, InterruptedException {
         pushNotificationService.sendMessageWithTopic(request);
         return new ResponseEntity<>(new PushNotificationResponse(HttpStatus.OK.value(), "Notification has been sent."), HttpStatus.OK);
+    }
+    @GetMapping("/subscribe/{uid}")
+    public ResponseEntity subscribeToTopic(@PathVariable(value = "uid") long uid) throws ExecutionException, InterruptedException, FirebaseMessagingException {
+        pushNotificationService.subscribeToTopics(uid);
+        return new ResponseEntity<>(new PushNotificationResponse(HttpStatus.OK.value(), "Topic subscribed"), HttpStatus.OK);
+    }
+    @GetMapping("/unsubscribe/{uid}")
+    public ResponseEntity unsubscribeToTopic(@PathVariable(value = "uid") Long uid) throws ExecutionException, InterruptedException, FirebaseMessagingException {
+        pushNotificationService.unsubscribeToTopics(uid);
+        return new ResponseEntity<>(new PushNotificationResponse(HttpStatus.OK.value(), "Topic unsubscribed"), HttpStatus.OK);
     }
 }
