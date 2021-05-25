@@ -1,9 +1,18 @@
 package com.collegemanagementsystem.Entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "UserRoles")
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserRole {
 
     @Id
@@ -14,22 +23,6 @@ public class UserRole {
     private Long userId;
     @Column(name="UserRoles_roleName")
     private String roleName;
-
-    public Long getUserid() {
-        return userId;
-    }
-
-    public void setUserid(Long userid) {
-        this.userId = userid;
-    }
-
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
 
 
 
