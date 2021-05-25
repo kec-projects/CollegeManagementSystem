@@ -9,7 +9,7 @@ public class StudentAdmissionDto {
     private String name;
     @NotEmpty
     private String email;
-@NotNull
+    @NotNull
     private Long mobile;
 
     public Long getId() {

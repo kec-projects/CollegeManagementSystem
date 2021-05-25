@@ -8,6 +8,7 @@ import com.collegemanagementsystem.Service.interfaceClass.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,7 +63,9 @@ public class UserController {
 
     @RequestMapping(value = "/loginDetails", method = RequestMethod.GET)
     @ResponseBody
-    public Map loginDetails(Authentication auth) {
+    public Map loginDetails() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
         return userService.loginsuccess(auth.getName());
     }
 

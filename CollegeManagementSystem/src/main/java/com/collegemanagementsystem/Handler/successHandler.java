@@ -19,8 +19,9 @@ public class successHandler extends SimpleUrlAuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                        Authentication authentication) throws IOException, ServletException {
+
         clearAuthenticationAttributes(request);
-        redirectStrategy.sendRedirect( request,response,"/users/loginDetails");
+        request.getRequestDispatcher("/users/loginDetails").forward(request, response);
 
     }
 }
