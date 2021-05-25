@@ -72,7 +72,7 @@ public class UserServiceImpl implements UserService {
                 msg.put("status", "Successful");
                 msg.put("message", "Account Successfully  registered and activated");
                 UserRole userRole = new UserRole();
-                userRole.setUserid(saveUser.getUserId());
+                userRole.setUserId(saveUser.getUserId());
                 userRole.setRoleName(registration.getYouAre());
                 userRoleRepository.save(userRole);
 

@@ -1,10 +1,18 @@
 package com.collegemanagementsystem.Dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class StudentAdmissionDto {
-    private Long id;
+    private Long userId;
     @NotEmpty
     private String name;
     @NotEmpty
@@ -12,35 +20,4 @@ public class StudentAdmissionDto {
     @NotNull
     private Long mobile;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Long getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(Long mobile) {
-        this.mobile = mobile;
-    }
 }

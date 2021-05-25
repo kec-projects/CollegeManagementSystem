@@ -14,17 +14,17 @@ import javax.annotation.PostConstruct;
 import java.io.IOException;
 
 @Service
-@Slf4j
 public class FCMInitializer {
     @Value("${app.firebase-configuration-file}")
     private String firebaseConfigPath;
 
-    Logger logger= LoggerFactory.getLogger(FCMInitializer.class);
-@PostConstruct
-    public void initialize(){
-        try{
-            FirebaseOptions options=new FirebaseOptions.Builder().setCredentials(GoogleCredentials.fromStream(new ClassPathResource(firebaseConfigPath).getInputStream())).build();
-            if(FirebaseApp.getApps().isEmpty()){
+    Logger logger = LoggerFactory.getLogger(FCMInitializer.class);
+
+    @PostConstruct
+    public void initialize() {
+        try {
+            FirebaseOptions options = new FirebaseOptions.Builder().setCredentials(GoogleCredentials.fromStream(new ClassPathResource(firebaseConfigPath).getInputStream())).build();
+            if (FirebaseApp.getApps().isEmpty()) {
                 FirebaseApp.initializeApp(options);
                 logger.info("Firebase application has been initialized ");
             }

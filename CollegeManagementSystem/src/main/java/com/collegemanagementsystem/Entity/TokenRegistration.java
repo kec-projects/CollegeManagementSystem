@@ -19,6 +19,6 @@ import javax.persistence.Table;
 public class TokenRegistration {
     @Id
    private String token;
-    private int uid;
+    private Long userId;
 
 }

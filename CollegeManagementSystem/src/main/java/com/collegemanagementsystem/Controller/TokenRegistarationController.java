@@ -12,25 +12,21 @@ public class TokenRegistarationController {
 
     @Autowired
     private TokenRegistrationService service;
+
     @PostMapping(value = "/token")
-    public TokenRegistrationDTO addStudent(@RequestBody TokenRegistrationDTO dto) {
-        return service.addStudent(dto);
-    }
-
-    @GetMapping("/token")
-    public List<TokenRegistrationDTO> getStudent(){
-        return (List<TokenRegistrationDTO>) service.getStudent();
-    }
-
-    @GetMapping("/token/{id}")
-    public TokenRegistrationDTO FindById(@PathVariable(value = "id")int id ){
-        return service.FindById(id);
+    public String addToken(@RequestBody TokenRegistrationDTO dto) {
+         service.addToken(dto);
+         return "Token added";
     }
     @DeleteMapping("/token/{id}")
-    public String deleteById(@RequestBody @PathVariable(value = "id")int id ){
-        return service.deleteById(id);
+    public String deleteById(@RequestBody @PathVariable(value = "id")Long uid ){
+         service.deleteById(uid);
+         return "Token Deleted Successfully";
     }
-
+    @GetMapping("/token/{id}")
+    public List<TokenRegistrationDTO> getToken(@PathVariable(value = "id")Long uid){
+        return service.getToken(uid);
+}
     @DeleteMapping("/token")
     public String deleteAllStudents(){
         return service.delete();

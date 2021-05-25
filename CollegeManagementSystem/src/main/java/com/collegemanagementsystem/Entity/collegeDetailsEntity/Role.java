@@ -1,10 +1,19 @@
 package com.collegemanagementsystem.Entity.collegeDetailsEntity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name="Role")
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Role implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE , generator = "roleid_gen")
@@ -14,24 +23,6 @@ public class Role implements Serializable {
     @Column(name="Role_name")
     private String name;
 
-    public Role(String name) {
-        this.name = name;
-    }
-    public Role(){}
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
 }

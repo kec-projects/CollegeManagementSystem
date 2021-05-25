@@ -1,4 +1,4 @@
-package com.collegemanagementsystem.Service.interfaceClass;
+package com.collegemanagementsystem.Service;
 
 import com.collegemanagementsystem.Dto.StudentDto;
 import com.collegemanagementsystem.Entity.profileEntity.Student;
@@ -23,9 +23,9 @@ public class StudentService {
         return  student.stream().map(x-> mapper.map(x, StudentDto.class)).collect(Collectors.toList());
     }
 
-    public StudentDto FindById(Long UserID) {
+    public StudentDto FindById(Long UserId) {
         ModelMapper mapper= new ModelMapper();
-        Student orElse = repo.findById(UserID).orElse(null);
+        Student orElse = repo.findById(UserId).orElse(null);
         return mapper.map(orElse, StudentDto.class);
     }
 
@@ -36,8 +36,8 @@ public class StudentService {
         return mapper.map(students, StudentDto.class);
     }
 
-    public String delete(Long UserID){
-        repo.deleteById(UserID);
+    public String delete(Long UserId){
+        repo.deleteById(UserId);
         return "deleted";
     }
 }
