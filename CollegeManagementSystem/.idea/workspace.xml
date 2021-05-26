@@ -4,163 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="Login, Registration and Notification API">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20201115.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CollegeManagementSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CollegeManagementSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/BeanConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/CmsApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/FCMController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/FCMInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/FCMService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/Faculty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/FacultyController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/FacultyDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/FacultyRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/FacultyService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/NonTeachingStaff.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/NonTeachingStaffController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/NonTeachingStaffDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/NonTeachingStaffRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/NonTeachingStaffService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/PushNotificationRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/PushNotificationResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/RoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/RoleDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/RoleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/RoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/RoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentAdmission.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentAdmissionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentAdmissionDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentAdmissionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentAdmissionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentAdmissionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/TokenRegistarationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/TokenRegistration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/TokenRegistrationDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/TokenRegistrationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/TokenRegistrationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserLoginDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserRegistrationDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserRoleDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserRoleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserRoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserRoleServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserRoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-05-2021_22_55__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="Registration List">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/ProfileController/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/ProfileController/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/CmsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/CmsApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/CollegeDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/CollegeDetailsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/DepartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/DepartmentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/PrincipalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/PrincipalController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/RoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/FCMController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/FCMController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/ProfileController/FacultyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/ProfileController/FacultyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/ProfileController/NonTeachingStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/ProfileController/NonTeachingStaffController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/ProfileController/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/ProfileController/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/StudentAdmissionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/StudentAdmissionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TokenRegistarationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TokenRegistarationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TopicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TopicController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/CollegeDetailsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/CollegeDetailsDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/DepartmentDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/DepartmentDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/FacultyDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/FacultyDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/NonTeachingStaffDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/NonTeachingStaffDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/PrincipalDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/PrincipalDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/RoleDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/RoleDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/StudentAdmissionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/StudentAdmissionDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/StudentDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/StudentDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/TokenRegistrationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/TokenRegistrationDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/TopicDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/TopicDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/UserRegistrationDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/UserRegistrationDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/UserRoleDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/UserRoleDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/PushNotificationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/PushNotificationRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/PushNotificationResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/PushNotificationResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/StudentAdmission.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/StudentAdmission.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/TokenRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/TokenRegistration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/TopicEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/TopicEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/TopicUid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/TopicUid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/UserRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/CollegeDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/CollegeDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/Department.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/PrincipalDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/PrincipalDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Faculty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Faculty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/NonTeachingStaff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/NonTeachingStaff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/entryPointHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/entryPointHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/failureHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/failureHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/logoutHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/logoutHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/successHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/successHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/CollegeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/CollegeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/DepartmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/DepartmentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/PrincipalRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/PrincipalRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/RoleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/StudentAdmissionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/StudentAdmissionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/StudentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/TokenRegistrationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/TokenRegistrationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/TopicRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/TopicRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/UserRoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/UserRoleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/FCMService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/FCMService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/FacultyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/FacultyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/NonTeachingStaffService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/NonTeachingStaffService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TokenRegistrationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TokenRegistrationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TopicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TopicService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/DepartmentServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/DepartmentServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/DepartmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/DepartmentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/PrincipalServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/PrincipalServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/PrincipalServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/PrincipalServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/StudentAdmissionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/StudentAdmissionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserRoleServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserRoleServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserRoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/CollegeDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/CollegeDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/PrincipalService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/PrincipalService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/RoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/StudentAdmissionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/StudentAdmissionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/UserRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/UserRoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621409534615</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Registration List">
+      <created>1622049312290</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622049312290</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +131,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merged with Notification API" />
     <MESSAGE value="Login, Registration and Notification API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login, Registration and Notification API" />
+    <MESSAGE value="Registration List" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration List" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
