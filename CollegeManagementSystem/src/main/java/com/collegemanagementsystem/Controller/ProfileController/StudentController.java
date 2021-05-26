@@ -33,5 +33,9 @@ public class StudentController {
         return StudentService.add(student);
     }
 
+    @GetMapping("/getreg/{sem}")
+    public List getreg(@PathVariable(value = "sem") String sem){
+        return StudentService.getRegistrationNo(sem);
+    }
 
 }
