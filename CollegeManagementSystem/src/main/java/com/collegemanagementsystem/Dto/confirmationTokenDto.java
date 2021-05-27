@@ -1,21 +1,19 @@
 package com.collegemanagementsystem.Dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.validation.constraints.NotEmpty;
-@Setter
-@Getter
+import java.sql.Date;
+
 @NoArgsConstructor
+@Getter
+@Setter
 @AllArgsConstructor
-public class UserLoginDto {
-    @NotEmpty
-    private String email;
-    @NotEmpty
-    private String password;
-
-
-
+public class confirmationTokenDto {
+    private String confirmationToken;
+    private Date createdDate;
+    private String userEmail;
 }

@@ -40,6 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //http.authorizeRequests().anyRequest().permitAll();
         //http.csrf().disable();
         http.authorizeRequests().antMatchers("/users/registration").permitAll();
+        http.authorizeRequests().antMatchers("/email/*").permitAll();
         http.authorizeRequests().antMatchers("/users/*").authenticated();
         http.csrf().disable();
        http.exceptionHandling().authenticationEntryPoint(entryPointHandler);
