@@ -15,4 +15,7 @@ public interface StudentRepository extends CrudRepository<Student, Long> {
 
     @Query("select r from Student r where r.semester= :sem")
     List<Student> getRegistrationNo(@Param("sem")String sem);
+
+    @Query("select r from Student r where r.registrationNo= :reg")
+    Student RegistrationNo(@Param("reg")String reg);
 }

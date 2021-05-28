@@ -1,5 +1,6 @@
 package com.collegemanagementsystem.Controller;
 import com.collegemanagementsystem.Dto.TokenRegistrationDTO;
+import com.collegemanagementsystem.Entity.TokenRegistration;
 import com.collegemanagementsystem.Service.TokenRegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,9 +24,9 @@ public class TokenRegistarationController {
          service.deleteById(uid);
          return "Token Deleted Successfully";
     }
-    @GetMapping("/token/{id}")
-    public List<TokenRegistrationDTO> getToken(@PathVariable(value = "id")Long uid){
-        return service.getToken(uid);
+    @GetMapping("/token/{registration}")
+    public List<TokenRegistration> getToken(@PathVariable(value = "registration")String registration){
+        return service.getToken(registration);
 }
     @DeleteMapping("/token")
     public String deleteAllStudents(){

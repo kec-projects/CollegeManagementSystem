@@ -5,8 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="Registration List">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_52.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_5_0_b01.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_02.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_4_02.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CollegeManagementSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CollegeManagementSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_13_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/FCMController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/FCMController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/TokenRegistarationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/TokenRegistarationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/TopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/TopicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/VerificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/VerificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/PushNotificationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/PushNotificationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/FacultyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/FacultyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/TopicRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/TopicRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/FCMService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/FCMService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/TokenRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/TokenRegistrationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/TopicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/TopicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/FCMController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/FCMController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/ProfileController/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/ProfileController/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TokenRegistarationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TokenRegistarationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TopicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TopicController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/PushNotificationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/PushNotificationRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/FacultyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/FacultyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/StudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/TopicRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/TopicRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/FCMService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/FCMService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TokenRegistrationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TokenRegistrationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TopicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TopicService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +71,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1sW3ZNb0YO85nJX1UBtAaiFzcdP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -113,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622049312290</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Registration List">
+      <created>1622049992939</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622049992939</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +198,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="7" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="8" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

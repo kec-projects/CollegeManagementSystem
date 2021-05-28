@@ -91,5 +91,13 @@ public class TopicService {
         topicrepo.deleteById(Math.toIntExact(uid));
         return "Deleted";
     }
+    public List alltopics(){
+       List<TopicEntity> topics=  topicrepo.allTopics();
+        List<String> alltopics=new ArrayList<>();
+        for (TopicEntity alltopic: topics){
+           alltopics.add(alltopic.getTopic());
+        }
+        return alltopics.stream().distinct().collect(Collectors.toList());
+    }
 
 }

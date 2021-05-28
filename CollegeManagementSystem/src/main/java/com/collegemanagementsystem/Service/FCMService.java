@@ -1,6 +1,9 @@
 package com.collegemanagementsystem.Service;
 
+import com.collegemanagementsystem.Dto.TokenRegistrationDTO;
 import com.collegemanagementsystem.Entity.*;
+import com.collegemanagementsystem.Entity.profileEntity.Student;
+import com.collegemanagementsystem.Repository.StudentRepository;
 import com.collegemanagementsystem.Repository.TokenRegistrationRepository;
 import com.collegemanagementsystem.Repository.TopicRepository;
 import com.google.firebase.messaging.*;
@@ -23,7 +26,6 @@ import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
-
 @Service
 public class FCMService {
         @Autowired
@@ -32,16 +34,26 @@ public class FCMService {
         private TopicRepository topicRepo;
         @Autowired
         ModelMapper mapper;
+    @Autowired
+    public TokenRegistrationService tokenservice;
     Logger logger= LoggerFactory.getLogger(FCMInitializer.class);
 
-    public void sendNotificationWithToken(PushNotificationRequest request) throws ExecutionException, InterruptedException {
-        Message message = getPreconfiguredMessageBuilder(request).setToken(request.getToken())
-                .build();
+    public String sendNotificationWithToken(PushNotificationRequest request) throws ExecutionException, InterruptedException {
+       List<TokenRegistration> tokens= tokenservice.getToken(request.getRegistrationNo());
+       if (tokens==null){
+           return "Token not found";
+       }
+       System.out.println(tokens.isEmpty());
+        System.out.println(tokens);
+        for (TokenRegistration token: tokens) {
+            Message message = getPreconfiguredMessageBuilder(request).setToken(token.getToken())
+                    .build();
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             String jsonOutput = gson.toJson(message);
-            String response= sendAndGetResponse(message);
-            logger.info("Sent message to token. Device token: " + request.getToken() + ", " + response+ " msg "+jsonOutput);
-
+            String response = sendAndGetResponse(message);
+            logger.info("Sent message to token. Device token: " + request.getToken() + ", " + response + " msg " + jsonOutput);
+        }
+        return "Notification has been sent.";
     }
 
     public void sendMessageWithTopic(PushNotificationRequest request)
@@ -118,4 +130,5 @@ public class FCMService {
         }
         return " tokens were unsubscribed successfully";
     }
+    
 }
