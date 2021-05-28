@@ -36,7 +36,7 @@
     </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="development" />
+        <entry key="$PROJECT_DIR$/.." value="gourav" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -51,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../cmsApi/CollegeManagementSystem/CollegeManagementSystem" />
+    <property name="last_opened_file_path" value="$USER_HOME$/cmsApi/CollegeManagementSystem/CollegeManagementSystem" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -78,6 +78,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CmsApplication" />
         <item itemvalue="Application.CmsApplication" />
         <item itemvalue="Application.CmsApplication" />
       </list>
@@ -113,7 +114,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622049312290</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="student promotion and result scrapping completed">
+      <created>1622182482964</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622182482964</updated>
+    </task>
+    <task id="LOCAL-00005" summary="student promotion and result scrapping completed">
+      <created>1622182591289</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622182591289</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,7 +147,8 @@
     <MESSAGE value="Merged with Notification API" />
     <MESSAGE value="Login, Registration and Notification API" />
     <MESSAGE value="Registration List" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration List" />
+    <MESSAGE value="student promotion and result scrapping completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="student promotion and result scrapping completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
