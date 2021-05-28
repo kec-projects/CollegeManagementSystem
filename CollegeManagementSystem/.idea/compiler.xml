@@ -7,11 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CollegeManagementSystem" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CollegeManagementSystem" target="9" />
+      <module name="CollegeManagementSystem" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
