@@ -13,10 +13,11 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PaymentDetailDto {
-
+    @Id
+    @GeneratedValue
+    private Long paymentId;
     private String paymentType;
     private String paymentName;
     private Long amount;
     private String category;
 }
-
