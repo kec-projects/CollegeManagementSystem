@@ -1,13 +1,13 @@
 <component name="libraryTable">
-  <library name="Maven: oro:oro:2.0.8">
+  <library name="Maven: com.google.protobuf:protobuf-java:3.6.0">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/oro/oro/2.0.8/oro-2.0.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.6.0/protobuf-java-3.6.0.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/oro/oro/2.0.8/oro-2.0.8-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.6.0/protobuf-java-3.6.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/oro/oro/2.0.8/oro-2.0.8-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.6.0/protobuf-java-3.6.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

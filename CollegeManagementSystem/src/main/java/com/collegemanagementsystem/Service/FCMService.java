@@ -44,13 +44,13 @@ public class FCMService {
            return "Token not found";
        }
        System.out.println(tokens.isEmpty());
-        System.out.println(tokens);
         for (TokenRegistration token: tokens) {
             Message message = getPreconfiguredMessageBuilder(request).setToken(token.getToken())
                     .build();
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             String jsonOutput = gson.toJson(message);
             String response = sendAndGetResponse(message);
+            System.out.println(token.getToken());
             logger.info("Sent message to token. Device token: " + request.getToken() + ", " + response + " msg " + jsonOutput);
         }
         return "Notification has been sent.";
