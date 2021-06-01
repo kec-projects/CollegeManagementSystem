@@ -23,38 +23,37 @@ public class PaymentDetailController {
         return paymentDetailService.getPayments();
     }
 
-    @PostMapping("/get/paymentName")
+    @GetMapping("/get/paymentName")
     public List getPaymentName(@RequestParam String paymentType){
         return paymentDetailService.getPaymentName(paymentType);
     }
-    @PostMapping("/get/paymentAmount")
+    @GetMapping("/get/paymentAmount")
     public List getPaymentAmountByCategory(@RequestParam String category){
         return paymentDetailService.getPaymentAmountByCategory(category);
     }
 
-    @PostMapping("/delete/paymentType")
+    @DeleteMapping("/delete/paymentType")
     public String deleteBypaymentType(@RequestParam String paymentType){
         return paymentDetailService.DeleteByPaymentType(paymentType);
     }
-    @PostMapping("/delete/paymentName")
+    @DeleteMapping("/delete/paymentName")
     public String deleteBypaymentTypeAndName(@RequestParam String paymentType,@RequestParam String paymentName){
         return paymentDetailService.DeleteByPaymentTypeAndPaymentName(paymentType,paymentName);
     }
-    @PostMapping("/update/paymentType")
+    @PutMapping("/update/paymentType")
     public String upgatePaymentType(@RequestParam String newPaymentType,@RequestParam String oldPaymentType){
         return paymentDetailService.updatePaymentType(newPaymentType,oldPaymentType);
     }
-    @PostMapping("/update/paymentName")
+    @PutMapping("/update/paymentName")
     public String updatePaymentName(@RequestParam String paymentType,@RequestParam String paymentName){
         return paymentDetailService.updatePaymentName(paymentType,paymentName);
     }
-    @PostMapping("/update/amount")
-    @ResponseBody
-    public String updatePaymentAmount(@RequestParam String paymentType,@RequestParam String paymentName,@RequestParam Long amount){
+    @PutMapping("/update/amount")
+    public String updatePaymentAmount(@RequestParam String paymentType,@RequestParam String paymentName,@RequestParam Double amount){
         return paymentDetailService.updateAmount(paymentType,paymentName,amount);
     }
 
-    @PostMapping("/update/category")
+    @PutMapping("/update/category")
     public String updateCategory(@RequestParam String paymentType,@RequestParam String paymentName,@RequestParam String category){
         return paymentDetailService.updateCategory(paymentType,paymentName,category);
     }

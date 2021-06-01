@@ -18,6 +18,6 @@ public class PaymentDetailDto {
     private Long paymentId;
     private String paymentType;
     private String paymentName;
-    private Long amount;
+    private Double amount;
     private String category;
 }

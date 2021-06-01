@@ -43,7 +43,7 @@ public interface PaymentDetailRepository extends JpaRepository<PaymentDetail,Lon
     @Modifying(clearAutomatically = true)
     @Transactional
     @Query("update PaymentDetail r set r.amount=:amt where r.paymentType=:payt and r.paymentName=:paynm")
-    void updateAmount(@Param("payt") String payt, @Param("paynm") String paynm,@Param("amt") Long amt);
+    void updateAmount(@Param("payt") String payt, @Param("paynm") String paynm,@Param("amt") Double amt);
 
     @Modifying(clearAutomatically = true)
     @Transactional

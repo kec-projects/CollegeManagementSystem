@@ -20,5 +20,5 @@ public class FeeDivision {
     private Long sr;
     private String transactionId;
     private String feeDivisionName;
-    private Long amount;
+    private Double amount;
 }

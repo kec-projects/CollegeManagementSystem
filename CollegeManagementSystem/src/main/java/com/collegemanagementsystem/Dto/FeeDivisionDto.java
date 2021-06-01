@@ -12,5 +12,5 @@ import lombok.Setter;
 public class FeeDivisionDto {
 
     private String feeDivisionName;
-    private Long amount;
+    private Double amount;
 }

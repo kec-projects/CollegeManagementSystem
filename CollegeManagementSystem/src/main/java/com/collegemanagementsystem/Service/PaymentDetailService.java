@@ -43,7 +43,7 @@ public class PaymentDetailService {
         return "updated";
     }
 
-    public String updateAmount(String paymentType,String paymentName,Long amount){
+    public String updateAmount(String paymentType,String paymentName,Double amount){
         paymentrepo.updateAmount(paymentType,paymentName,amount);
         return "updated";
     }
@@ -72,7 +72,7 @@ public class PaymentDetailService {
     }
     public List getPaymentAmountByCategory(String category){
         List<PaymentDetail> payments=paymentrepo.getPaymentDetailByCategory(category);
-        List<Long> amount=new ArrayList<>();
+        List<Double> amount=new ArrayList<>();
         for (PaymentDetail payment: payments){
             amount.add(payment.getAmount());
         }
