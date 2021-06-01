@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -70,13 +72,17 @@ public class PaymentDetailService {
         }
         return paymentTypes.stream().distinct().collect(Collectors.toList());
     }
-    public List getPaymentAmountByCategory(String category){
-        List<PaymentDetail> payments=paymentrepo.getPaymentDetailByCategory(category);
-        List<Double> amount=new ArrayList<>();
+    public Map<String, String> getPaymentAmountByCategoryandPaymentType(String paymentType, String category){
+        List<PaymentDetail> payments=paymentrepo.getPaymentDetailByCategory(paymentType,category);
+        List<String> amount=new ArrayList<>();
+        Map<String, String> msg = new HashMap();
+
         for (PaymentDetail payment: payments){
-            amount.add(payment.getAmount());
+            amount.add(payment.getPaymentName());
+            amount.add(payment.getAmount().toString());
+            msg.put(payment.getPaymentName(),payment.getAmount().toString());
         }
-        return amount;
+        return msg;
     }
 
 }

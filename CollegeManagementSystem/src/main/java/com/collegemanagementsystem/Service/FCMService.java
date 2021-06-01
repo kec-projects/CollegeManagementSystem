@@ -1,17 +1,13 @@
 package com.collegemanagementsystem.Service;
 
-import com.collegemanagementsystem.Dto.TokenRegistrationDTO;
-import com.collegemanagementsystem.Entity.*;
-import com.collegemanagementsystem.Entity.profileEntity.Student;
-import com.collegemanagementsystem.Repository.StudentRepository;
+import com.collegemanagementsystem.Entity.PushNotificationRequest;
+import com.collegemanagementsystem.Entity.TokenRegistration;
+import com.collegemanagementsystem.Entity.TopicEntity;
 import com.collegemanagementsystem.Repository.TokenRegistrationRepository;
 import com.collegemanagementsystem.Repository.TopicRepository;
 import com.google.firebase.messaging.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import net.bytebuddy.jar.asm.Type;
-import net.bytebuddy.jar.asm.commons.Remapper;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,11 +16,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.ExecutionException;
-import java.util.stream.Collectors;
 
 @Service
 public class FCMService {

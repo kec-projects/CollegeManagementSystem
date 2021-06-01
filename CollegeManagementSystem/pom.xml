@@ -29,7 +29,6 @@
 
     <dependencies>
 
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -175,6 +174,7 @@
             <artifactId>spring-context</artifactId>
             <version>5.3.1</version>
         </dependency>
+
     </dependencies>
 
     <build>

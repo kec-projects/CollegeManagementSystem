@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class PaymentDetailController {
@@ -28,8 +29,8 @@ public class PaymentDetailController {
         return paymentDetailService.getPaymentName(paymentType);
     }
     @GetMapping("/get/paymentAmount")
-    public List getPaymentAmountByCategory(@RequestParam String category){
-        return paymentDetailService.getPaymentAmountByCategory(category);
+    public Map getPaymentAmountByCategory(@RequestParam String paymentType, @RequestParam String category){
+        return paymentDetailService.getPaymentAmountByCategoryandPaymentType(paymentType,category);
     }
 
     @DeleteMapping("/delete/paymentType")
