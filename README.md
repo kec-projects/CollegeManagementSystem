@@ -3,9 +3,9 @@
 <h3><b>Base URL: http://localhost:8080</b></h3>
 
 <h2>🎄 ADD TOKEN 🎄</h2>
-Url: url/fcm/token
-Method: POST
-Header: application/json
+Url: url/fcm/token<br>
+Method: POST<br>
+Header: application/json<br>
 Body: {
         "userId":  Long,
         "token": String
