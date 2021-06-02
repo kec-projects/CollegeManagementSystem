@@ -9,8 +9,8 @@ Header: application/json<br>
 Body: {
         "userId":  Long,
         "token": String
-       }
-Result:  String(Token added)
+       }<br>
+Result:  String(Token added)<br>
 
 ------DELETE TOKEN BY UID API-----------------
 
