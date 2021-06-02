@@ -56,31 +56,39 @@ public class PaymentDetailService {
 
 
 
-    public List getPayments(){
+    public Map getPayments(){
        List<PaymentDetail>payments=paymentrepo.findAll();
         List<String> paymentTypes=new ArrayList<>();
+        Map<String, String> msg = new HashMap();
+        int i=1;
         for (PaymentDetail payment: payments){
             paymentTypes.add(payment.getPaymentType());
         }
-        return paymentTypes.stream().distinct().collect(Collectors.toList());
-    }
-    public List getPaymentName(String paymentType){
-        List<PaymentDetail> payments=paymentrepo.getPaymentDetailByPaymentType(paymentType);
-        List<String> paymentTypes=new ArrayList<>();
-        for (PaymentDetail payment: payments){
-            paymentTypes.add(payment.getPaymentName());
+       paymentTypes= paymentTypes.stream().distinct().collect(Collectors.toList());
+        for (String payment: paymentTypes){
+            msg.put(String.format("name%d",i++),payment);
         }
-        return paymentTypes.stream().distinct().collect(Collectors.toList());
+        return msg;
     }
-    public Map<String, String> getPaymentAmountByCategoryandPaymentType(String paymentType, String category){
-        List<PaymentDetail> payments=paymentrepo.getPaymentDetailByCategory(paymentType,category);
-        List<String> amount=new ArrayList<>();
+    public Map getPaymentName(String paymentType){
+        List<PaymentDetail> payments=paymentrepo.getPaymentDetailByPaymentType(paymentType);
         Map<String, String> msg = new HashMap();
-
+        int i=1;
+        List<String> paymentName=new ArrayList<>();
         for (PaymentDetail payment: payments){
-            amount.add(payment.getPaymentName());
-            amount.add(payment.getAmount().toString());
-            msg.put(payment.getPaymentName(),payment.getAmount().toString());
+            paymentName.add(payment.getPaymentName());
+        }
+        paymentName= paymentName.stream().distinct().collect(Collectors.toList());
+        for (String name: paymentName){
+            msg.put(String.format("name%d",i++),name);
+        }
+        return msg;
+    }
+    public Map<String, Double> getPaymentAmountByCategoryandPaymentType(String paymentType, String category){
+        List<PaymentDetail> payments=paymentrepo.getPaymentDetailByCategory(paymentType,category);
+        Map<String, Double> msg = new HashMap();
+        for (PaymentDetail payment: payments){
+            msg.put(payment.getPaymentName(),payment.getAmount());
         }
         return msg;
     }

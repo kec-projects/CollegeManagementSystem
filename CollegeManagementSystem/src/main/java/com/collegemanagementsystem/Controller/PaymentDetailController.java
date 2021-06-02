@@ -20,12 +20,12 @@ public class PaymentDetailController {
     }
 
     @GetMapping("/get/paymentTypes")
-    public List getPaymentTypes(){
+    public Map getPaymentTypes(){
         return paymentDetailService.getPayments();
     }
 
     @GetMapping("/get/paymentName")
-    public List getPaymentName(@RequestParam String paymentType){
+    public Map getPaymentName(@RequestParam String paymentType){
         return paymentDetailService.getPaymentName(paymentType);
     }
     @GetMapping("/get/paymentAmount")
