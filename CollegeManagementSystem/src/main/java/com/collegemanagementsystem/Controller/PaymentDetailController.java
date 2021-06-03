@@ -5,8 +5,8 @@ import com.collegemanagementsystem.Service.PaymentDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @RestController
 public class PaymentDetailController {
@@ -20,16 +20,16 @@ public class PaymentDetailController {
     }
 
     @GetMapping("/get/paymentTypes")
-    public Map getPaymentTypes(){
+    public Set<Map> getPaymentTypes(){
         return paymentDetailService.getPayments();
     }
 
     @GetMapping("/get/paymentName")
-    public Map getPaymentName(@RequestParam String paymentType){
+    public Set<Map> getPaymentName(@RequestParam String paymentType){
         return paymentDetailService.getPaymentName(paymentType);
     }
     @GetMapping("/get/paymentAmount")
-    public Map getPaymentAmountByCategory(@RequestParam String paymentType, @RequestParam String category){
+    public Set<Map> getPaymentAmountByCategory(@RequestParam String paymentType, @RequestParam String category){
         return paymentDetailService.getPaymentAmountByCategoryandPaymentType(paymentType,category);
     }
 

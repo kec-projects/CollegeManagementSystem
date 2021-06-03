@@ -1,17 +1,12 @@
 package com.collegemanagementsystem.Service;
 import com.collegemanagementsystem.Dto.PaymentDetailDto;
 import com.collegemanagementsystem.Entity.PaymentDetail;
-import com.collegemanagementsystem.Entity.TopicEntity;
 import com.collegemanagementsystem.Repository.PaymentDetailRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.*;
 
 @Service
 public class PaymentDetailService {
@@ -56,41 +51,35 @@ public class PaymentDetailService {
 
 
 
-    public Map getPayments(){
-       List<PaymentDetail>payments=paymentrepo.findAll();
-        List<String> paymentTypes=new ArrayList<>();
-        Map<String, String> msg = new HashMap();
-        int i=1;
+    public Set<Map> getPayments(){
+       List<PaymentDetail> payments=paymentrepo.findAll();
+        Set<Map> namelist=new HashSet<>();
         for (PaymentDetail payment: payments){
-            paymentTypes.add(payment.getPaymentType());
+            Map<String, String> msg = new HashMap();
+            msg.put("name",payment.getPaymentType());
+            namelist.add(msg);
         }
-       paymentTypes= paymentTypes.stream().distinct().collect(Collectors.toList());
-        for (String payment: paymentTypes){
-            msg.put(String.format("name%d",i++),payment);
-        }
-        return msg;
+        return namelist;
     }
-    public Map getPaymentName(String paymentType){
+    public Set<Map> getPaymentName(String paymentType){
         List<PaymentDetail> payments=paymentrepo.getPaymentDetailByPaymentType(paymentType);
-        Map<String, String> msg = new HashMap();
-        int i=1;
-        List<String> paymentName=new ArrayList<>();
+        Set<Map> namelist=new HashSet<>();
         for (PaymentDetail payment: payments){
-            paymentName.add(payment.getPaymentName());
+            Map<String, String> msg = new HashMap();
+            msg.put("name",payment.getPaymentName());
+            namelist.add(msg);
         }
-        paymentName= paymentName.stream().distinct().collect(Collectors.toList());
-        for (String name: paymentName){
-            msg.put(String.format("name%d",i++),name);
-        }
-        return msg;
+        return namelist;
     }
-    public Map<String, Double> getPaymentAmountByCategoryandPaymentType(String paymentType, String category){
+    public Set<Map> getPaymentAmountByCategoryandPaymentType(String paymentType, String category){
         List<PaymentDetail> payments=paymentrepo.getPaymentDetailByCategory(paymentType,category);
-        Map<String, Double> msg = new HashMap();
+        Set<Map> amount=new HashSet<>();
         for (PaymentDetail payment: payments){
+            Map<String, Double> msg = new HashMap();
             msg.put(payment.getPaymentName(),payment.getAmount());
+            amount.add(msg);
         }
-        return msg;
+        return amount;
     }
 
 }
