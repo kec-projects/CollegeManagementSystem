@@ -16,8 +16,7 @@ public class entryPointHandler implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException)
             throws IOException, ServletException {
-        System.out.println(authException.getCause());
-        System.out.println(request);
+
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
     }
 }

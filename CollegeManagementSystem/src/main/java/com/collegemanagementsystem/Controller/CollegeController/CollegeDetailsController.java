@@ -25,12 +25,14 @@ public class CollegeDetailsController {
     {
         return collegeDetailsService.save(collegeDetailsDto);
     }
+
     @RequestMapping(value="/getAll",method = RequestMethod.GET)
     @ResponseBody
     public List<CollegeDetailsDto> getAll()
     {
         return collegeDetailsService.collegeList();
     }
+
     @RequestMapping(value="/getCollege",method = RequestMethod.POST)
     @ResponseBody
     public CollegeDetails getCollege(@RequestBody @Valid CollegeDetailsDto collegeDetailsDto)
