@@ -10,8 +10,8 @@ import com.collegemanagementsystem.Repository.UserRoleRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -91,13 +91,16 @@ public class TopicService {
         topicrepo.deleteById(Math.toIntExact(uid));
         return "Deleted";
     }
-    public List alltopics(){
+    public Set alltopics(){
        List<TopicEntity> topics=  topicrepo.allTopics();
-        List<String> alltopics=new ArrayList<>();
-        for (TopicEntity alltopic: topics){
-           alltopics.add(alltopic.getTopic());
-        }
-        return alltopics.stream().distinct().collect(Collectors.toList());
+
+
+        Set<Map> topicName=new HashSet<>();
+     for (TopicEntity topic: topics){
+        Map<String, String> msg = new HashMap();
+        msg.put("name",topic.getTopic());
+         topicName.add(msg);
     }
+        return topicName;}
 
 }

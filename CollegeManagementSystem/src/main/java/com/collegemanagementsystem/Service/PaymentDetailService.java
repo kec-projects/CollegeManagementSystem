@@ -49,8 +49,6 @@ public class PaymentDetailService {
         return "updated";
     }
 
-
-
     public Set<Map> getPayments(){
        List<PaymentDetail> payments=paymentrepo.findAll();
         Set<Map> namelist=new HashSet<>();
