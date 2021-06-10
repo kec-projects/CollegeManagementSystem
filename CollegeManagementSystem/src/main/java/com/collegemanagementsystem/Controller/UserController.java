@@ -61,14 +61,27 @@ public class UserController {
         return userService.save(userRegistrationDto);
     }
 
-    @RequestMapping(value = "/loginDetails", method = RequestMethod.GET)
+    @RequestMapping(value = "/loginDetails", method = {RequestMethod.POST,RequestMethod.GET})
     @ResponseBody
     public Map loginDetails() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-
         return userService.loginsuccess(auth.getName());
     }
 
+    @RequestMapping(value = "/getCount", method = RequestMethod.GET)
+    @ResponseBody
+    public Map Countuser() {
+
+       return userService.userCount();
+
+    }
+    @RequestMapping(value = "/getUserStatusBased/{status}", method = RequestMethod.GET)
+    @ResponseBody
+    public List getUser(@PathVariable("status") String status) {
+
+        return userService.getUserStatusBased(status);
+
+    }
 
 
 

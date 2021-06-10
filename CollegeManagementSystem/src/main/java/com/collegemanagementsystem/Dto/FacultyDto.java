@@ -22,7 +22,6 @@ public class FacultyDto {
     private Date dateOfLeaving;
     private String bloodGroup;
     private Long aadhaarNo;
-    private Byte[] profilePic;
 
 
 

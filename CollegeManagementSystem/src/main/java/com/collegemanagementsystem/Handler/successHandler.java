@@ -20,9 +20,10 @@ public class successHandler extends SimpleUrlAuthenticationSuccessHandler {
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                        Authentication authentication) throws IOException, ServletException {
 
-        clearAuthenticationAttributes(request);
+       // clearAuthenticationAttributes(request);
+        System.out.println("gg");
         request.getRequestDispatcher("/users/loginDetails").forward(request, response);
-
+       // redirectStrategy.sendRedirect(request,response,"/users/loginDetails");
     }
 }
 

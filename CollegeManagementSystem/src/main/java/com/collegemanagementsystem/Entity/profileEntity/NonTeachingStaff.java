@@ -37,8 +37,6 @@ public class NonTeachingStaff {
     private Date dateOfBirth;
     @Column(name = "NonTeaching_dol")
     private Date dateOfLeaving;
-    @Column(name="NonTeaching_profilePic")
-    @Lob
-    private Byte[] profilePic;
+
 
 }
