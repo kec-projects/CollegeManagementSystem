@@ -93,8 +93,6 @@ public class TopicService {
     }
     public Set alltopics(){
        List<TopicEntity> topics=  topicrepo.allTopics();
-
-
         Set<Map> topicName=new HashSet<>();
      for (TopicEntity topic: topics){
         Map<String, String> msg = new HashMap();
