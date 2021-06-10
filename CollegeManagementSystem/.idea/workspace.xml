@@ -133,7 +133,35 @@
       <option name="project" value="LOCAL" />
       <updated>1622279165910</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Payment API Updated">
+      <created>1622538104872</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622538104872</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Payment API Updated">
+      <created>1622657972327</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622657972327</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Payment API Updated">
+      <created>1622723166784</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622723166784</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Notification API Updated">
+      <created>1623260751059</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623260751059</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +180,7 @@
     <MESSAGE value="Merged with Notification API" />
     <MESSAGE value="Login, Registration and Notification API" />
     <MESSAGE value="Registration List" />
+    <MESSAGE value="Payment API Updated" />
     <MESSAGE value="Notification API Updated" />
     <option name="LAST_COMMIT_MESSAGE" value="Notification API Updated" />
   </component>

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/fcm")
@@ -26,7 +27,7 @@ public class TopicController {
         return "Topic Deleted Successfully";
     }
     @GetMapping(value = "/alltopics")
-    public List alltopics() {
+    public Set alltopics() {
        return service.alltopics();
 
     }
