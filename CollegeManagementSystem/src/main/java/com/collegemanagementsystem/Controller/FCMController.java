@@ -1,6 +1,7 @@
 package com.collegemanagementsystem.Controller;
 import com.collegemanagementsystem.Entity.PushNotificationRequest;
 import com.collegemanagementsystem.Entity.PushNotificationResponse;
+import com.collegemanagementsystem.Entity.TopicEntity;
 import com.collegemanagementsystem.Service.FCMService;
 import com.google.firebase.messaging.FirebaseMessagingException;
 import org.springframework.http.HttpStatus;
@@ -19,9 +20,9 @@ public class FCMController {
 
 
     @PostMapping(value = "/notification/token")
-    public  ResponseEntity sendTokenNotification( @RequestBody PushNotificationRequest request) throws ExecutionException, InterruptedException {
-        pushNotificationService.sendNotificationWithToken(request);
-        return new ResponseEntity<>(new PushNotificationResponse(HttpStatus.OK.value(), "Notification has been sent."), HttpStatus.OK);
+    public  String sendTokenNotification( @RequestBody PushNotificationRequest request) throws ExecutionException, InterruptedException {
+      return pushNotificationService.sendNotificationWithToken(request);
+       // return "Notification has been sent.";//new ResponseEntity<>(new PushNotificationResponse(HttpStatus.OK.value(), "Notification has been sent."), HttpStatus.OK);
     }
 
     @PostMapping(value = "/notification/topic")

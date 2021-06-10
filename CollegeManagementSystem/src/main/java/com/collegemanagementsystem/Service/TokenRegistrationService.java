@@ -1,6 +1,8 @@
 package com.collegemanagementsystem.Service;
 import com.collegemanagementsystem.Dto.TokenRegistrationDTO;
 import com.collegemanagementsystem.Entity.TokenRegistration;
+import com.collegemanagementsystem.Entity.profileEntity.Student;
+import com.collegemanagementsystem.Repository.StudentRepository;
 import com.collegemanagementsystem.Repository.TokenRegistrationRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,8 @@ public class TokenRegistrationService {
     @Autowired
     public TokenRegistrationRepository studentDao;
     @Autowired
+    public StudentRepository studentservice;
+    @Autowired
     ModelMapper mapper;
 
     public TokenRegistrationDTO addToken(TokenRegistrationDTO dto) {
@@ -23,9 +27,15 @@ public class TokenRegistrationService {
         return mapper.map(student, TokenRegistrationDTO.class);
     }
 
-    public List<TokenRegistrationDTO> getToken(Long uid){
+    public List<TokenRegistration> getToken(String registration){
+        Student student= studentservice.RegistrationNo(registration);
+        if(student==null){
+            return null;
+        }
+        Long uid= student.getUserId();
         List<TokenRegistration> getToken =  studentDao.getById(uid);
-        return getToken.stream().map(x-> mapper.map(x, TokenRegistrationDTO.class)).collect(Collectors.toList());
+        return getToken;
+
     }
 
     public String delete(){

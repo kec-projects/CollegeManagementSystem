@@ -16,6 +16,6 @@ public class PushNotificationRequest {
     private String message;
     private String topic;
     private String token;
-
+    private String registrationNo;
 
 }

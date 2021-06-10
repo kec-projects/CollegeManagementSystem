@@ -17,6 +17,8 @@ public interface TopicRepository extends CrudRepository<TopicEntity, Integer> {
     List<TopicEntity> findByUid(@Param("uid") Long uid);
     @Query("select r from TopicEntity r where r.userId = :id AND r.topic= :nm")
     TopicEntity checkTopic(@Param("id") Long id, @Param("nm") String nm);
+    @Query("select r from TopicEntity r ")
+    List<TopicEntity> allTopics();
 
 
 }

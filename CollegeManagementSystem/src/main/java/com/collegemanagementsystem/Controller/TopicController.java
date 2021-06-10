@@ -25,4 +25,9 @@ public class TopicController {
          service.DeleteByUid(uid);
         return "Topic Deleted Successfully";
     }
+    @GetMapping(value = "/alltopics")
+    public List alltopics() {
+       return service.alltopics();
+
+    }
 }
