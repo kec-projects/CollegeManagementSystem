@@ -31,6 +31,8 @@ public class User {
     private Date registeredDate;
     @Column(name = "User_updatedDate")
     private Date updatedDate;
+    @Column(name = "User_youAre")
+    private String youAre;
 
 
 

@@ -24,6 +24,5 @@ public class NonTeachingStaffDto {
     private Date dateOfJoining;
     private Date dateOfBirth;
     private Date dateOfLeaving;
-    private Byte[] profilePic;
 
 }

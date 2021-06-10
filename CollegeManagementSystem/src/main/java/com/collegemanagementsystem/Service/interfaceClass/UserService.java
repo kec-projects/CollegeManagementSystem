@@ -14,5 +14,7 @@ public interface UserService extends UserDetailsService {
     public List<UserRegistrationDto> allUser();
     User findByEmail(String email);
     User findById(String email);
+    Map userCount();
+    public List<UserRegistrationDto> getUserStatusBased(String status);
 
 }

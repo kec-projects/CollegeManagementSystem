@@ -37,8 +37,6 @@ public class Faculty {
     private String bloodGroup;
     @Column(name = "Faculty_aadhaar")
     private Long aadhaarNo;
-    @Column(name = "Faculty_profilePic")
-    @Lob
-    private Byte[] profilePic;
+
 
 }

@@ -19,9 +19,6 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Student_sr")
     private Long sr;
-    @Column(name = "Student_profilePic")
-    @Lob
-    private Byte[] profilePic;
     @Column(name = "Student_userId")
     private Long userId;
     @Column(name = "Student_registrationNo")

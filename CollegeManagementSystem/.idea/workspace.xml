@@ -4,30 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="promotion merged">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/CollegeController/SubjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/StudentAttendanceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Dto/StudentAttendanceDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Dto/SubjectTeacherDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/AttendanceEntity/ClassAttendanceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/AttendanceEntity/StudentAttendanceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/SubjectTeacherEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/ClassAttendanceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/StudentAttendanceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/SubjectTeacherRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/AttendanceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/SubjectTeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="attendance completed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/ProfileImageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Dto/ProfileImageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/ProfileImageEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/ProfileImageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/ProfileImageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/CollegeController/CollegeDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/CollegeController/CollegeDetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Handler/entryPointHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Handler/entryPointHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Handler/failureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Handler/failureHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Dto/FacultyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Dto/FacultyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Dto/NonTeachingStaffDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Dto/NonTeachingStaffDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/profileEntity/Faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/profileEntity/Faculty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/profileEntity/NonTeachingStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/profileEntity/NonTeachingStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/profileEntity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/profileEntity/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Handler/successHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Handler/successHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/CollegeDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/CollegeController/CollegeDetailsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/entryPointHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/entryPointHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/failureHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/failureHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/implementation/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/implementation/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/interfaceClass/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/interfaceClass/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/FacultyDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/FacultyDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/NonTeachingStaffDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/NonTeachingStaffDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Faculty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Faculty.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/NonTeachingStaff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/NonTeachingStaff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/successHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Handler/successHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/interfaceClass/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +69,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1sW3ZNb0YO85nJX1UBtAaiFzcdP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -145,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622049312290</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="attendance completed">
+      <created>1622820482411</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622820482411</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,7 +183,8 @@
     <MESSAGE value="Merged with Notification API" />
     <MESSAGE value="Login, Registration and Notification API" />
     <MESSAGE value="Registration List" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration List" />
+    <MESSAGE value="attendance completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="attendance completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -184,6 +204,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="7" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.web.multipart.MultipartException" package="org.springframework.web.multipart" />
+          <option name="timeStamp" value="8" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

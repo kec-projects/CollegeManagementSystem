@@ -5,8 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User,Integer> {
@@ -19,4 +22,9 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     @Transactional
     @Query("update User r set r.password=:password where r.email=:email")
     void updatePassword(@Param("password") String password,@Param("email") String email);
+
+    @Query("select r from User r where r.accountStatus = :status ")
+    List< User> getUser(@Param("status") String status);
+
+
 }
