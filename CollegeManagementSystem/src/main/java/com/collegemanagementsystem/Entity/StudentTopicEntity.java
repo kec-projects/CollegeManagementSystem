@@ -11,9 +11,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Topic")
+@Table(name = "StudentTopic")
 @IdClass(TopicUid.class)
-public class TopicEntity implements Serializable {
+public class StudentTopicEntity implements Serializable {
     @Id
     private String topic;
     @Id

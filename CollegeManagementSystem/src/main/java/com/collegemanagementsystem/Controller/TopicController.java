@@ -16,14 +16,23 @@ public class TopicController {
   public TopicService service;
 
     @GetMapping(value = "/addtopic/{uid}")
-    public String addStudent(@PathVariable(value = "uid")Long uid) {
+    public String addTopic(@PathVariable(value = "uid")Long uid) {
        service.addTopic(uid);
        return "Topic Added";
     }
-
+    @GetMapping(value = "/addTopicToAll")
+    public String addTopicToAll() {
+        service.addAllStudentTopics();
+        return "Topic Added";
+    }
     @DeleteMapping ("/topic/{uid}")
     public String FindById(@PathVariable(value = "uid")Long uid ){
          service.DeleteByUid(uid);
+        return "Topic Deleted Successfully";
+    }
+    @DeleteMapping ("/AllTopic")
+    public String FindById( ){
+        service.DeleteAllStudentTopics();
         return "Topic Deleted Successfully";
     }
     @GetMapping(value = "/alltopics")
