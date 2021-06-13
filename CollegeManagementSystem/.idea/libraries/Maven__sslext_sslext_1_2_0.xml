@@ -1,13 +1,13 @@
 <component name="libraryTable">
-  <library name="Maven: io.grpc:grpc-protobuf:1.13.1">
+  <library name="Maven: sslext:sslext:1.2-0">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/io/grpc/grpc-protobuf/1.13.1/grpc-protobuf-1.13.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/sslext/sslext/1.2-0/sslext-1.2-0.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/io/grpc/grpc-protobuf/1.13.1/grpc-protobuf-1.13.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/sslext/sslext/1.2-0/sslext-1.2-0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/io/grpc/grpc-protobuf/1.13.1/grpc-protobuf-1.13.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/sslext/sslext/1.2-0/sslext-1.2-0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
