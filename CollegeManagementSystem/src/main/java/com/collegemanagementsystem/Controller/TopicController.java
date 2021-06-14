@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 @RestController
@@ -16,9 +17,9 @@ public class TopicController {
   public TopicService service;
 
     @GetMapping(value = "/addtopic/{uid}")
-    public String addTopic(@PathVariable(value = "uid")Long uid) {
-       service.addTopic(uid);
-       return "Topic Added";
+    public Map addTopic(@PathVariable(value = "uid")Long uid) {
+      return service.addTopic(uid);
+       //return "Topic Added";
     }
     @GetMapping(value = "/addTopicToAll")
     public String addTopicToAll() {
@@ -30,7 +31,7 @@ public class TopicController {
          service.DeleteByUid(uid);
         return "Topic Deleted Successfully";
     }
-    @DeleteMapping ("/AllTopic")
+    @DeleteMapping ("/delete/AllTopic")
     public String FindById( ){
         service.DeleteAllStudentTopics();
         return "Topic Deleted Successfully";

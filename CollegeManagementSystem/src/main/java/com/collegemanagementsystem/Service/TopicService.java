@@ -2,6 +2,7 @@ package com.collegemanagementsystem.Service;
 
 
 import com.collegemanagementsystem.Entity.*;
+import com.collegemanagementsystem.Entity.profileEntity.Faculty;
 import com.collegemanagementsystem.Entity.profileEntity.Student;
 import com.collegemanagementsystem.Repository.*;
 import org.modelmapper.ModelMapper;
@@ -14,7 +15,8 @@ import java.util.*;
 public class TopicService {
     @Autowired
     private StudentTopicRepository studentTopicRepo;
-
+    @Autowired
+    private FacultyTopicRepository facultyTopicRepo;
     @Autowired
     ModelMapper mapper;
     @Autowired
@@ -24,18 +26,23 @@ public class TopicService {
     @Autowired
     private StudentRepository studentrepo;
     @Autowired
-    private FacultyTopicRepository facultyTopicRepo;
+    private FacultyRepository facultyRepo;
 
-    public void addTopic(Long uid){
+    public Map addTopic(Long uid){
         List<UserRole> roles=userrolerepo.getRoleById(uid);
         Student students=studentrepo.getById(uid);
+        Faculty faculty=facultyRepo.getById(uid);
         List<String> role=new ArrayList<>();
         for (UserRole newRole: roles){
             role.add(newRole.getRoleName());
         }
-
+        Map msg=new HashMap();
         for (String newRole: role){
-            if(newRole.toLowerCase().equals("student")){
+
+            if(students== null && faculty ==null){
+
+                msg.put("message","Data Not Found");}
+            if("student".equals(newRole.toLowerCase())){
                 List<StudentTopicEntity> topics = new ArrayList<>();
                 StudentTopicEntity topic=new StudentTopicEntity();
                 topic.setUserId(uid);
@@ -64,11 +71,12 @@ public class TopicService {
                 topics.add(topic);
                 studentTopicRepo.saveAll(topics);
             }
-            if(newRole.toLowerCase().equals("faculty")){
+
+          if(newRole.toLowerCase().equals("faculty")){
                 List<FacultyTopicEntity> topics = new ArrayList<>();
                 FacultyTopicEntity topic=new FacultyTopicEntity();
                 topic.setUserId(uid);
-                topic.setTopic(students.getDepartment());
+                topic.setTopic(faculty.getDepartment());
                 FacultyTopicEntity department= mapper.map(topic, FacultyTopicEntity.class);
                 topics.add(department);
                 topic=new FacultyTopicEntity();
@@ -81,8 +89,11 @@ public class TopicService {
                 topic.setTopic("general");
                 topics.add(topic);
                 facultyTopicRepo.saveAll(topics);
+
             }
+          msg.put("message","Topic Added Successfully");
         }
+        return msg;
 
     }
     public void addAllStudentTopics(){
@@ -136,6 +147,7 @@ public class TopicService {
 
     public String DeleteAllStudentTopics(){
         studentTopicRepo.deleteAll();
+        facultyTopicRepo.deleteAll();
         return "Deleted";
     }
 

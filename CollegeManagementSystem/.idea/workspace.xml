@@ -5,27 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="Notification API Updated">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opencensus_opencensus_contrib_http_util_0_15_03.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_5_0_b01.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_resolver_maven_resolver_api_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_tools_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/FacultyTopicEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/FacultyTopicRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/FCMController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/FCMController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/TopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/TopicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/TopicEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/StudentTopicEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/TopicRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/StudentTopicRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/FCMService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/FCMService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/FacultyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/FacultyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/FacultyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/FacultyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/TopicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/TopicService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TopicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/TopicController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/FacultyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/FacultyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TopicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/TopicService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623522503258</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Notification API Updated">
+      <created>1623525852287</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623525852287</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
