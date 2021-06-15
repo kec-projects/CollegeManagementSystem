@@ -10,4 +10,5 @@ import org.springframework.stereotype.Repository;
 public interface StudentAdmissionRepository extends JpaRepository<StudentAdmission,Integer> {
     @Query("select r from StudentAdmission r where r.name = :sm AND r.email= :em")
     StudentAdmission getStudent(@Param("sm")String sm, @Param("em") String em);
+
 }

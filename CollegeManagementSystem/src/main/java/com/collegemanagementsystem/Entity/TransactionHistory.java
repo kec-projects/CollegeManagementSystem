@@ -28,5 +28,6 @@ public class TransactionHistory {
   private String paymentType;
   private String registrationNo;
   private Double totalAmount;
+  private Long otherUserId;
 
 }

@@ -13,7 +13,7 @@ public class TransactionHistoryController {
     private TransactionHistoryService transactionHistoryService;
     @PostMapping("/addTransactions")
     public String addTransactions(@RequestBody TransactionHistoryDto transactionHistoryDto){
-        return transactionHistoryService.addTransactio(transactionHistoryDto);
+        return transactionHistoryService.addTransaction(transactionHistoryDto);
     }
 
 }
