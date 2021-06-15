@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class SubjectTeacherService {
@@ -34,5 +35,17 @@ public class SubjectTeacherService {
         return subjectTeacherRepository.getSubject(userid,flag);
     }
 
-
+    public Map getSubjectDetails(Long classId)
+    {
+        Map details = new HashMap();
+     SubjectTeacherEntity s= subjectTeacherRepository.getOne(classId);
+     details.put("Subject Name",s.getSubName());
+     details.put("Teacher Name",s.getTeacherName());
+     details.put("Branch",s.getDepart());
+     details.put("Class Id",s.getClassId());
+     details.put("Semester",s.getSem());
+     details.put("Teacher UserId",s.getUserId());
+     details.put("Batch",s.getBatch());
+     return details;
+    }
 }

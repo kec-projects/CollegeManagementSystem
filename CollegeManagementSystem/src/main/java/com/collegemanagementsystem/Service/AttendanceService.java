@@ -3,15 +3,14 @@ package com.collegemanagementsystem.Service;
 import com.collegemanagementsystem.Dto.StudentAttendanceDto;
 import com.collegemanagementsystem.Entity.AttendanceEntity.ClassAttendanceEntity;
 import com.collegemanagementsystem.Entity.AttendanceEntity.StudentAttendanceEntity;
+import com.collegemanagementsystem.Entity.SubjectTeacherEntity;
 import com.collegemanagementsystem.Repository.ClassAttendanceRepository;
 import com.collegemanagementsystem.Repository.StudentAttendanceRepository;
+import com.google.api.client.util.ArrayMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class AttendanceService {
@@ -19,6 +18,12 @@ public class AttendanceService {
     private ClassAttendanceRepository classAttendanceRepository;
     @Autowired
     private StudentAttendanceRepository studentAttendanceRepository;
+    @Autowired
+    private SubjectTeacherService subjectTeacherService;
+    @Autowired
+            private StudentService studentService;
+    @Autowired
+            private CsvGeneration csv;
 
     Long millis = System.currentTimeMillis();
     java.sql.Date date = new java.sql.Date(millis);
@@ -26,6 +31,7 @@ public class AttendanceService {
 
     //function to take attendance and save it to database
     public Map takeAttendence(StudentAttendanceDto studentAttendanceDto) {
+        Map msg=new HashMap();
         ClassAttendanceEntity classAttendanceEntity = new ClassAttendanceEntity();
         classAttendanceEntity.setClassId(studentAttendanceDto.getClassId());
         classAttendanceEntity.setDate(date);
@@ -55,7 +61,9 @@ public class AttendanceService {
             studentAttendanceEntity.setUserId(Long.parseLong(student.toString()));
             studentAttendanceRepository.save(studentAttendanceEntity);
         }
-        return null;
+        msg.put("status","Successfull");
+        msg.put("message","Attendance successfully taken");
+        return msg;
     }
 
     // fn return class attendance
@@ -105,5 +113,35 @@ public class AttendanceService {
        msg.put("percentage",(present.size()/list.size()*100.0));
 
         return msg;
+    }
+    public Map classStudentAttendance(Long classId){
+        List<ClassAttendanceEntity> count= classAttendanceRepository.getClassAttendanceCount(classId);
+        Map subDetails= subjectTeacherService.getSubjectDetails(classId);
+        List<Long> studentList= studentService.getUserId((String) subDetails.get("Semester"));
+        System.out.println(studentList);
+        System.out.println(subDetails);
+        System.out.println(count);
+        subDetails.put("Total Class",count.size());
+        String[] details = new String[100];
+        List<String[]> completeDetails = new ArrayList<>();
+        int i=0;
+        details[i++]="UserId";
+        details[i++]="Student Name";
+        details[i++]="Registration No";
+
+        for(ClassAttendanceEntity c:count){
+            details[i++]= String.valueOf(c.getDate());
+        }
+        details[i++]="Total";
+        details[i++]="Percentage";
+        completeDetails.add(details);
+        for(Long student:studentList){
+            List<StudentAttendanceEntity> li= studentAttendanceRepository.getStudentAttendance(classId,student);
+            for(StudentAttendanceEntity l:li){
+            }
+       //     System.out.println(cls.getDate());
+        }
+        csv.createCsv(subDetails,completeDetails);
+        return null;
     }
 }

@@ -25,8 +25,8 @@ public class FacultyService {
     }
 
     public FacultyDto FindById(Long UserID) {
-        Faculty orElse = repo.findById(UserID).orElse(null);
-        return mapper.map(orElse, FacultyDto.class);
+        Faculty faculty = repo.getById(UserID);
+        return mapper.map(faculty, FacultyDto.class);
     }
 
     public FacultyDto add(FacultyDto faculty){

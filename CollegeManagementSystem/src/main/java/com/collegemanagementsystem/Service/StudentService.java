@@ -27,8 +27,8 @@ public class StudentService {
     }
 
     public StudentDto FindById(Long UserId) {
-        Student orElse = repo.findById(UserId).orElse(null);
-        return mapper.map(orElse, StudentDto.class);
+        Student student = repo.getById(UserId);
+        return mapper.map(student, StudentDto.class);
     }
 
     public StudentDto add(StudentDto student){
@@ -49,5 +49,13 @@ public class StudentService {
             regNo.add(newRegNo.getRegistrationNo());
         }
         return regNo;
+    }
+    public List getUserId(String sem) {
+        List<Student> registrationNo= repo.getRegistrationNo(sem);
+        List<Long> userId=new ArrayList<>();
+        for (Student newRegNo: registrationNo){
+            userId.add(newRegNo.getUserId());
+        }
+        return userId;
     }
 }

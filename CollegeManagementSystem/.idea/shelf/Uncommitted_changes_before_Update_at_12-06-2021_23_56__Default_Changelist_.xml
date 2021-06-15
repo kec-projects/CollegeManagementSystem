@@ -1,0 +1,84 @@
+<changelist name="Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]" date="1623522363155" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 12-06-2021 23:56 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/UserServiceImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Entity/profileEntity/NonTeachingStaff.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Entity/profileEntity/NonTeachingStaff.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/NonTeachingStaff.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Repository/UserRepository.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Repository/UserRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/UserRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Controller/UserController.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Controller/UserController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/UserController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Service/interfaceClass/UserService.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Service/interfaceClass/UserService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/UserService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Controller/CollegeController/CollegeDetailsController.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Controller/CollegeController/CollegeDetailsController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/CollegeDetailsController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl$1.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Service/implementation/UserServiceImpl$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/UserServiceImpl$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Handler/failureHandler.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Handler/failureHandler.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/failureHandler.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Handler/successHandler.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Handler/successHandler.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/successHandler.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Entity/User.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Entity/User.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/User.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Dto/NonTeachingStaffDto.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Dto/NonTeachingStaffDto.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/NonTeachingStaffDto.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Entity/profileEntity/Faculty.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Entity/profileEntity/Faculty.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/Faculty.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Repository/StudentRepository.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Repository/StudentRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/StudentRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Dto/FacultyDto.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Dto/FacultyDto.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/FacultyDto.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Entity/profileEntity/Student.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Entity/profileEntity/Student.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/Student.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/collegemanagementsystem/Handler/entryPointHandler.class" />
+    <option name="AFTER_PATH" value="target/classes/com/collegemanagementsystem/Handler/entryPointHandler.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-06-2021_23_56_[Default_Changelist]/entryPointHandler.class" />
+  </binary>
+</changelist>
