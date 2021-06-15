@@ -20,7 +20,7 @@ public class ProfileImageEntity {
     private Long userId;
 
     @Lob
-    @Column(name = "picByte",columnDefinition="mediumblob")
-    private byte[] picByte;
+    @Column(name = "picByte",columnDefinition="longtext")
+    private String picByte;
 
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class StudentController {
@@ -24,12 +25,12 @@ public class StudentController {
     }
 
     @DeleteMapping("/deletebyid/{UserId}")
-    public String DeleteById(@PathVariable(value = "UserId")Long UserId){
+    public Map DeleteById(@PathVariable(value = "UserId")Long UserId){
         return StudentService.delete(UserId);
     }
 
     @PostMapping("/addstudent")
-    public StudentDto add(@RequestBody StudentDto student){
+    public Map add(@RequestBody StudentDto student){
         return StudentService.add(student);
     }
 
