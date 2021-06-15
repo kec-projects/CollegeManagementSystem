@@ -27,7 +27,7 @@ public class ProfileImageService {
         //byte[] parseBase64Binary = DatatypeConverter.parseBase64Binary((String)profileImageDto.getPicByte());
         ProfileImageEntity profileImageEntity=new ProfileImageEntity();
         profileImageEntity.setUserId(profileImageDto.getUserId());
-        profileImageEntity.setPicByte(Base64.getDecoder().decode(profileImageDto.getPicByte()));
+        profileImageEntity.setPicByte(profileImageDto.getPicByte());
         profileImageRepository.save(profileImageEntity);
         msg.put("status","Successful");
         msg.put("message",(exist==null)?"Profile Image Saved":"Profile Image Updated");
@@ -41,7 +41,7 @@ public class ProfileImageService {
 
             msg.put("status","Successful");
             msg.put("message","Image Found");
-            msg.put("image",Base64.getEncoder().encodeToString(exist.getPicByte()) );
+            msg.put("image",exist);
         }
         else{
             msg.put("status","Failed");

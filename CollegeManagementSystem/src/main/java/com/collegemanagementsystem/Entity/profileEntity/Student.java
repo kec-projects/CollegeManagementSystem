@@ -38,11 +38,11 @@ public class Student {
     @Column(name = "Student_motherName")
     private String motherName;
     @Column(name = "Student_fatherContactNo")
-    private Long fatherContactNo;
+    private String fatherContactNo;
     @Column(name = "Student_aadhar")
-    private Long aadhaarNo;
+    private String aadhaarNo;
     @Column(name = "Student_dob")
-    private Date dateOfBirth;
+    private String dateOfBirth;
     @Column(name = "Student_blood")
     private String bloodGroup;
     @Column(name = "Student_sem")
