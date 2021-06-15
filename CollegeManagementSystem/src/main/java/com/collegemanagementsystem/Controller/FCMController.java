@@ -1,7 +1,6 @@
 package com.collegemanagementsystem.Controller;
 import com.collegemanagementsystem.Entity.PushNotificationRequest;
 import com.collegemanagementsystem.Entity.PushNotificationResponse;
-import com.collegemanagementsystem.Entity.TopicEntity;
 import com.collegemanagementsystem.Service.FCMService;
 import com.google.firebase.messaging.FirebaseMessagingException;
 import org.springframework.http.HttpStatus;
@@ -35,9 +34,19 @@ public class FCMController {
         pushNotificationService.subscribeToTopics(uid);
         return new ResponseEntity<>(new PushNotificationResponse(HttpStatus.OK.value(), "Topic subscribed"), HttpStatus.OK);
     }
+    @GetMapping("/subscribeToAll")
+    public ResponseEntity subscribeToTopicForAll() throws ExecutionException, InterruptedException, FirebaseMessagingException {
+        pushNotificationService.subscribeToTopicsForAll();
+        return new ResponseEntity<>(new PushNotificationResponse(HttpStatus.OK.value(), "Topic subscribed"), HttpStatus.OK);
+    }
     @GetMapping("/unsubscribe/{uid}")
     public ResponseEntity unsubscribeToTopic(@PathVariable(value = "uid") Long uid) throws ExecutionException, InterruptedException, FirebaseMessagingException {
         pushNotificationService.unsubscribeToTopics(uid);
+        return new ResponseEntity<>(new PushNotificationResponse(HttpStatus.OK.value(), "Topic unsubscribed"), HttpStatus.OK);
+    }
+    @GetMapping("/unsubscribeToAll")
+    public ResponseEntity unsubscribeToTopicForAll() throws ExecutionException, InterruptedException, FirebaseMessagingException {
+        pushNotificationService.unsubscribeToTopicsForAll();
         return new ResponseEntity<>(new PushNotificationResponse(HttpStatus.OK.value(), "Topic unsubscribed"), HttpStatus.OK);
     }
 }

@@ -1,17 +1,16 @@
 package com.collegemanagementsystem.Service;
 
-import com.collegemanagementsystem.Dto.TokenRegistrationDTO;
-import com.collegemanagementsystem.Entity.*;
+import com.collegemanagementsystem.Entity.PushNotificationRequest;
+import com.collegemanagementsystem.Entity.TokenRegistration;
+import com.collegemanagementsystem.Entity.StudentTopicEntity;
 import com.collegemanagementsystem.Entity.profileEntity.Student;
+import com.collegemanagementsystem.Repository.FacultyTopicRepository;
 import com.collegemanagementsystem.Repository.StudentRepository;
 import com.collegemanagementsystem.Repository.TokenRegistrationRepository;
-import com.collegemanagementsystem.Repository.TopicRepository;
+import com.collegemanagementsystem.Repository.StudentTopicRepository;
 import com.google.firebase.messaging.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import net.bytebuddy.jar.asm.Type;
-import net.bytebuddy.jar.asm.commons.Remapper;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,18 +19,20 @@ import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.ExecutionException;
-import java.util.stream.Collectors;
 
 @Service
 public class FCMService {
         @Autowired
         private TokenRegistrationRepository tokenRepo;
         @Autowired
-        private TopicRepository topicRepo;
+        private StudentTopicRepository studentTopicRepo;
+    @Autowired
+    private FacultyTopicRepository facultyTopicRepo;
+
+    @Autowired
+    private StudentRepository student;
         @Autowired
         ModelMapper mapper;
     @Autowired
@@ -98,9 +99,9 @@ public class FCMService {
         for (TokenRegistration newToken: tokens){
             token.add(newToken.getToken());
         }
-        List<TopicEntity> topics=  topicRepo.findByUid(uid);
+        List<StudentTopicEntity> topics=  studentTopicRepo.findByUid(uid);
         List<String> topic=new ArrayList<>();
-        for (TopicEntity newTopic: topics){
+        for (StudentTopicEntity newTopic: topics){
             topic.add(newTopic.getTopic());
         }
 
@@ -108,6 +109,26 @@ public class FCMService {
             TopicManagementResponse response = FirebaseMessaging.getInstance().subscribeToTopic(
                     token, item);
         }
+        return " tokens were subscribed successfully";
+    }
+    public String subscribeToTopicsForAll( ) throws FirebaseMessagingException {
+        List<Student> listStudents= (List<Student>) student.findAll();
+        for(Student student: listStudents){
+        List<TokenRegistration> tokens=  tokenRepo.getById(student.getUserId());
+        List<String> token=new ArrayList<>();
+        for (TokenRegistration newToken: tokens){
+            token.add(newToken.getToken());
+        }
+        List<StudentTopicEntity> topics=  studentTopicRepo.findByUid(student.getUserId());
+        List<String> topic=new ArrayList<>();
+        for (StudentTopicEntity newTopic: topics){
+            topic.add(newTopic.getTopic());
+        }
+
+        for(String item: topic){
+            TopicManagementResponse response = FirebaseMessaging.getInstance().subscribeToTopic(
+                    token, item);
+        }}
         return " tokens were subscribed successfully";
     }
 
@@ -118,9 +139,9 @@ public class FCMService {
             token.add(newToken.getToken());
         }
       
-        List<TopicEntity> topics= (List<TopicEntity>) topicRepo.findByUid(uid);
+        List<StudentTopicEntity> topics= (List<StudentTopicEntity>) studentTopicRepo.findByUid(uid);
         List<String> topic=new ArrayList<>();
-        for (TopicEntity newTopic: topics){
+        for (StudentTopicEntity newTopic: topics){
             topic.add(newTopic.getTopic());
         }
         for(String item: topic){
@@ -130,5 +151,25 @@ public class FCMService {
         }
         return " tokens were unsubscribed successfully";
     }
-    
+    public String unsubscribeToTopicsForAll( ) throws FirebaseMessagingException {
+        List<Student> listStudents= (List<Student>) student.findAll();
+        for(Student student: listStudents){
+            List<TokenRegistration> tokens=  tokenRepo.getById(student.getUserId());
+            List<String> token=new ArrayList<>();
+            for (TokenRegistration newToken: tokens){
+                token.add(newToken.getToken());
+            }
+            List<StudentTopicEntity> topics=  studentTopicRepo.findByUid(student.getUserId());
+            List<String> topic=new ArrayList<>();
+            for (StudentTopicEntity newTopic: topics){
+                topic.add(newTopic.getTopic());
+            }
+
+            for(String item: topic){
+                TopicManagementResponse response = FirebaseMessaging.getInstance().unsubscribeFromTopic(
+                        token,item);
+            }}
+        return " tokens were unsubscribed successfully";
+    }
+
 }

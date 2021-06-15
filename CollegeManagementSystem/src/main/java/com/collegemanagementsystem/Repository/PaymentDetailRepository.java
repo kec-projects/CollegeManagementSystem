@@ -27,8 +27,8 @@ public interface PaymentDetailRepository extends JpaRepository<PaymentDetail,Lon
     @Query("select r from PaymentDetail r where r.paymentType=:payt")
     List<PaymentDetail> getPaymentDetailByPaymentType(@Param("payt")String payt);
 
-    @Query("select r from PaymentDetail r where r.category=:cat")
-    List<PaymentDetail> getPaymentDetailByCategory(@Param("cat")String cat);
+    @Query("select r from PaymentDetail r where r.paymentType=:payt and r.category=:cat")
+    List<PaymentDetail> getPaymentDetailByCategory(@Param("payt")String payt, @Param("cat") String cat);
 
     @Modifying(clearAutomatically = true)
     @javax.transaction.Transactional
