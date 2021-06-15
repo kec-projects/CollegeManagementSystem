@@ -27,4 +27,10 @@ public class ProfileImageController {
     public Map getImage(@PathVariable("id") Long id){
        return profileImageService.getImage(id);
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/update",method = RequestMethod.PUT)
+    public  Map updateImage(@RequestBody @Valid ProfileImageDto profileImageDto){
+        return profileImageService.updateImage(profileImageDto);
+    }
 }

@@ -3,11 +3,12 @@ package com.collegemanagementsystem.Controller;
 import com.collegemanagementsystem.Dto.StudentAttendanceDto;
 import com.collegemanagementsystem.Service.AttendanceService;
 import com.collegemanagementsystem.Service.CsvGeneration;
-import com.collegemanagementsystem.Service.PdfGeneration;
+import com.itextpdf.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.util.Map;
@@ -21,8 +22,6 @@ public class StudentAttendanceController {
 
     @Autowired
     private CsvGeneration csvGeneration;
-    @Autowired
-    private PdfGeneration pdfGeneration;
 
     @RequestMapping(value = "/takeAttendance", method = RequestMethod.POST)
     @ResponseBody
@@ -40,13 +39,13 @@ public class StudentAttendanceController {
     @ResponseBody
     public Map getStudentAttendance(@PathVariable(value = "classId") Long classId, @PathVariable(value = "userId") Long userId) throws IOException {
 
-        pdfGeneration.generatePdf();
         return attendanceService.getStudentAttendance(userId, classId);
     }
-    @RequestMapping(value = "/getClassStudentAttendance/{classId}",method = RequestMethod.GET)
+
+    @RequestMapping(value = "/getClassStudentAttendance/{classId}/{email}", method = RequestMethod.GET)
     @ResponseBody
-    public Map getClassStudentAttendance(@PathVariable(value = "classId")Long classId){
-        attendanceService.classStudentAttendance(classId);
-        return null;
+    public Map getClassStudentAttendance(@PathVariable(value = "classId") Long classId, @PathVariable(value = "email") String email) throws DocumentException, IOException, MessagingException {
+        return attendanceService.classStudentAttendance(classId, email);
+
     }
 }

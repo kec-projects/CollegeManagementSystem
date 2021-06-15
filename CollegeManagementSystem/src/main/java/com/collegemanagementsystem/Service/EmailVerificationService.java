@@ -50,7 +50,7 @@ public class EmailVerificationService {
             content = content.replace("[[name]]", foundUser.getName());
             String verifyURL = "http://localhost:8080/email/verifyToken?token="+ URLEncoder.encode(token, "UTF-8")+"&email="+email+"&password="+password;
             content = content.replace("[[URL]]", verifyURL);
-            sendEmailService.sendEmail(email,subject,content);
+            sendEmailService.sendEmail(email,subject,content,null,null);
             msg.put("status", "Successful");
             msg.put("message", "Verification Link Sent");
         } else {

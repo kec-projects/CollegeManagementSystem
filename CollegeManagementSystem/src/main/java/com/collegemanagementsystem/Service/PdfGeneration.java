@@ -1,5 +1,5 @@
 package com.collegemanagementsystem.Service;
-
+/*
 import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.color.Color;
@@ -53,4 +53,6 @@ public class PdfGeneration {
 
     }
 }
+
+ */
 

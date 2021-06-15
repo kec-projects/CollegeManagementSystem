@@ -24,7 +24,7 @@ public class CsvGeneration {
             data.add(new String[]{"Semester", (String) details.get("Semester")});
             data.add(new String[]{"Batch", (String) details.get("Batch")});
             data.add(new String[]{"Department", (String) details.get("Branch")});
-            data.add(new String[]{"Total class", (String) details.get("Total Class")});
+            data.add(new String[]{"Total class", (String) (details.get("Total Class")).toString()});
             writer.writeAll(data);
             writer.writeAll(complete);
 

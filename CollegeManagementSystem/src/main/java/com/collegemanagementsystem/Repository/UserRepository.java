@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Date;
 import java.util.List;
 
 @Repository
@@ -25,6 +26,11 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 
     @Query("select r from User r where r.accountStatus = :status ")
     List< User> getUser(@Param("status") String status);
+
+    @Modifying
+    @Transactional
+    @Query("update User r set r.updatedDate=:date where r.userId=:id")
+    void updateDate(@Param("date")Date date,@Param("id")Long id);
 
 
 }
