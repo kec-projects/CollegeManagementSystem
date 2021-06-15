@@ -29,4 +29,5 @@ public class TransactionHistory {
   private String registrationNo;
   private Double totalAmount;
 
+
 }

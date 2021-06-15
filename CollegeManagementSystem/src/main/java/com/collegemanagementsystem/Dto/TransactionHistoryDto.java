@@ -29,4 +29,5 @@ public class TransactionHistoryDto {
     private Double totalAmount;
     private List<FeeDivisionDto> feeDivision;
 
+
 }

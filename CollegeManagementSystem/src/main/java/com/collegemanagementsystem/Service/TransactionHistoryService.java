@@ -4,7 +4,9 @@ import com.collegemanagementsystem.Dto.FeeDivisionDto;
 import com.collegemanagementsystem.Dto.TransactionHistoryDto;
 import com.collegemanagementsystem.Entity.FeeDivision;
 import com.collegemanagementsystem.Entity.TransactionHistory;
+import com.collegemanagementsystem.Entity.profileEntity.Student;
 import com.collegemanagementsystem.Repository.FeeDivisionRepository;
+import com.collegemanagementsystem.Repository.StudentRepository;
 import com.collegemanagementsystem.Repository.TransactionHistoryRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +25,12 @@ public class TransactionHistoryService {
     @Autowired
     private FeeDivisionRepository feeDivisionRepository;
 
-    public String addTransactio(TransactionHistoryDto dto){
+    @Autowired
+    private StudentRepository studentrepo;
+
+    public String addTransaction(TransactionHistoryDto dto){
         TransactionHistory transactionHistory=mapper.map(dto, TransactionHistory.class);
         transactionHistoryRepository.save(transactionHistory);
-        //FeeDivision feeDivision=mapper.map(dto, FeeDivision.class);
-
         for (FeeDivisionDto fee: dto.getFeeDivision()){
             FeeDivision feeDivision= new FeeDivision();
         feeDivision.setTransactionId(dto.getTransactionId());

@@ -36,6 +36,10 @@ public class StudentService {
         return mapper.map(student, StudentDto.class);
     }
 
+    public StudentDto FindByEmail(String email) {
+        Student student = repo.getByEmail(email);
+        return mapper.map(student, StudentDto.class);
+    }
     public Map add(StudentDto student){
         Student students = mapper.map(student,Student.class);
         repo.save(students);
