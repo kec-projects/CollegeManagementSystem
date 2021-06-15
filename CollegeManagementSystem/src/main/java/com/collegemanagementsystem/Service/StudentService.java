@@ -4,12 +4,15 @@ import com.collegemanagementsystem.Dto.StudentDto;
 import com.collegemanagementsystem.Entity.UserRole;
 import com.collegemanagementsystem.Entity.profileEntity.Student;
 import com.collegemanagementsystem.Repository.StudentRepository;
+import com.collegemanagementsystem.Repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -19,6 +22,8 @@ public class StudentService {
     private StudentRepository repo;
     @Autowired
     ModelMapper mapper;
+    @Autowired
+    private UserRepository userRepository;
 
     public List<StudentDto> get() {
 
@@ -27,19 +32,28 @@ public class StudentService {
     }
 
     public StudentDto FindById(Long UserId) {
-        Student orElse = repo.findById(UserId).orElse(null);
-        return mapper.map(orElse, StudentDto.class);
+        Student student = repo.getById(UserId);
+        return mapper.map(student, StudentDto.class);
     }
 
-    public StudentDto add(StudentDto student){
+    public Map add(StudentDto student){
         Student students = mapper.map(student,Student.class);
         repo.save(students);
-        return mapper.map(students, StudentDto.class);
+        Long millis = System.currentTimeMillis();
+        java.sql.Date date = new java.sql.Date(millis);
+        userRepository.updateDate(date,student.getUserId());
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data saved successful");
+        return msg;
     }
 
-    public String delete(Long UserId){
+    public Map delete(Long UserId){
         repo.deleteById(UserId);
-        return "deleted";
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data deleted successful");
+        return msg;
     }
 
     public List getRegistrationNo(String sem) {
@@ -49,5 +63,13 @@ public class StudentService {
             regNo.add(newRegNo.getRegistrationNo());
         }
         return regNo;
+    }
+    public List getUserId(String sem) {
+        List<Student> registrationNo= repo.getRegistrationNo(sem);
+        List<Long> userId=new ArrayList<>();
+        for (Student newRegNo: registrationNo){
+            userId.add(newRegNo.getUserId());
+        }
+        return userId;
     }
 }

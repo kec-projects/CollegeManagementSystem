@@ -73,8 +73,9 @@ public class PaymentDetailService {
         List<PaymentDetail> payments=paymentrepo.getPaymentDetailByCategory(paymentType,category);
         Set<Map> amount=new HashSet<>();
         for (PaymentDetail payment: payments){
-            Map<String, Double> msg = new HashMap();
-            msg.put(payment.getPaymentName(),payment.getAmount());
+            Map msg = new HashMap();
+            msg.put("name",payment.getPaymentName());
+            msg.put("value",payment.getAmount());
             amount.add(msg);
         }
         return amount;

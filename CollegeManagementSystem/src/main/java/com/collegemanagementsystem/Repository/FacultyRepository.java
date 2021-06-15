@@ -13,4 +13,6 @@ import java.util.List;
 public interface FacultyRepository extends CrudRepository<Faculty, Long> {
     @Query("select r from Faculty r where r.employmentId= :empId")
     Faculty getRegistrationNo(@Param("empId")String empId);
+    @Query("select r from Faculty r where r.userId= :id")
+    Faculty getById(@Param("id")long id);
 }

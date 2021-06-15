@@ -19,26 +19,28 @@ public class ProfileImageService {
     private ProfileImageRepository profileImageRepository;
 
     public Map saveImage(ProfileImageDto profileImageDto) throws IOException {
-        Map msg=new HashMap();
-        ProfileImageEntity exist= profileImageRepository.getById(profileImageDto.getUserId());
-        if(exist!=null){
-            profileImageRepository.deleteById(profileImageDto.getUserId());
-        }
-        //byte[] parseBase64Binary = DatatypeConverter.parseBase64Binary((String)profileImageDto.getPicByte());
-        ProfileImageEntity profileImageEntity=new ProfileImageEntity();
+        Map msg = new HashMap();
+        ProfileImageEntity profileImageEntity = new ProfileImageEntity();
         profileImageEntity.setUserId(profileImageDto.getUserId());
         profileImageEntity.setPicByte(profileImageDto.getPicByte());
         profileImageRepository.save(profileImageEntity);
-        msg.put("status","Successful");
-        msg.put("message",(exist==null)?"Profile Image Saved":"Profile Image Updated");
+        msg.put("status", "Successful");
+        msg.put("message", "Profile Image Saved");
         return msg;
     }
-    public Map getImage(Long id){
-        Map msg=new HashMap();
 
-        ProfileImageEntity exist= profileImageRepository.getById(id);
-        if(exist!=null){
+    public Map updateImage(ProfileImageDto profileImageDto) {
+        Map msg = new HashMap();
+        profileImageRepository.updatePic(profileImageDto.getUserId(), profileImageDto.getPicByte());
+        msg.put("status", "Successful");
+        msg.put("message", "Profile pic updated");
+        return msg;
+    }
 
+    public Map getImage(Long id) {
+        Map msg = new HashMap();
+
+<<<<<<< HEAD
             msg.put("status","Successful");
             msg.put("message","Image Found");
             msg.put("image",exist);
@@ -46,6 +48,17 @@ public class ProfileImageService {
         else{
             msg.put("status","Failed");
             msg.put("message","Image Not Found");
+=======
+        ProfileImageEntity exist = profileImageRepository.getById(id);
+        if (exist != null) {
+
+            msg.put("status", "Successful");
+            msg.put("message", "Image Found");
+            msg.put("image", exist.getPicByte());
+        } else {
+            msg.put("status", "Failed");
+            msg.put("message", "Image Not Found");
+>>>>>>> fb133342cedd56b9473e8b61073f7f4752db8a32
         }
         return msg;
     }
