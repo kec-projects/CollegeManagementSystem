@@ -28,6 +28,6 @@ public class TransactionHistoryDto {
     private String registrationNo;
     private Double totalAmount;
     private List<FeeDivisionDto> feeDivision;
-    private Long otherUserId;
+
 
 }

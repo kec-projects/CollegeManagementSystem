@@ -30,7 +30,6 @@ public class TransactionHistoryService {
 
     public String addTransaction(TransactionHistoryDto dto){
         TransactionHistory transactionHistory=mapper.map(dto, TransactionHistory.class);
-        Student student=studentrepo.RegistrationNo(dto.getRegistrationNo());
         transactionHistoryRepository.save(transactionHistory);
         for (FeeDivisionDto fee: dto.getFeeDivision()){
             FeeDivision feeDivision= new FeeDivision();
