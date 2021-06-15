@@ -50,4 +50,12 @@ public class StudentService {
         }
         return regNo;
     }
+    public List getUserId(String sem) {
+        List<Student> registrationNo= repo.getRegistrationNo(sem);
+        List<Long> userId=new ArrayList<>();
+        for (Student newRegNo: registrationNo){
+            userId.add(newRegNo.getUserId());
+        }
+        return userId;
+    }
 }

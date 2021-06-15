@@ -2,7 +2,6 @@ package com.collegemanagementsystem.Controller.CollegeController;
 
 import com.collegemanagementsystem.Dto.SubjectTeacherDto;
 import com.collegemanagementsystem.Service.SubjectTeacherService;
-import com.collegemanagementsystem.Service.interfaceClass.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -18,13 +17,16 @@ public class SubjectController {
     @RequestMapping(value="/subjectTeacher/add",method = RequestMethod.POST)
     @ResponseBody
     public Map subjectTeacherAdd(@RequestBody SubjectTeacherDto subjectTeacherDto){
-
         return subjectTeacherService.saveSubjectTeacher(subjectTeacherDto);
-
     }
     @RequestMapping(value="/subjectTeacher/get/{userId}/{flag}",method = RequestMethod.GET)
     @ResponseBody
     public List subjectTeacherGet(@PathVariable(value = "userId") Long userId, @PathVariable(value = "flag") String flag){
         return subjectTeacherService.getSubject(userId,flag);
+    }
+    @RequestMapping(value="/subjectTeacher/get/{classId}",method = RequestMethod.GET)
+    @ResponseBody
+    public Map subjectDetailsGet(@PathVariable(value = "classId") Long classId){
+        return subjectTeacherService.getSubjectDetails(classId);
     }
 }
