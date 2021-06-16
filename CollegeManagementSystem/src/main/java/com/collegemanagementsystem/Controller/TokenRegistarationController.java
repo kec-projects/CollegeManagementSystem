@@ -25,7 +25,7 @@ public class TokenRegistarationController {
          return "Token Deleted Successfully";
     }
     @GetMapping("/token/{registration}")
-    public List<TokenRegistration> getToken(@PathVariable(value = "registration")String registration){
+    public List<TokenRegistrationDTO> getToken(@PathVariable(value = "registration")String registration){
         return service.getToken(registration);
 }
     @DeleteMapping("/token")
