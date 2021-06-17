@@ -16,7 +16,6 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TransactionHistory {
-  @Id
   private Long userId;
   private String name;
   private String semester;
@@ -24,6 +23,7 @@ public class TransactionHistory {
   private Long mobileNo;
   private String paymentDoneBy;
   private String paymentDoneFor;
+  @Id
   private String transactionId;
   private String paymentType;
   private String registrationNo;

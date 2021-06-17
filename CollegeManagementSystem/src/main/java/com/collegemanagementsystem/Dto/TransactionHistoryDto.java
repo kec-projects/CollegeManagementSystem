@@ -15,7 +15,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TransactionHistoryDto {
-    @Id
     private Long userId;
     private String name;
     private String semester;

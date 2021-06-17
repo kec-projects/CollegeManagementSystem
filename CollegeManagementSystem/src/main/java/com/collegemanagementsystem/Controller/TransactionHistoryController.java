@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/transaction")
@@ -16,7 +17,7 @@ public class TransactionHistoryController {
     @Autowired
     private TransactionHistoryService transactionHistoryService;
     @PostMapping("/addTransactions")
-    public String addTransactions(@RequestBody TransactionHistoryDto transactionHistoryDto){
+    public Map addTransactions(@RequestBody TransactionHistoryDto transactionHistoryDto){
         return transactionHistoryService.addTransaction(transactionHistoryDto);
     }
 
@@ -25,7 +26,7 @@ public class TransactionHistoryController {
         return transactionHistoryService.FindById(userId);
     }
     @GetMapping("/find/TransactionId")
-    public TransactionHistoryDto FindByTransactionId(@RequestParam String transactionId){
+    public List<TransactionHistoryDto> FindByTransactionId(@RequestParam String transactionId){
         return transactionHistoryService.FindByTransactionId(transactionId);
     }
 

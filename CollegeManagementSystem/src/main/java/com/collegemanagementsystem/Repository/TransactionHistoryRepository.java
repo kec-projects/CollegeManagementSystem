@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @Repository
-public interface TransactionHistoryRepository extends JpaRepository<TransactionHistory,Long> {
+public interface TransactionHistoryRepository extends JpaRepository<TransactionHistory,String> {
     @Query("select r from TransactionHistory r where r.userId= :id")
     List<TransactionHistory> getById(@Param("id")long id);
 

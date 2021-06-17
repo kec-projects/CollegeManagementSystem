@@ -5,6 +5,8 @@ import com.collegemanagementsystem.Service.PaymentDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -14,9 +16,8 @@ public class PaymentDetailController {
     private PaymentDetailService paymentDetailService;
 
     @PostMapping(value = "/addpayment")
-    public String addpayment(@RequestBody PaymentDetailDto dto){
-        paymentDetailService.addpayment(dto);
-        return "Data Added";
+    public Map addpayment(@RequestBody List<PaymentDetailDto> dto){
+        return paymentDetailService.addpayment(dto);
     }
 
     @GetMapping("/get/paymentTypes")
@@ -34,28 +35,28 @@ public class PaymentDetailController {
     }
 
     @DeleteMapping("/delete/paymentType")
-    public String deleteBypaymentType(@RequestParam String paymentType){
+    public Map deleteBypaymentType(@RequestParam String paymentType){
         return paymentDetailService.DeleteByPaymentType(paymentType);
     }
     @DeleteMapping("/delete/paymentName")
-    public String deleteBypaymentTypeAndName(@RequestParam String paymentType,@RequestParam String paymentName){
+    public Map deleteBypaymentTypeAndName(@RequestParam String paymentType,@RequestParam String paymentName){
         return paymentDetailService.DeleteByPaymentTypeAndPaymentName(paymentType,paymentName);
     }
     @PutMapping("/update/paymentType")
-    public String upgatePaymentType(@RequestParam String newPaymentType,@RequestParam String oldPaymentType){
+    public Map upgatePaymentType(@RequestParam String newPaymentType,@RequestParam String oldPaymentType){
         return paymentDetailService.updatePaymentType(newPaymentType,oldPaymentType);
     }
     @PutMapping("/update/paymentName")
-    public String updatePaymentName(@RequestParam String paymentType,@RequestParam String paymentName){
+    public Map updatePaymentName(@RequestParam String paymentType,@RequestParam String paymentName){
         return paymentDetailService.updatePaymentName(paymentType,paymentName);
     }
     @PutMapping("/update/amount")
-    public String updatePaymentAmount(@RequestParam String paymentType,@RequestParam String paymentName,@RequestParam Double amount){
+    public Map updatePaymentAmount(@RequestParam String paymentType,@RequestParam String paymentName,@RequestParam Double amount){
         return paymentDetailService.updateAmount(paymentType,paymentName,amount);
     }
 
     @PutMapping("/update/category")
-    public String updateCategory(@RequestParam String paymentType,@RequestParam String paymentName,@RequestParam String category){
+    public Map updateCategory(@RequestParam String paymentType,@RequestParam String paymentName,@RequestParam String category){
         return paymentDetailService.updateCategory(paymentType,paymentName,category);
     }
 
