@@ -1,6 +1,7 @@
 package com.collegemanagementsystem.Controller;
 
 import com.collegemanagementsystem.Dto.PaymentDetailDto;
+import com.collegemanagementsystem.Dto.PaymentListDto;
 import com.collegemanagementsystem.Service.PaymentDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ public class PaymentDetailController {
     private PaymentDetailService paymentDetailService;
 
     @PostMapping(value = "/addpayment")
-    public Map addpayment(@RequestBody List<PaymentDetailDto> dto){
+    public Map addpayment(@RequestBody PaymentListDto dto){
         return paymentDetailService.addpayment(dto);
     }
 
