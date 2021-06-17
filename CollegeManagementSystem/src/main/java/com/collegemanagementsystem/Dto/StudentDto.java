@@ -20,6 +20,7 @@ public class StudentDto {
     private String registrationNo;
     private Long rollNo;
     private String name;
+    private String email;
     private String department;
     private Long batch;
     private String category;

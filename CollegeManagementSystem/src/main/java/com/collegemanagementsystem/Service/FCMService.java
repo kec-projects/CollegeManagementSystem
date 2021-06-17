@@ -1,5 +1,6 @@
 package com.collegemanagementsystem.Service;
 
+import com.collegemanagementsystem.Dto.TokenRegistrationDTO;
 import com.collegemanagementsystem.Entity.PushNotificationRequest;
 import com.collegemanagementsystem.Entity.TokenRegistration;
 import com.collegemanagementsystem.Entity.StudentTopicEntity;
@@ -40,12 +41,12 @@ public class FCMService {
     Logger logger= LoggerFactory.getLogger(FCMInitializer.class);
 
     public String sendNotificationWithToken(PushNotificationRequest request) throws ExecutionException, InterruptedException {
-       List<TokenRegistration> tokens= tokenservice.getToken(request.getRegistrationNo());
+       List<TokenRegistrationDTO> tokens= tokenservice.getToken(request.getRegistrationNo());
        if (tokens==null){
            return "Token not found";
        }
        System.out.println(tokens.isEmpty());
-        for (TokenRegistration token: tokens) {
+        for (TokenRegistrationDTO token: tokens) {
             Message message = getPreconfiguredMessageBuilder(request).setToken(token.getToken())
                     .build();
             Gson gson = new GsonBuilder().setPrettyPrinting().create();

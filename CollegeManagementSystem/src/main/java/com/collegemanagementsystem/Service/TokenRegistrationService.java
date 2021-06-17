@@ -1,4 +1,5 @@
 package com.collegemanagementsystem.Service;
+import com.collegemanagementsystem.Dto.StudentDto;
 import com.collegemanagementsystem.Dto.TokenRegistrationDTO;
 import com.collegemanagementsystem.Entity.TokenRegistration;
 import com.collegemanagementsystem.Entity.profileEntity.Student;
@@ -27,14 +28,14 @@ public class TokenRegistrationService {
         return mapper.map(student, TokenRegistrationDTO.class);
     }
 
-    public List<TokenRegistration> getToken(String registration){
+    public List<TokenRegistrationDTO> getToken(String registration){
         Student student= studentservice.RegistrationNo(registration);
         if(student==null){
             return null;
         }
         Long uid= student.getUserId();
         List<TokenRegistration> getToken =  studentDao.getById(uid);
-        return getToken;
+        return getToken.stream().map(x-> mapper.map(x, TokenRegistrationDTO.class)).collect(Collectors.toList());
 
     }
 

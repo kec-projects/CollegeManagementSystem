@@ -21,6 +21,8 @@ public class Student {
     private Long sr;
     @Column(name = "Student_userId")
     private Long userId;
+    @Column(name = "Student_email")
+    private String email;
     @Column(name = "Student_registrationNo")
     private String registrationNo;
     @Column(name = "Student_rollNo")

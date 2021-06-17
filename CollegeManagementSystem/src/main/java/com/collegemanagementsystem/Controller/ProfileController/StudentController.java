@@ -24,6 +24,11 @@ public class StudentController {
        return StudentService.FindById (UserId);
     }
 
+    @GetMapping("/findByEmail")
+    public StudentDto FindByEmail(@RequestParam String email){
+        return StudentService.FindByEmail(email);
+    }
+
     @DeleteMapping("/deletebyid/{UserId}")
     public Map DeleteById(@PathVariable(value = "UserId")Long UserId){
         return StudentService.delete(UserId);
