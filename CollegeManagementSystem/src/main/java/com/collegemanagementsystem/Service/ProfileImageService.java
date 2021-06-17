@@ -40,15 +40,7 @@ public class ProfileImageService {
     public Map getImage(Long id) {
         Map msg = new HashMap();
 
-<<<<<<< HEAD
-            msg.put("status","Successful");
-            msg.put("message","Image Found");
-            msg.put("image",exist);
-        }
-        else{
-            msg.put("status","Failed");
-            msg.put("message","Image Not Found");
-=======
+
         ProfileImageEntity exist = profileImageRepository.getById(id);
         if (exist != null) {
 
@@ -58,7 +50,6 @@ public class ProfileImageService {
         } else {
             msg.put("status", "Failed");
             msg.put("message", "Image Not Found");
->>>>>>> fb133342cedd56b9473e8b61073f7f4752db8a32
         }
         return msg;
     }

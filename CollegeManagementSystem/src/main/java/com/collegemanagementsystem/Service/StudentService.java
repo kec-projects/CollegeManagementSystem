@@ -43,8 +43,8 @@ public class StudentService {
         java.sql.Date date = new java.sql.Date(millis);
         userRepository.updateDate(date,student.getUserId());
         Map msg=new HashMap();
-        msg.put("Status","Successful");
-        msg.put("Message","Data saved successful");
+        msg.put("status","Successful");
+        msg.put("message","Data saved successful");
         return msg;
     }
 
