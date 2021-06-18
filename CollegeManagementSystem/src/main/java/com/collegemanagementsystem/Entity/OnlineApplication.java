@@ -19,8 +19,8 @@ public class OnlineApplication {
 
     @Id
     @GeneratedValue
-    @Column(name = "SerialNo")
-    private Long sr;
+    @Column(name = "ApplicationId")
+    private Long applicationId;
     @Column(name = "UserId")
     private Long userId;
     @Column(name = "RegistrationNo")
@@ -38,7 +38,7 @@ public class OnlineApplication {
     @Column(name = "MotherName")
     private String motherName;
     @Column(name = "DateOfBirth")
-    private Date dateOfBirth;
+    private String dateOfBirth;
     @Column(name = "Purpose")
     private String purpose;
     @Column(name = "CertificateTaken")
@@ -49,6 +49,7 @@ public class OnlineApplication {
     private Date approvedDate;
     @Column(name = "Status")
     private String status;
+    @Column(name = "uploadedfile")
     private byte[] file;
 
 

@@ -19,8 +19,8 @@ public class OnlineApplicationController {
         return onlineApplicationService.addDto(onlineApplication);
     }
     @PutMapping(value = "/updateStatus")
-    public String updateStatus(@RequestParam  String oldstatus,@RequestParam  String newstatus){
-        return onlineApplicationService.update(oldstatus,newstatus);
+    public String updateStatus(@RequestParam  String oldstatus,@RequestParam  String newstatus, @RequestParam Long applicationId){
+        return onlineApplicationService.update(oldstatus,newstatus, applicationId);
     }
     @GetMapping("/allapplication")
     public List<OnlineApplicationResponseDto> getallTopics(){
@@ -36,6 +36,10 @@ public class OnlineApplicationController {
         return onlineApplicationService.FindByIdAndCertificateType(UserId,type);
     }
 
+    @GetMapping("/statuslist")
+    public List<OnlineApplicationDto>getByStatus(@RequestParam String status){
+        return onlineApplicationService.getByStatus(status);
+    }
 
 
 

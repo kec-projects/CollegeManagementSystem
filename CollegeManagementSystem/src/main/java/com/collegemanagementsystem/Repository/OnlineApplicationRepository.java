@@ -16,8 +16,8 @@ import java.util.Optional;
 public interface OnlineApplicationRepository extends CrudRepository<OnlineApplication, Long> {
     @Modifying(clearAutomatically = true)
     @Transactional
-    @Query("update OnlineApplication r set r.status=:news where r.status=:olds")
-    void updateStatus(@Param("olds")String olds, @Param("news")String news);
+    @Query("update OnlineApplication r set r.status=:news where r.status=:olds and r.applicationId =:id")
+    void updateStatus(@Param("olds")String olds, @Param("news")String news, @Param("id") Long id);
 
     @Modifying(clearAutomatically = true)
     @Transactional
@@ -26,6 +26,10 @@ public interface OnlineApplicationRepository extends CrudRepository<OnlineApplic
 
     @Query("select r from OnlineApplication r where r.userId =:uid and r.certificateType=:ty ")
     OnlineApplication findByIdAndCertificate(@Param("uid")long userId,@Param("ty") String type);
+
     @Query("select r from OnlineApplication r where r.userId =:uid  ")
     List<OnlineApplication> getById(@Param("uid")long userId);
+
+    @Query("select r from OnlineApplication r where r.status=:sta ")
+    List<OnlineApplication> getByStatus(@Param("sta") String sta);
 }

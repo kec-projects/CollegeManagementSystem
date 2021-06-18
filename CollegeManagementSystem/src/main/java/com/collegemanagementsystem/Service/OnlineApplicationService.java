@@ -23,8 +23,8 @@ public class OnlineApplicationService {
     @Autowired
     ModelMapper mapper;
 
-    public String  update(String oldstatus,String newstatus){
-        repo.updateStatus(oldstatus,newstatus);
+    public String  update(String oldstatus,String newstatus, Long applicationId){
+        repo.updateStatus(oldstatus,newstatus,applicationId);
         if(newstatus=="Approved"){
             Calendar cal= Calendar.getInstance();
             Date date=cal.getTime();
@@ -54,6 +54,11 @@ public class OnlineApplicationService {
        onlineApplications.setFile(Base64.getDecoder().decode(dto.getFile()));
         repo.save(onlineApplications);
         return mapper.map(onlineApplications,OnlineApplicationDto.class);
+    }
+    public List<OnlineApplicationDto> getByStatus(String status){
+        List<OnlineApplication> application = repo.getByStatus(status);
+        return application.stream().map(x->mapper.map(x,OnlineApplicationDto.class)).collect(Collectors.toList());
+
     }
 
 

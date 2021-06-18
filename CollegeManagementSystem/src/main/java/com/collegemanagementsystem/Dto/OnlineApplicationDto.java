@@ -12,6 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class OnlineApplicationDto {
 
+    private Long applicationId;
     private Long userId;
     private Long registrationNo;
     private String name;
@@ -20,7 +21,7 @@ public class OnlineApplicationDto {
     private String category;
     private String fatherName;
     private String motherName;
-    private Date dateOfBirth;
+    private String dateOfBirth;
     private String purpose;
     private Date appliedDate;
     private Date approvedDate;
