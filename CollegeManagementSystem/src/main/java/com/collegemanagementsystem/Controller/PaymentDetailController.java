@@ -18,7 +18,11 @@ public class PaymentDetailController {
 
     @PostMapping(value = "/addpayment")
     public Map addpayment(@RequestBody PaymentListDto dto){
-        return paymentDetailService.addpayment(dto);
+         paymentDetailService.addpayment(dto);
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data Added successfully");
+        return msg;
     }
 
     @GetMapping("/get/paymentTypes")
@@ -37,28 +41,52 @@ public class PaymentDetailController {
 
     @DeleteMapping("/delete/paymentType")
     public Map deleteBypaymentType(@RequestParam String paymentType){
-        return paymentDetailService.DeleteByPaymentType(paymentType);
+        paymentDetailService.DeleteByPaymentType(paymentType);
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data Deleted successfully");
+        return msg;
     }
     @DeleteMapping("/delete/paymentName")
     public Map deleteBypaymentTypeAndName(@RequestParam String paymentType,@RequestParam String paymentName){
-        return paymentDetailService.DeleteByPaymentTypeAndPaymentName(paymentType,paymentName);
+       paymentDetailService.DeleteByPaymentTypeAndPaymentName(paymentType,paymentName);
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data deleted successfully");
+        return msg;
     }
     @PutMapping("/update/paymentType")
     public Map upgatePaymentType(@RequestParam String newPaymentType,@RequestParam String oldPaymentType){
-        return paymentDetailService.updatePaymentType(newPaymentType,oldPaymentType);
+        paymentDetailService.updatePaymentType(newPaymentType,oldPaymentType);
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data Updated successfully");
+        return msg;
     }
     @PutMapping("/update/paymentName")
     public Map updatePaymentName(@RequestParam String paymentType,@RequestParam String paymentName){
-        return paymentDetailService.updatePaymentName(paymentType,paymentName);
+        paymentDetailService.updatePaymentName(paymentType,paymentName);
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data updated successfully");
+        return msg;
     }
     @PutMapping("/update/amount")
     public Map updatePaymentAmount(@RequestParam String paymentType,@RequestParam String paymentName,@RequestParam Double amount){
-        return paymentDetailService.updateAmount(paymentType,paymentName,amount);
+        paymentDetailService.updateAmount(paymentType,paymentName,amount);
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data updated successfully");
+        return msg;
     }
 
     @PutMapping("/update/category")
     public Map updateCategory(@RequestParam String paymentType,@RequestParam String paymentName,@RequestParam String category){
-        return paymentDetailService.updateCategory(paymentType,paymentName,category);
+      paymentDetailService.updateCategory(paymentType,paymentName,category);
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data updated successfully");
+        return msg;
     }
 
 

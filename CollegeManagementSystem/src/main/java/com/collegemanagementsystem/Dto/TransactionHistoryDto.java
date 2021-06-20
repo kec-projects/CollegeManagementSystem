@@ -18,7 +18,6 @@ public class TransactionHistoryDto {
     private Long userId;
     private String name;
     private String semester;
-    private Timestamp date;
     private Long mobileNo;
     private String paymentDoneBy;
     private String paymentDoneFor;

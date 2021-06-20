@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +21,11 @@ public class TransactionHistoryController {
     private TransactionHistoryService transactionHistoryService;
     @PostMapping("/addTransactions")
     public Map addTransactions(@RequestBody TransactionHistoryDto transactionHistoryDto){
-        return transactionHistoryService.addTransaction(transactionHistoryDto);
+        transactionHistoryService.addTransaction(transactionHistoryDto);
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data Added successfully");
+        return msg;
     }
 
     @GetMapping("/find/Id")
@@ -32,8 +39,17 @@ public class TransactionHistoryController {
 
 
     @PostMapping("/find/Date")
-    public List<TransactionHistoryDto> FindByDate(@RequestBody DateDto dto){
+    public List<TransactionHistoryDto> FindByDate(@RequestBody DateDto dto) throws MessagingException, UnsupportedEncodingException {
         return transactionHistoryService.FindByDate(dto.getStartD(),dto.getEndD());
+    }
+
+    @PostMapping("/send")
+    public Map sendCsv(@RequestBody DateDto dto) throws MessagingException, UnsupportedEncodingException {
+        transactionHistoryService.sendCsv(dto.getEmail(), dto.getStartD(),dto.getEndD());
+        Map msg=new HashMap();
+        msg.put("Message","Report Generated and Emailed");
+        msg.put("Status","Successful");
+        return msg;
     }
 
 }
