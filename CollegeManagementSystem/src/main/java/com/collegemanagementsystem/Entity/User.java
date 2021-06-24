@@ -33,6 +33,8 @@ public class User {
     private Date updatedDate;
     @Column(name = "User_youAre")
     private String youAre;
+    @Column(name = "User_mobile")
+    private Long mobile;
 
 
 

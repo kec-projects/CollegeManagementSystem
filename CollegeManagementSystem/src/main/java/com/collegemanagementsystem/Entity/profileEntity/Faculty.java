@@ -15,11 +15,12 @@ import java.sql.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Faculty {
-    @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Faculty_sr")
     private Long sr;
     @Column(name = "Faculty_userId")
+    @Id
     private Long userId;
     @Column(name = "Faculty_name")
     private String name;
@@ -37,6 +38,12 @@ public class Faculty {
     private String bloodGroup;
     @Column(name = "Faculty_aadhaar")
     private Long aadhaarNo;
+    @Column(name="Faculty_mobileNo")
+    private Long mobileNo;
+    @Column(name="Faculty_Address")
+    private String address;
+    @Column(name="Faculty_pincode")
+    private String pincode;
 
 
 }

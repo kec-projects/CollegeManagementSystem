@@ -1,5 +1,6 @@
 package com.collegemanagementsystem.Service;
 import com.collegemanagementsystem.Dto.PaymentDetailDto;
+import com.collegemanagementsystem.Dto.PaymentListDto;
 import com.collegemanagementsystem.Dto.TransactionHistoryDto;
 import com.collegemanagementsystem.Entity.PaymentDetail;
 import com.collegemanagementsystem.Repository.PaymentDetailRepository;
@@ -16,13 +17,16 @@ public class PaymentDetailService {
     @Autowired
     ModelMapper mapper;
 
-    public Map addpayment(List<PaymentDetailDto>  paymentDetailDto){
-        List<PaymentDetail> payments = new ArrayList<>();
-        for(PaymentDetailDto newPayment: paymentDetailDto){
-            PaymentDetail payment=mapper.map(newPayment, PaymentDetail.class);
-            payments.add(payment);
+    public Map addpayment(PaymentListDto paymentListDto){
+
+        for(PaymentDetailDto newPaymentListDto: paymentListDto.getPaymentsDetail()){
+            PaymentDetail payment=new PaymentDetail();
+            payment.setPaymentName(newPaymentListDto.getPaymentName());
+            payment.setPaymentType(newPaymentListDto.getPaymentType());
+            payment.setCategory(newPaymentListDto.getCategory());
+            payment.setAmount(newPaymentListDto.getAmount());
+            paymentrepo.save(payment);
         }
-        paymentrepo.saveAll(payments);
         Map msg=new HashMap();
         msg.put("Status","Successful");
         msg.put("Message","Data Added successfully");

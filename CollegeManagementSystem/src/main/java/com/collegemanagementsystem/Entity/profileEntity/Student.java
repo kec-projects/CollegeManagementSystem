@@ -15,10 +15,11 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Student {
-    @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Student_sr")
     private Long sr;
+    @Id
     @Column(name = "Student_userId")
     private Long userId;
     @Column(name = "Student_email")
@@ -32,7 +33,7 @@ public class Student {
     @Column(name = "Student_department")
     private String department;
     @Column(name = "Student_batch")
-    private String batch;
+    private Long batch;
     @Column(name = "Student_category")
     private String category;
     @Column(name = "Student_fatherName")
@@ -40,17 +41,24 @@ public class Student {
     @Column(name = "Student_motherName")
     private String motherName;
     @Column(name = "Student_fatherContactNo")
-    private String fatherContactNo;
+    private Long fatherContactNo;
+    @Column(name = "Student_emergencyContactNo")
+    private Long emergencyContactNo;
+    @Column(name = "Student_mobile")
+    private Long mobile;
     @Column(name = "Student_aadhar")
-    private String aadhaarNo;
+    private Long aadhaarNo;
     @Column(name = "Student_dob")
     private Date dateOfBirth;
     @Column(name = "Student_blood")
     private String bloodGroup;
     @Column(name = "Student_sem")
     private String semester;
-    @Column(name="Student_emergencyContactNo")
-    private String emergencyContactNo;
+
+    @Column(name = "Student_address")
+    private String address;
+    @Column(name = "Student_pincode")
+    private String pincode;
 
     public String getSemester_department() {
         return semester+department;
