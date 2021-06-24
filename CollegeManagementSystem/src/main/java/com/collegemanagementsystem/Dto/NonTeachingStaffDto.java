@@ -19,8 +19,13 @@ public class NonTeachingStaffDto {
     private String bloodGroup;
     private Long aadhaarNo;
     private String designation;
-    private Date dateOfJoining;
-    private Date dateOfBirth;
-    private Date dateOfLeaving;
+    private String dateOfJoining;
+    private String dateOfBirth;
+    private String dateOfLeaving;
+    private String address;
+    private String pincode;
+    private Long mobileNo;
+    private String email;
+
 
 }

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Type;
+import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,8 @@ public class PrincipalServiceImpl implements PrincipalService {
             PrincipalDetails newPrincipal = new PrincipalDetails();
             newPrincipal.setName(principalDto.getName());
             newPrincipal.setId(principalDto.getId());
-            newPrincipal.setStartDate(principalDto.getStartDate());
+            Date date=Date.valueOf(principalDto.getStartDate());
+            newPrincipal.setStartDate(date);
             principalRepository.save(newPrincipal);
             msg.put("status", "Successfully");
             msg.put("message", "Principal successfully added");
