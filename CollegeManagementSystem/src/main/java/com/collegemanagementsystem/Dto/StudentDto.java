@@ -32,6 +32,8 @@ public class StudentDto {
     private String dateOfBirth;
     private String bloodGroup;
     private String semester;
+    private String address;
+    private String pincode;
 
     public String getSemester_department() {
         return semester+department;

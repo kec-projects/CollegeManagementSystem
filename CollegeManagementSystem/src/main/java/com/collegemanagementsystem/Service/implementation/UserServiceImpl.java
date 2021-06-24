@@ -5,6 +5,7 @@ import com.collegemanagementsystem.Entity.ProfileImageEntity;
 import com.collegemanagementsystem.Entity.User;
 import com.collegemanagementsystem.Entity.UserRole;
 import com.collegemanagementsystem.Repository.*;
+import com.collegemanagementsystem.Service.ConstantService;
 import com.collegemanagementsystem.Service.ProfileImageService;
 import com.collegemanagementsystem.Service.interfaceClass.UserRoleService;
 import com.collegemanagementsystem.Service.interfaceClass.UserService;
@@ -42,6 +43,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     ModelMapper modelMapper;
+    @Autowired
+    private ConstantService constantService;
 
 
     public User findById(String email) {
@@ -59,15 +62,14 @@ public class UserServiceImpl implements UserService {
             newuser.setName(registration.getName());
             newuser.setEmail(registration.getEmail());
             newuser.setYouAre(registration.getYouAre());
+            newuser.setMobile(registration.getMobileNo());
             newuser.setPassword(passwordEncoder.encode(registration.getPassword()));
             if ((studentAdmissionRepository.getStudent(registration.getName(), registration.getEmail())) != null) {
                 newuser.setAccountStatus("Active");
             } else {
                 newuser.setAccountStatus("Pending");
             }
-            Long millis = System.currentTimeMillis();
-            java.sql.Date date = new java.sql.Date(millis);
-            newuser.setRegisteredDate(date);
+            newuser.setRegisteredDate(constantService.getLocalDate());
             User saveUser = userRepository.save(newuser);
             if (newuser.getAccountStatus() == "Active") {
                 msg.put("status", "Successful");
@@ -120,8 +122,10 @@ public class UserServiceImpl implements UserService {
         msg.put("email", user.getEmail());
         msg.put("youAre",user.getYouAre());
         msg.put("updatedDate", user.getUpdatedDate());
-        msg.put("profileImage", (profile != null) ? profile.getPicByte().toString() : null);
+        msg.put("mobileNo",user.getMobile());
+
         msg.put("role", userRoleService.allRole(user.getUserId()));
+        msg.put("profileImage", (profile != null) ? profile.getPicByte().toString() : null);
         return msg;
     }
 

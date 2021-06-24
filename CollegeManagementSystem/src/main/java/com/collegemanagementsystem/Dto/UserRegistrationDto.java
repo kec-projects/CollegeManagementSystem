@@ -24,6 +24,7 @@ public class UserRegistrationDto {
     private String password;
     @NotEmpty
     private String youAre;
+    private Long mobileNo;
 
 
 
