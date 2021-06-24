@@ -44,11 +44,13 @@ public class Student {
     @Column(name = "Student_aadhar")
     private String aadhaarNo;
     @Column(name = "Student_dob")
-    private String dateOfBirth;
+    private Date dateOfBirth;
     @Column(name = "Student_blood")
     private String bloodGroup;
     @Column(name = "Student_sem")
     private String semester;
+    @Column(name="Student_emergencyContactNo")
+    private String emergencyContactNo;
 
     public String getSemester_department() {
         return semester+department;

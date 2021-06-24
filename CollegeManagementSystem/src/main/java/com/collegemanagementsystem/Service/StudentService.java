@@ -44,8 +44,8 @@ public class StudentService {
         Student students = mapper.map(student,Student.class);
         repo.save(students);
         Long millis = System.currentTimeMillis();
-        java.sql.Date date = new java.sql.Date(millis);
-        userRepository.updateDate(date,student.getUserId());
+        java.sql.Date updateDate = new java.sql.Date(millis);
+        userRepository.updateDate(updateDate,student.getUserId());
         Map msg=new HashMap();
         msg.put("status","Successful");
         msg.put("message","Data saved successful");
