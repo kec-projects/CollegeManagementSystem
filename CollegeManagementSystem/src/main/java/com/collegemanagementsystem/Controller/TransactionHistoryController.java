@@ -4,12 +4,9 @@ import com.collegemanagementsystem.Dto.DateDto;
 import com.collegemanagementsystem.Dto.TransactionHistoryDto;
 import com.collegemanagementsystem.Service.TransactionHistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
-
 import javax.mail.MessagingException;
 import java.io.UnsupportedEncodingException;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,6 +34,10 @@ public class TransactionHistoryController {
         return transactionHistoryService.FindByTransactionId(transactionId);
     }
 
+    @GetMapping("/find/email")
+    public List<TransactionHistoryDto> FindByEmail(@RequestParam String email){
+        return transactionHistoryService.FindByEmail(email);
+    }
 
     @PostMapping("/find/Date")
     public List<TransactionHistoryDto> FindByDate(@RequestBody DateDto dto) throws MessagingException, UnsupportedEncodingException {

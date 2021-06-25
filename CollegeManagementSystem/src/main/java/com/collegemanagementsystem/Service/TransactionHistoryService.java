@@ -1,11 +1,8 @@
 package com.collegemanagementsystem.Service;
 
 import com.collegemanagementsystem.Dto.FeeDivisionDto;
-import com.collegemanagementsystem.Dto.StudentDto;
-import com.collegemanagementsystem.Dto.TokenRegistrationDTO;
 import com.collegemanagementsystem.Dto.TransactionHistoryDto;
 import com.collegemanagementsystem.Entity.FeeDivision;
-import com.collegemanagementsystem.Entity.StudentTopicEntity;
 import com.collegemanagementsystem.Entity.TransactionHistory;
 import com.collegemanagementsystem.Repository.FeeDivisionRepository;
 import com.collegemanagementsystem.Repository.StudentRepository;
@@ -16,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
-import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -38,6 +34,8 @@ public class TransactionHistoryService {
     private SendEmailService emailService;
     @Autowired
     private PaymentCSV csv;
+    @Autowired
+    private PaymentCsvtoPdf paymentpdf;
 
     public void addTransaction(TransactionHistoryDto dto){
         TransactionHistory transactionHistory=mapper.map(dto, TransactionHistory.class);
@@ -94,6 +92,19 @@ public class TransactionHistoryService {
         return transactions;
     }
 
+    public List<TransactionHistoryDto> FindByEmail(String email) {
+        List<TransactionHistoryDto> transactions = new ArrayList<>();
+        List<TransactionHistory> trans =   transactionHistoryRepository.getByemail(email);
+        if(trans!=null){
+            for(TransactionHistory newTran:trans){
+                List<FeeDivision> fee=feeDivisionRepository.getByTransactionId(newTran.getTransactionId());
+                TransactionHistoryDto transactionDto=mapper.map(newTran,TransactionHistoryDto.class);
+                transactionDto.setFeeDivision(fee.stream().map(x-> mapper.map(x, FeeDivisionDto.class)).collect(Collectors.toList()));
+                transactions.add(transactionDto);
+            }}
+        return transactions;
+    }
+
     public void sendCsv(String email, Date startD, Date endD) throws MessagingException, UnsupportedEncodingException {
         List<TransactionHistory> trans =   transactionHistoryRepository.getByDate(startD,endD);
         Map subDetails = new HashMap();
@@ -131,9 +142,14 @@ public class TransactionHistoryService {
             details[i++] = newTran.getDate().toString();
             // details[i++] = newTran.getTime().toString();
             completeDetails.add(details);
+
         }
         csv.createCsv(subDetails, completeDetails);
-        emailService.sendEmail(email, "transaction report", "Please find the attachment", "transaction.csv", "C:\\Users\\RAM BABU SINGH\\Desktop\\transaction.csv");
+        paymentpdf.generatePdf(subDetails,completeDetails);
+        System.out.println(completeDetails.get(0)[1]);
+        emailService.sendEmail(email, "transaction report", "Please find the attachment", "transaction.csv",  "C:\\Users\\RAM BABU SINGH\\Desktop\\sample.pdf");
+
+       // emailService.sendEmail(email, "transaction report", "Please find the attachment", "transaction.csv", "C:\\Users\\RAM BABU SINGH\\Desktop\\transaction.csv");
 
     }
 }
