@@ -35,6 +35,7 @@ public class StudentDto {
     private String semester;
     private String address;
     private String pincode;
+    private Long mobile;
 
     public String getSemester_department() {
         return semester+department;

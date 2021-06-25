@@ -48,8 +48,8 @@ public class StudentService {
         repo.save(students);
         userRepository.updateDate(constantService.getLocalDate(), student.getUserId());
         Map msg = new HashMap();
-        msg.put("Status", "Successful");
-        msg.put("Message", "Data saved successful");
+        msg.put("status", "Successful");
+        msg.put("message", "Data saved successful");
         return msg;
     }
 
