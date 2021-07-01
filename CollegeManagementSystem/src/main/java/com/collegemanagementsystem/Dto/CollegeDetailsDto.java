@@ -15,7 +15,7 @@ public class CollegeDetailsDto {
     private Long id;
     private String name;
     private String address;
-    private String phone;
+    private Long phone;
     private String affiliationTo;
-    private Date established;
+    private String established;
 }

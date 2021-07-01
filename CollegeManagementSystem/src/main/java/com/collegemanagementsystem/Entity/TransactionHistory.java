@@ -7,8 +7,9 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.sql.Date;
+import java.sql.Time;
 import java.sql.Timestamp;
-import java.util.Date;
 
 @Entity
 @Setter
@@ -19,7 +20,8 @@ public class TransactionHistory {
   private Long userId;
   private String name;
   private String semester;
-  private Timestamp date;
+  private Date date;
+  private Time time;
   private Long mobileNo;
   private String paymentDoneBy;
   private String paymentDoneFor;
