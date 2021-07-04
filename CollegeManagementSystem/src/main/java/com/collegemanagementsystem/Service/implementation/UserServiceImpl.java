@@ -2,6 +2,7 @@ package com.collegemanagementsystem.Service.implementation;
 
 import com.collegemanagementsystem.Dto.UserRegistrationDto;
 import com.collegemanagementsystem.Entity.ProfileImageEntity;
+import com.collegemanagementsystem.Entity.StudentAdmission;
 import com.collegemanagementsystem.Entity.User;
 import com.collegemanagementsystem.Entity.UserRole;
 import com.collegemanagementsystem.Repository.*;
@@ -62,10 +63,12 @@ public class UserServiceImpl implements UserService {
             newuser.setName(registration.getName());
             newuser.setEmail(registration.getEmail());
             newuser.setYouAre(registration.getYouAre());
-            newuser.setMobile(registration.getMobileNo());
+
             newuser.setPassword(passwordEncoder.encode(registration.getPassword()));
-            if ((studentAdmissionRepository.getStudent(registration.getName(), registration.getEmail())) != null) {
+           StudentAdmission exist= studentAdmissionRepository.getStudent(registration.getName(), registration.getEmail());
+            if ( exist!= null) {
                 newuser.setAccountStatus("Active");
+                newuser.setMobile(exist.getMobile());
             } else {
                 newuser.setAccountStatus("Pending");
             }

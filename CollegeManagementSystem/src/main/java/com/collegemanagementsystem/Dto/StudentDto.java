@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.sql.Date;
 
 
 @Setter
@@ -26,14 +27,15 @@ public class StudentDto {
     private String category;
     private String fatherName;
     private String motherName;
-    private Long fatherContactNo;
-    private Long emergencyContactNo;
-    private Long aadhaarNo;
+    private String fatherContactNo;
+    private String emergencyContactNo;
+    private String aadhaarNo;
     private String dateOfBirth;
     private String bloodGroup;
     private String semester;
     private String address;
     private String pincode;
+    private Long mobile;
 
     public String getSemester_department() {
         return semester+department;

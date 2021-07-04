@@ -16,7 +16,7 @@ public interface TransactionHistoryRepository extends JpaRepository<TransactionH
     TransactionHistory getByTransactionId(@Param("tid")String tid);
 
     @Query("select r from TransactionHistory r where r.paymentDoneFor= :eml")
-    List<TransactionHistory> getByemail(@Param("eml") String eml);
+    List<TransactionHistory> getByEmail(@Param("eml") String eml);
 
     @Query("from TransactionHistory  where date between :srtD and :endD")
     List<TransactionHistory> getByDate(@Param("srtD") Date srtD, @Param("endD")Date endD);

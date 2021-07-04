@@ -13,4 +13,5 @@ import java.util.Optional;
 public interface TokenRegistrationRepository extends CrudRepository<TokenRegistration, Integer> {
     @Query("select r from TokenRegistration r where r.userId= :id")
     List<TokenRegistration> getById(@Param("id")Long id);
+
 }

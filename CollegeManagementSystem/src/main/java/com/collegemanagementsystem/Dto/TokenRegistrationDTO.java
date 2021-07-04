@@ -17,6 +17,7 @@ public class TokenRegistrationDTO {
 
     private String token;
     private Long userId;
+    private String deviceId;
 
 
 }
