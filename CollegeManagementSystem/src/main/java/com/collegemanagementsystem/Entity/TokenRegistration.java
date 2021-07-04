@@ -17,8 +17,10 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TokenRegistration {
-    @Id
-   private String token;
+
+    private String token;
     private Long userId;
+    @Id
+    private String deviceId;
 
 }

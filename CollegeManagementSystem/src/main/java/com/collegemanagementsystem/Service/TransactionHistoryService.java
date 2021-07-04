@@ -94,7 +94,7 @@ public class TransactionHistoryService {
 
     public List<TransactionHistoryDto> FindByEmail(String email) {
         List<TransactionHistoryDto> transactions = new ArrayList<>();
-        List<TransactionHistory> trans =   transactionHistoryRepository.getByemail(email);
+        List<TransactionHistory> trans =   transactionHistoryRepository.getByEmail(email);
         if(trans!=null){
             for(TransactionHistory newTran:trans){
                 List<FeeDivision> fee=feeDivisionRepository.getByTransactionId(newTran.getTransactionId());

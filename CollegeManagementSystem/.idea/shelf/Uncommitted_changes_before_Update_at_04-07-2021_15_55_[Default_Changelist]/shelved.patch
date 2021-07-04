@@ -1,0 +1,134 @@
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\r\nspring.datasource.url=jdbc:mysql://localhost:3306/user?createDatabaseIfNotExist=true\r\nspring.datasource.username=root\r\nspring.datasource.password=manisha\r\nspring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL57InnoDBDialect\r\nspring.jpa.properties.hibernate.format_sql = true\r\nspring.datasource.testWhileIdle = true\r\nspring.datasource.timeBetweenEvictionRunsMillis = 60000\r\nspring.datasource.validationQuery = SELECT 1\r\nspring.jpa.hibernate.ddl-auto = update\r\nspring.jpa.generate-ddl=true\r\napp.firebase-configuration-file=firebaseconfig/cms-kec-firebase-adminsdk-z5iok-53ef0bd5c2.json\r\n\r\nspring.mail.host=smtp.gmail.com\r\nspring.mail.port=587\r\nspring.mail.username=kecfilestorage@gmail.com\r\nspring.mail.password=Katihar@123\r\nspring.mail.properties.mail.smtp.auth=true\r\nspring.mail.properties.mail.smtp.starttls.enable=true
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	(revision 84a581166f58d0c3fc8630e3407154f852a2bc95)
++++ b/src/main/resources/application.properties	(date 1625394014334)
+@@ -17,4 +17,5 @@
+ spring.mail.username=kecfilestorage@gmail.com
+ spring.mail.password=Katihar@123
+ spring.mail.properties.mail.smtp.auth=true
+-spring.mail.properties.mail.smtp.starttls.enable=true
+\ No newline at end of file
++spring.mail.properties.mail.smtp.starttls.enable=true
++server.port=9090
+\ No newline at end of file
+Index: src/main/java/com/collegemanagementsystem/Entity/TokenRegistration.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.collegemanagementsystem.Entity;\r\n\r\nimport lombok.AllArgsConstructor;\r\nimport lombok.Getter;\r\nimport lombok.NoArgsConstructor;\r\nimport lombok.Setter;\r\n\r\nimport javax.persistence.Entity;\r\nimport javax.persistence.Id;\r\nimport javax.persistence.Table;\r\n\r\n\r\n@Entity\r\n@Table(name = \"Token\")\r\n@Getter\r\n@Setter\r\n@NoArgsConstructor\r\n@AllArgsConstructor\r\npublic class TokenRegistration {\r\n    @Id\r\n   private String token;\r\n    private Long userId;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/collegemanagementsystem/Entity/TokenRegistration.java b/src/main/java/com/collegemanagementsystem/Entity/TokenRegistration.java
+--- a/src/main/java/com/collegemanagementsystem/Entity/TokenRegistration.java	(revision 84a581166f58d0c3fc8630e3407154f852a2bc95)
++++ b/src/main/java/com/collegemanagementsystem/Entity/TokenRegistration.java	(date 1625394309293)
+@@ -20,5 +20,6 @@
+     @Id
+    private String token;
+     private Long userId;
++    private String deviceId;
+ 
+ }
+Index: src/main/java/com/collegemanagementsystem/Service/PaymentCsvtoPdf.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.collegemanagementsystem.Service;\r\n\r\nimport com.itextpdf.io.image.ImageData;\r\nimport com.itextpdf.io.image.ImageDataFactory;\r\nimport com.itextpdf.kernel.color.Color;\r\nimport com.itextpdf.kernel.geom.PageSize;\r\nimport com.itextpdf.kernel.pdf.PdfDocument;\r\nimport com.itextpdf.kernel.pdf.PdfWriter;\r\nimport com.itextpdf.kernel.pdf.canvas.PdfCanvas;\r\nimport com.itextpdf.kernel.pdf.extgstate.PdfExtGState;\r\nimport com.itextpdf.layout.Document;\r\nimport com.itextpdf.layout.element.Cell;\r\nimport com.itextpdf.layout.element.Table;\r\nimport com.itextpdf.layout.element.Text;\r\nimport com.itextpdf.layout.property.TextAlignment;\r\nimport com.itextpdf.layout.property.UnitValue;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.stereotype.Service;\r\nimport java.io.FileNotFoundException;\r\nimport java.io.FileOutputStream;\r\nimport java.net.MalformedURLException;\r\nimport java.util.HashMap;\r\nimport java.util.List;\r\nimport java.util.Map;\r\n\r\n@Service\r\npublic class PaymentCsvtoPdf {\r\n    @Autowired\r\n    private ConstantService constantService;\r\n\r\n    public Map generatePdf(Map details, List<String[]> complete) {\r\n        com.itextpdf.kernel.pdf.PdfWriter writer;\r\n        try {\r\n            String filePath = \"C:/Users/RAM BABU SINGH/Desktop/sample.pdf\";\r\n            String image = \"src\\\\main\\\\resources\\\\keclogo.png\";\r\n            writer = new PdfWriter(new FileOutputStream(filePath));\r\n            PdfDocument pdf = new PdfDocument(writer);\r\n            com.itextpdf.layout.Document document = new Document(pdf, com.itextpdf.kernel.geom.PageSize.A4);\r\n            com.itextpdf.kernel.geom.PageSize pageSize = new com.itextpdf.kernel.geom.PageSize(PageSize.A4).rotate();\r\n            PdfCanvas canvas = new PdfCanvas(pdf.addNewPage());\r\n            // creating image data instance by passing the path to image\r\n            ImageData img = ImageDataFactory.create(image);\r\n            canvas.saveState();\r\n            PdfExtGState state = new PdfExtGState();\r\n            state.setFillOpacity(0.2f);\r\n            canvas.setExtGState(state);\r\n            canvas.addImage(img, 100, 250, pageSize.getWidth() / 2, false);\r\n            canvas.restoreState();\r\n\r\n            Text text = new Text(\"Payment Report\").setBold().setFontSize(20f).setUnderline();\r\n            document.add(new com.itextpdf.layout.element.Paragraph(text).setTextAlignment(TextAlignment.CENTER));\r\n            Table table = new Table(new float[]{10, 10});\r\n            table.setWidth(UnitValue.createPercentValue(100));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(\"Registration No \")).setBackgroundColor(Color.LIGHT_GRAY));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get(\"Registration No\")))).setBackgroundColor(Color.LIGHT_GRAY));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(\"Student Name \")));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get(\"Student Name\")))));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(\"Total Amount \")).setBackgroundColor(Color.LIGHT_GRAY));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get(\"Total Amount\")))).setBackgroundColor(Color.LIGHT_GRAY));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(\"Payment Type \")));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get(\"Payment Type\")))));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(\"Payment Id \")).setBackgroundColor(Color.LIGHT_GRAY));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get(\"Payment Id\")))).setBackgroundColor(Color.LIGHT_GRAY));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(\"Fee Divisions \")));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get(\"Fee Divisions\")))));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(\"Date \")).setBackgroundColor(Color.LIGHT_GRAY));\r\n            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(constantService.getLocalDate()))).setBackgroundColor(Color.LIGHT_GRAY));\r\n           // table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(\"Time \")).setBackgroundColor(Color.LIGHT_GRAY));\r\n           //table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(constantService.getLocalTime()))).setBackgroundColor(Color.LIGHT_GRAY));\r\n            document.add(table);\r\n            document.add(new com.itextpdf.layout.element.Paragraph());\r\n\r\n\r\n            document.close();\r\n        } catch (FileNotFoundException | MalformedURLException e) {\r\n            e.printStackTrace();\r\n        }\r\n        Map msg = new HashMap();\r\n        msg.put(\"Status\", \"DF\");\r\n        return msg;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/collegemanagementsystem/Service/PaymentCsvtoPdf.java b/src/main/java/com/collegemanagementsystem/Service/PaymentCsvtoPdf.java
+--- a/src/main/java/com/collegemanagementsystem/Service/PaymentCsvtoPdf.java	(revision 84a581166f58d0c3fc8630e3407154f852a2bc95)
++++ b/src/main/java/com/collegemanagementsystem/Service/PaymentCsvtoPdf.java	(date 1624668316657)
+@@ -9,9 +9,8 @@
+ import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
+ import com.itextpdf.kernel.pdf.extgstate.PdfExtGState;
+ import com.itextpdf.layout.Document;
+-import com.itextpdf.layout.element.Cell;
+-import com.itextpdf.layout.element.Table;
+-import com.itextpdf.layout.element.Text;
++import com.itextpdf.layout.element.*;
++import com.itextpdf.layout.property.AreaBreakType;
+ import com.itextpdf.layout.property.TextAlignment;
+ import com.itextpdf.layout.property.UnitValue;
+ import org.springframework.beans.factory.annotation.Autowired;
+@@ -51,25 +50,25 @@
+             document.add(new com.itextpdf.layout.element.Paragraph(text).setTextAlignment(TextAlignment.CENTER));
+             Table table = new Table(new float[]{10, 10});
+             table.setWidth(UnitValue.createPercentValue(100));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("Registration No ")).setBackgroundColor(Color.LIGHT_GRAY));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get("Registration No")))).setBackgroundColor(Color.LIGHT_GRAY));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("Student Name ")));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get("Student Name")))));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("Total Amount ")).setBackgroundColor(Color.LIGHT_GRAY));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get("Total Amount")))).setBackgroundColor(Color.LIGHT_GRAY));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("Payment Type ")));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get("Payment Type")))));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("Payment Id ")).setBackgroundColor(Color.LIGHT_GRAY));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get("Payment Id")))).setBackgroundColor(Color.LIGHT_GRAY));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("Fee Divisions ")));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get("Fee Divisions")))));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("Date ")).setBackgroundColor(Color.LIGHT_GRAY));
+-            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(constantService.getLocalDate()))).setBackgroundColor(Color.LIGHT_GRAY));
+-           // table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("Time ")).setBackgroundColor(Color.LIGHT_GRAY));
+-           //table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(constantService.getLocalTime()))).setBackgroundColor(Color.LIGHT_GRAY));
+-            document.add(table);
+-            document.add(new com.itextpdf.layout.element.Paragraph());
++            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("Start Date")).setBackgroundColor(Color.LIGHT_GRAY));
++            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get("Start Date:")))).setBackgroundColor(Color.LIGHT_GRAY));
++            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph("End Date")));
++            table.addCell(new Cell().add(new com.itextpdf.layout.element.Paragraph(String.valueOf(details.get("End Date:")))));
++             document.add(table);
++            document.add(new Paragraph());
++            int counter=0;
++                Table table1 = new Table(new float[]{5,5,5,5,5,5,5,5,5,5});
++                table1.setWidth(UnitValue.createPercentValue(100));
++                for(int k=0;k<complete.size();k++){
++                    for(int j=counter;j<counter+10;j++){
++                        table1.addCell(new Cell().add(new Paragraph(String.valueOf(complete.get(k)[j]))));
+ 
++                   }
++                }
++                counter+=9;
++                document.add(table1);
++                document.add(new AreaBreak(AreaBreakType.NEXT_PAGE));
++           // }
+ 
+             document.close();
+         } catch (FileNotFoundException | MalformedURLException e) {
+Index: src/main/java/com/collegemanagementsystem/Service/TransactionHistoryService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.collegemanagementsystem.Service;\r\n\r\nimport com.collegemanagementsystem.Dto.FeeDivisionDto;\r\nimport com.collegemanagementsystem.Dto.TransactionHistoryDto;\r\nimport com.collegemanagementsystem.Entity.FeeDivision;\r\nimport com.collegemanagementsystem.Entity.TransactionHistory;\r\nimport com.collegemanagementsystem.Repository.FeeDivisionRepository;\r\nimport com.collegemanagementsystem.Repository.StudentRepository;\r\nimport com.collegemanagementsystem.Repository.TransactionHistoryRepository;\r\nimport lombok.var;\r\nimport org.modelmapper.ModelMapper;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.stereotype.Service;\r\n\r\nimport javax.mail.MessagingException;\r\nimport java.io.UnsupportedEncodingException;\r\nimport java.util.*;\r\nimport java.util.stream.Collectors;\r\n\r\n@Service\r\npublic class TransactionHistoryService {\r\n\r\n    @Autowired\r\n    ModelMapper mapper;\r\n    @Autowired\r\n    private TransactionHistoryRepository transactionHistoryRepository;\r\n\r\n    @Autowired\r\n    private FeeDivisionRepository feeDivisionRepository;\r\n\r\n    @Autowired\r\n    private StudentRepository studentrepo;\r\n    @Autowired\r\n    private SendEmailService emailService;\r\n    @Autowired\r\n    private PaymentCSV csv;\r\n    @Autowired\r\n    private PaymentCsvtoPdf paymentpdf;\r\n\r\n    public void addTransaction(TransactionHistoryDto dto){\r\n        TransactionHistory transactionHistory=mapper.map(dto, TransactionHistory.class);\r\n        Long millis = System.currentTimeMillis();\r\n        java.sql.Date date = new java.sql.Date(millis);\r\n        transactionHistory.setDate(date);\r\n        java.sql.Time time = new java.sql.Time(millis);\r\n        transactionHistory.setTime(time);\r\n        transactionHistoryRepository.save(transactionHistory);\r\n        for (FeeDivisionDto fee: dto.getFeeDivision()){\r\n            FeeDivision feeDivision= new FeeDivision();\r\n            feeDivision.setTransactionId(dto.getTransactionId());\r\n            feeDivision.setFeeDivisionName(fee.getFeeDivisionName());\r\n            feeDivision.setAmount(fee.getAmount());\r\n            feeDivisionRepository.save(feeDivision);\r\n        }\r\n\r\n        return ;\r\n    }\r\n    public List<TransactionHistoryDto> FindById(Long UserId) {\r\n        List<TransactionHistoryDto> transactions = new ArrayList<>();\r\n        List<TransactionHistory> trans =   transactionHistoryRepository.getById(UserId);\r\n        if(trans!=null){\r\n        for(TransactionHistory newTran:trans){\r\n           List<FeeDivision> fee=feeDivisionRepository.getByTransactionId(newTran.getTransactionId());\r\n           TransactionHistoryDto transactionDto=mapper.map(newTran,TransactionHistoryDto.class);\r\n           transactionDto.setFeeDivision(fee.stream().map(x-> mapper.map(x, FeeDivisionDto.class)).collect(Collectors.toList()));\r\n           transactions.add(transactionDto);\r\n       }}\r\n        return transactions;\r\n    }\r\n    public List<TransactionHistoryDto> FindByTransactionId(String transactionId) {\r\n        TransactionHistory trans =   transactionHistoryRepository.getByTransactionId(transactionId);\r\n        List<TransactionHistoryDto> transactions = new ArrayList<>();\r\n\r\n        if(trans!=null){\r\n            TransactionHistoryDto transactionDto= mapper.map(trans, TransactionHistoryDto.class);\r\n        List<FeeDivision> fee=feeDivisionRepository.getByTransactionId(trans.getTransactionId());\r\n        transactionDto.setFeeDivision(fee.stream().map(x-> mapper.map(x, FeeDivisionDto.class)).collect(Collectors.toList()));\r\n        transactions.add(transactionDto);\r\n        }\r\n        return transactions;\r\n    }\r\n    public List<TransactionHistoryDto> FindByDate(Date startD, Date endD) throws MessagingException, UnsupportedEncodingException {\r\n        List<TransactionHistoryDto> transactions = new ArrayList<>();\r\n        List<TransactionHistory> trans =   transactionHistoryRepository.getByDate(startD,endD);\r\n        if(trans!=null){\r\n        for(TransactionHistory newTran:trans){\r\n            List<FeeDivision> fee=feeDivisionRepository.getByTransactionId(newTran.getTransactionId());\r\n            TransactionHistoryDto transactionDto=mapper.map(newTran,TransactionHistoryDto.class);\r\n            transactionDto.setFeeDivision(fee.stream().map(x-> mapper.map(x, FeeDivisionDto.class)).collect(Collectors.toList()));\r\n            transactions.add(transactionDto);\r\n        }}\r\n        return transactions;\r\n    }\r\n\r\n    public List<TransactionHistoryDto> FindByEmail(String email) {\r\n        List<TransactionHistoryDto> transactions = new ArrayList<>();\r\n        List<TransactionHistory> trans =   transactionHistoryRepository.getByemail(email);\r\n        if(trans!=null){\r\n            for(TransactionHistory newTran:trans){\r\n                List<FeeDivision> fee=feeDivisionRepository.getByTransactionId(newTran.getTransactionId());\r\n                TransactionHistoryDto transactionDto=mapper.map(newTran,TransactionHistoryDto.class);\r\n                transactionDto.setFeeDivision(fee.stream().map(x-> mapper.map(x, FeeDivisionDto.class)).collect(Collectors.toList()));\r\n                transactions.add(transactionDto);\r\n            }}\r\n        return transactions;\r\n    }\r\n\r\n    public void sendCsv(String email, Date startD, Date endD) throws MessagingException, UnsupportedEncodingException {\r\n        List<TransactionHistory> trans =   transactionHistoryRepository.getByDate(startD,endD);\r\n        Map subDetails = new HashMap();\r\n        subDetails.put(\"Start Date:\",startD.toString());\r\n        subDetails.put(\"End Date:\",endD.toString());\r\n        String[] details = new String[100];\r\n        List<String[]> completeDetails = new ArrayList<>();\r\n        int i = 0;\r\n        details[i++] = \"Registration No\";\r\n        details[i++] = \"Student Name\";\r\n        details[i++] = \"Total Amount\";\r\n        details[i++] = \"Payment Type\";\r\n        details[i++] = \"Payment Id\";\r\n        details[i++] = \"Fee Divisions\";\r\n        details[i++] = \"Date\";\r\n        details[i++] = \"Time\";\r\n        completeDetails.add(details);\r\n        for(TransactionHistory newTran:trans){\r\n            List<FeeDivision> fee=feeDivisionRepository.getByTransactionId(newTran.getTransactionId());\r\n            details = new String[1000];\r\n            i = 0;\r\n            details[i++] = newTran.getRegistrationNo();\r\n            details[i++] = newTran.getName();\r\n            details[i++] = String.valueOf(newTran.getTotalAmount());\r\n            details[i++] = newTran.getPaymentType();\r\n            details[i++] = newTran.getTransactionId();\r\n\r\n            List<String> feeDivision = new ArrayList<>();\r\n            for(FeeDivision newFee: fee){\r\n                var j=0;\r\n                feeDivision.add(newFee.getFeeDivisionName()+\":\" + newFee.getAmount());\r\n\r\n            }\r\n            details[i++] = feeDivision.toString();\r\n            details[i++] = newTran.getDate().toString();\r\n            // details[i++] = newTran.getTime().toString();\r\n            completeDetails.add(details);\r\n\r\n        }\r\n        csv.createCsv(subDetails, completeDetails);\r\n        paymentpdf.generatePdf(subDetails,completeDetails);\r\n        System.out.println(completeDetails.get(0)[1]);\r\n        emailService.sendEmail(email, \"transaction report\", \"Please find the attachment\", \"transaction.csv\",  \"C:\\\\Users\\\\RAM BABU SINGH\\\\Desktop\\\\sample.pdf\");\r\n\r\n       // emailService.sendEmail(email, \"transaction report\", \"Please find the attachment\", \"transaction.csv\", \"C:\\\\Users\\\\RAM BABU SINGH\\\\Desktop\\\\transaction.csv\");\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/collegemanagementsystem/Service/TransactionHistoryService.java b/src/main/java/com/collegemanagementsystem/Service/TransactionHistoryService.java
+--- a/src/main/java/com/collegemanagementsystem/Service/TransactionHistoryService.java	(revision 84a581166f58d0c3fc8630e3407154f852a2bc95)
++++ b/src/main/java/com/collegemanagementsystem/Service/TransactionHistoryService.java	(date 1624667210305)
+@@ -24,10 +24,8 @@
+     ModelMapper mapper;
+     @Autowired
+     private TransactionHistoryRepository transactionHistoryRepository;
+-
+     @Autowired
+     private FeeDivisionRepository feeDivisionRepository;
+-
+     @Autowired
+     private StudentRepository studentrepo;
+     @Autowired
+@@ -146,8 +144,8 @@
+         }
+         csv.createCsv(subDetails, completeDetails);
+         paymentpdf.generatePdf(subDetails,completeDetails);
+-        System.out.println(completeDetails.get(0)[1]);
+-        emailService.sendEmail(email, "transaction report", "Please find the attachment", "transaction.csv",  "C:\\Users\\RAM BABU SINGH\\Desktop\\sample.pdf");
++        System.out.println(completeDetails.size());
++        //emailService.sendEmail(email, "transaction report", "Please find the attachment", "transaction.csv",  "C:\\Users\\RAM BABU SINGH\\Desktop\\sample.pdf");
+ 
+        // emailService.sendEmail(email, "transaction report", "Please find the attachment", "transaction.csv", "C:\\Users\\RAM BABU SINGH\\Desktop\\transaction.csv");
+ 

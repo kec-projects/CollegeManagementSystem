@@ -16,16 +16,22 @@ import java.util.stream.Collectors;
 public class TokenRegistrationService {
 
     @Autowired
-    public TokenRegistrationRepository studentDao;
+    public TokenRegistrationRepository tokenRegistrationRepository;
     @Autowired
     public StudentRepository studentservice;
     @Autowired
     ModelMapper mapper;
 
-    public TokenRegistrationDTO addToken(TokenRegistrationDTO dto) {
-        TokenRegistration student= mapper.map(dto, TokenRegistration.class);
-        studentDao.save(student);
-        return mapper.map(student, TokenRegistrationDTO.class);
+    public void addToken(TokenRegistrationDTO dto) {
+        TokenRegistration tokens= mapper.map(dto, TokenRegistration.class);
+        List<TokenRegistration> tokensofid= tokenRegistrationRepository.getById(dto.getUserId());
+        for(TokenRegistration newToken: tokensofid){
+            if (dto.getDeviceId()==newToken.getDeviceId()){
+                return ;
+            }
+        }
+        tokenRegistrationRepository.save(tokens);
+
     }
 
     public List<TokenRegistrationDTO> getToken(String registration){
@@ -34,19 +40,19 @@ public class TokenRegistrationService {
             return null;
         }
         Long uid= student.getUserId();
-        List<TokenRegistration> getToken =  studentDao.getById(uid);
+        List<TokenRegistration> getToken =  tokenRegistrationRepository.getById(uid);
         return getToken.stream().map(x-> mapper.map(x, TokenRegistrationDTO.class)).collect(Collectors.toList());
 
     }
 
-    public String delete(){
-        studentDao.deleteAll();
-        return "All data deleted";
+    public void delete(){
+        tokenRegistrationRepository.deleteAll();
+        return;
     }
 
-    public String deleteById(Long uid){
-        studentDao.deleteById(Math.toIntExact(uid));
-        return "deleted";
+    public void deleteById(Long uid){
+        tokenRegistrationRepository.deleteById(Math.toIntExact(uid));
+        return ;
     }
 
 

@@ -1,0 +1,232 @@
+Index: .idea/workspace.xml~origin_Abhilasha
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml~origin_Abhilasha b/.idea/workspace.xml~origin_Abhilasha
+new file mode 100644
+--- /dev/null	
++++ b/.idea/workspace.xml~origin_Abhilasha	
+@@ -0,0 +1,188 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="Merged with Notification API">
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/collegeDetailsEntity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/collegeDetailsEntity/Department.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/StudentRepository.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Interface" />
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Merge.Settings">
++    <option name="BRANCH" value="developement" />
++  </component>
++  <component name="Git.Settings">
++    <excluded-from-favorite>
++      <branch-storage>
++        <map>
++          <entry type="LOCAL">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$/.." source="master" />
++              </list>
++            </value>
++          </entry>
++        </map>
++      </branch-storage>
++    </excluded-from-favorite>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$/.." value="master" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++  </component>
++  <component name="ProjectId" id="1sW3ZNb0YO85nJX1UBtAaiFzcdP" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
++    <property name="last_opened_file_path" value="$USER_HOME$/cmsApi/CollegeManagementSystem/CollegeManagementSystem" />
++  </component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\RAM BABU SINGH\Desktop\cms_project\CollegeManagementSystem\CollegeManagementSystem\src\main\resources\firebaseconfig" />
++      <recent name="C:\Users\RAM BABU SINGH\Desktop\cms_project\CollegeManagementSystem\CollegeManagementSystem\src\main\resources" />
++      <recent name="C:\Users\RAM BABU SINGH\Desktop\cms_project\CollegeManagementSystem\CollegeManagementSystem\src\main\java\com\collegemanagementsystem\Service" />
++      <recent name="C:\Users\RAM BABU SINGH\Desktop\cms_project\CollegeManagementSystem\CollegeManagementSystem\src\main\java\com\collegemanagementsystem\Controller" />
++      <recent name="C:\Users\RAM BABU SINGH\Desktop\cms_project\CollegeManagementSystem\CollegeManagementSystem\src\main\java\com\collegemanagementsystem\Repository" />
++    </key>
++  </component>
++  <component name="RunManager">
++    <configuration name="CmsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_181\jre" />
++      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
++      <option name="MAIN_CLASS_NAME" value="com.collegemanagementsystem.CmsApplication" />
++      <module name="CollegeManagementSystem" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.collegemanagementsystem.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.CmsApplication" />
++        <item itemvalue="Application.CmsApplication" />
++        <item itemvalue="Application.CmsApplication" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="" />
++      <created>1620974576422</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1620974576422</updated>
++    </task>
++    <task id="LOCAL-00001" summary="Login, Registration and Notification API">
++      <created>1621409420976</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1621409420976</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Login, Registration and Notification API">
++      <created>1621409534615</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1621409534615</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Registration List">
++      <created>1622049312290</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1622049312290</updated>
++    </task>
++    <task id="LOCAL-00004" summary="student promotion and result scrapping completed">
++      <created>1622182482964</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1622182482964</updated>
++    </task>
++    <task id="LOCAL-00005" summary="student promotion and result scrapping completed">
++      <created>1622182591289</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1622182591289</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++    <option name="oldMeFiltersMigrated" value="true" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Merged with Notification API" />
++    <MESSAGE value="Login, Registration and Notification API" />
++    <MESSAGE value="Registration List" />
++    <MESSAGE value="student promotion and result scrapping completed" />
++    <option name="LAST_COMMIT_MESSAGE" value="student promotion and result scrapping completed" />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <breakpoint enabled="true" type="java-exception">
++          <properties class="javax.persistence.NonUniqueResultException" package="javax.persistence" />
++          <option name="timeStamp" value="4" />
++        </breakpoint>
++        <breakpoint enabled="true" type="java-exception">
++          <properties class="java.sql.SQLException" package="java.sql" />
++          <option name="timeStamp" value="5" />
++        </breakpoint>
++        <breakpoint enabled="true" type="java-exception">
++          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
++          <option name="timeStamp" value="6" />
++        </breakpoint>
++        <breakpoint enabled="true" type="java-exception">
++          <properties class="java.lang.IllegalStateException" package="java.lang" />
++          <option name="timeStamp" value="7" />
++        </breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
++    <pin-to-top-manager>
++      <pinned-members>
++        <PinnedItemInfo parentTag="com.collegemanagementsystem.Entity.TopicUid" memberName="topic" />
++      </pinned-members>
++    </pin-to-top-manager>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/compiler.xml~origin_Abhilasha
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml~origin_Abhilasha b/.idea/compiler.xml~origin_Abhilasha
+new file mode 100644
+--- /dev/null	
++++ b/.idea/compiler.xml~origin_Abhilasha	
+@@ -0,0 +1,22 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile default="true" name="Default" enabled="true" />
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="CollegeManagementSystem" />
++      </profile>
++    </annotationProcessing>
++    <bytecodeTargetLevel>
++      <module name="CollegeManagementSystem" target="8" />
++    </bytecodeTargetLevel>
++  </component>
++  <component name="JavacSettings">
++    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
++      <module name="CollegeManagementSystem" options="-parameters" />
++    </option>
++  </component>
++</project>
+\ No newline at end of file
