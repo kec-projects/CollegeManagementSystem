@@ -4,8 +4,10 @@ import com.collegemanagementsystem.Dto.StudentAttendanceDto;
 import com.collegemanagementsystem.Dto.StudentDto;
 import com.collegemanagementsystem.Entity.AttendanceEntity.ClassAttendanceEntity;
 import com.collegemanagementsystem.Entity.AttendanceEntity.StudentAttendanceEntity;
+import com.collegemanagementsystem.Entity.SubjectTeacherEntity;
 import com.collegemanagementsystem.Repository.ClassAttendanceRepository;
 import com.collegemanagementsystem.Repository.StudentAttendanceRepository;
+import com.google.api.client.util.ArrayMap;
 import com.itextpdf.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,42 +29,49 @@ public class AttendanceService {
     @Autowired
     private CsvGeneration csv;
     @Autowired
+    private CsvToPdf csvToPdf;
+    @Autowired
     private SendEmailService emailService;
-    @Autowired
-    private ConstantService constantService;
-    @Autowired
-    private PdfGeneration pdfGeneration;
+
+    Long millis = System.currentTimeMillis();
+    java.sql.Date date = new java.sql.Date(millis);
+    java.sql.Time time = new java.sql.Time(millis);
 
     //function to take attendance and save it to database
-    public void takeAttendence(StudentAttendanceDto studentAttendanceDto) {
-
-        //class attendance recorded
+    public Map takeAttendence(StudentAttendanceDto studentAttendanceDto) {
+        Map msg = new HashMap();
         ClassAttendanceEntity classAttendanceEntity = new ClassAttendanceEntity();
         classAttendanceEntity.setClassId(studentAttendanceDto.getClassId());
-        classAttendanceEntity.setDate(constantService.getLocalDate());
-        classAttendanceEntity.setTime(constantService.getLocalTime());
+        classAttendanceEntity.setDate(date);
+        classAttendanceEntity.setTime(time);
         classAttendanceRepository.save(classAttendanceEntity);
-
-        // student attendance
         for (Object student : studentAttendanceDto.getPresentStudent()) {
+            Long millis = System.currentTimeMillis();
+            java.sql.Date date = new java.sql.Date(millis);
+            java.sql.Time time = new java.sql.Time(millis);
             StudentAttendanceEntity studentAttendanceEntity = new StudentAttendanceEntity();
             studentAttendanceEntity.setStatus("P");
-            studentAttendanceEntity.setDate(constantService.getLocalDate());
-            studentAttendanceEntity.setTime(constantService.getLocalTime());
+            studentAttendanceEntity.setDate(date);
+            studentAttendanceEntity.setTime(time);
             studentAttendanceEntity.setClassId(studentAttendanceDto.getClassId());
             studentAttendanceEntity.setUserId(Long.parseLong(student.toString()));
             studentAttendanceRepository.save(studentAttendanceEntity);
         }
         for (Object student : studentAttendanceDto.getAbsentStudent()) {
+            Long millis = System.currentTimeMillis();
+            java.sql.Date date = new java.sql.Date(millis);
+            java.sql.Time time = new java.sql.Time(millis);
             StudentAttendanceEntity studentAttendanceEntity = new StudentAttendanceEntity();
             studentAttendanceEntity.setStatus("A");
-            studentAttendanceEntity.setDate(constantService.getLocalDate());
-            studentAttendanceEntity.setTime(constantService.getLocalTime());
+            studentAttendanceEntity.setDate(date);
+            studentAttendanceEntity.setTime(time);
             studentAttendanceEntity.setClassId(studentAttendanceDto.getClassId());
             studentAttendanceEntity.setUserId(Long.parseLong(student.toString()));
             studentAttendanceRepository.save(studentAttendanceEntity);
         }
-
+        msg.put("status", "Successfull");
+        msg.put("message", "Attendance successfully taken");
+        return msg;
     }
 
     // fn return class attendance
@@ -117,6 +126,9 @@ public class AttendanceService {
         List<ClassAttendanceEntity> count = classAttendanceRepository.getClassAttendanceCount(classId);
         Map subDetails = subjectTeacherService.getSubjectDetails(classId);
         List<Long> studentList = studentService.getUserId((String) subDetails.get("Semester"));
+        System.out.println(studentList);
+        System.out.println(subDetails);
+        System.out.println(count);
         subDetails.put("Total Class", count.size());
         String[] details = new String[100];
         List<String[]> completeDetails = new ArrayList<>();
@@ -158,12 +170,10 @@ public class AttendanceService {
         }
         csv.createCsv(subDetails, completeDetails);
         //  csvToPdf.csvToPdf();
-     //   emailService.sendEmail(email, "attendance report", "Please find the attachment", "attendance.csv", "C:\\Users\\MonAmour\\Desktop\\attendance.csv");
-        Map msg = new HashMap();
-        msg.put("message", "Report Generated and Emailed");
-        msg.put("status", "Successful");
-      pdfGeneration.generatePdf(subDetails,completeDetails);
-        System.out.println(completeDetails.get(0)[1]);
+        emailService.sendEmail(email, "attendance report", "Please find the attachment", "attendance.csv", "C:\\Users\\MonAmour\\Desktop\\attendance.csv");
+      Map msg=new HashMap();
+      msg.put("Message","Report Generated and Emailed");
+      msg.put("Status","Successful");
         return msg;
     }
 }

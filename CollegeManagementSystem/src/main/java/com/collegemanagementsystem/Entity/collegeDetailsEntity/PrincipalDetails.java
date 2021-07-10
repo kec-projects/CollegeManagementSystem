@@ -13,13 +13,12 @@ import java.sql.Date;
 @Entity
 @Table(name="Principal")
 public class PrincipalDetails {
-
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="Principal_sr")
     private Long sr;
     @Column(name="Principal_name")
     private String name;
-    @Id
     @Column(name="Principal_id")
     private String id;
     @Column(name="Principal_joinDate")

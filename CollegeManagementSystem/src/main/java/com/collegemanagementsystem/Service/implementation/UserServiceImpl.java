@@ -2,11 +2,9 @@ package com.collegemanagementsystem.Service.implementation;
 
 import com.collegemanagementsystem.Dto.UserRegistrationDto;
 import com.collegemanagementsystem.Entity.ProfileImageEntity;
-import com.collegemanagementsystem.Entity.StudentAdmission;
 import com.collegemanagementsystem.Entity.User;
 import com.collegemanagementsystem.Entity.UserRole;
 import com.collegemanagementsystem.Repository.*;
-import com.collegemanagementsystem.Service.ConstantService;
 import com.collegemanagementsystem.Service.ProfileImageService;
 import com.collegemanagementsystem.Service.interfaceClass.UserRoleService;
 import com.collegemanagementsystem.Service.interfaceClass.UserService;
@@ -44,8 +42,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     ModelMapper modelMapper;
-    @Autowired
-    private ConstantService constantService;
 
 
     public User findById(String email) {
@@ -63,16 +59,15 @@ public class UserServiceImpl implements UserService {
             newuser.setName(registration.getName());
             newuser.setEmail(registration.getEmail());
             newuser.setYouAre(registration.getYouAre());
-
             newuser.setPassword(passwordEncoder.encode(registration.getPassword()));
-           StudentAdmission exist= studentAdmissionRepository.getStudent(registration.getName(), registration.getEmail());
-            if ( exist!= null) {
+            if ((studentAdmissionRepository.getStudent(registration.getName(), registration.getEmail())) != null) {
                 newuser.setAccountStatus("Active");
-                newuser.setMobile(exist.getMobile());
             } else {
                 newuser.setAccountStatus("Pending");
             }
-            newuser.setRegisteredDate(constantService.getLocalDate());
+            Long millis = System.currentTimeMillis();
+            java.sql.Date date = new java.sql.Date(millis);
+            newuser.setRegisteredDate(date);
             User saveUser = userRepository.save(newuser);
             if (newuser.getAccountStatus() == "Active") {
                 msg.put("status", "Successful");
@@ -125,10 +120,8 @@ public class UserServiceImpl implements UserService {
         msg.put("email", user.getEmail());
         msg.put("youAre",user.getYouAre());
         msg.put("updatedDate", user.getUpdatedDate());
-        msg.put("mobileNo",user.getMobile());
-
-        msg.put("role", userRoleService.allRole(user.getUserId()));
         msg.put("profileImage", (profile != null) ? profile.getPicByte().toString() : null);
+        msg.put("role", userRoleService.allRole(user.getUserId()));
         return msg;
     }
 
