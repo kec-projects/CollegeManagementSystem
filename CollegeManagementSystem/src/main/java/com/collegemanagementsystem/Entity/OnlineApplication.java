@@ -44,13 +44,15 @@ public class OnlineApplication {
     @Column(name = "CertificateTaken")
     private String certificateType;
     @Column(name = "AppliedDate")
-    private Date appliedDate ;
+    private Date appliedDate;
     @Column(name = "approvedDate")
     private Date approvedDate;
     @Column(name = "Status")
     private String status;
+    @Lob
     @Column(name = "uploadedfile")
     private byte[] file;
+
 
 
 }

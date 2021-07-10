@@ -13,21 +13,18 @@ import java.sql.Date;
 @Setter
 @Table(name="CollegeDetails")
 public class CollegeDetails {
-
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="College_sr")
     private Long sr;
-    @Id
     @Column(name="College_id")
     private Long id;
     @Column(name="College_name")
     private String name;
     @Column(name="College_address")
     private String address;
-    @Column(name="College_pincode")
-    private String pincode;
     @Column(name="College_phone")
-    private Long phone;
+    private String phone;
     @Column(name="College_affiliation")
     private String affiliationTo;
     @Column(name="College_established")

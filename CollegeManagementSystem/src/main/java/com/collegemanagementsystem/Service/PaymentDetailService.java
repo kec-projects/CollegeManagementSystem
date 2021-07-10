@@ -17,7 +17,7 @@ public class PaymentDetailService {
     @Autowired
     ModelMapper mapper;
 
-    public void addpayment(PaymentListDto paymentListDto){
+    public Map addpayment(PaymentListDto paymentListDto){
 
         for(PaymentDetailDto newPaymentListDto: paymentListDto.getPaymentsDetail()){
             PaymentDetail payment=new PaymentDetail();
@@ -27,37 +27,56 @@ public class PaymentDetailService {
             payment.setAmount(newPaymentListDto.getAmount());
             paymentrepo.save(payment);
         }
-
-        return ;
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data Added successfully");
+        return msg;
     }
 
-    public void DeleteByPaymentType(String paymentType){
+    public Map DeleteByPaymentType(String paymentType){
          paymentrepo.deleteByPaymentType(paymentType);
-
-        return ;
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data Deleted successfully");
+        return msg;
     }
 
-    public void updatePaymentType(String newPaymentType,String oldPaymentType){
+    public Map updatePaymentType(String newPaymentType,String oldPaymentType){
         paymentrepo.updatePaymentType(newPaymentType,oldPaymentType);
-
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data Updated successfully");
+        return msg;
     }
 
-    public void DeleteByPaymentTypeAndPaymentName(String paymentType,String paymentName){
+    public Map DeleteByPaymentTypeAndPaymentName(String paymentType,String paymentName){
          paymentrepo.deleteByPaymentNameAndPaymentType(paymentName,paymentType);
-
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data deleted successfully");
+        return msg;
     }
-    public void updatePaymentName(String paymentType,String paymentName){
+    public Map updatePaymentName(String paymentType,String paymentName){
         paymentrepo.updatePaymentName(paymentType,paymentName);
-
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data updated successfully");
+        return msg;
     }
 
-    public void updateAmount(String paymentType,String paymentName,Double amount){
+    public Map updateAmount(String paymentType,String paymentName,Double amount){
         paymentrepo.updateAmount(paymentType,paymentName,amount);
-
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data updated successfully");
+        return msg;
     }
-    public void updateCategory(String paymentType,String paymentName,String category){
+    public Map updateCategory(String paymentType,String paymentName,String category){
         paymentrepo.updateCategory(paymentType,paymentName,category);
-
+        Map msg=new HashMap();
+        msg.put("Status","Successful");
+        msg.put("Message","Data updated successfully");
+        return msg;
     }
 
     public Set<Map> getPayments(){

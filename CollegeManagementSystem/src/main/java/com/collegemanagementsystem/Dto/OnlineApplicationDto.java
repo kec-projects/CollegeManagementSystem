@@ -27,6 +27,6 @@ public class OnlineApplicationDto {
     private Date approvedDate;
     private String certificateType;
     private String status;
-    private String file;
+    private byte[] file;
 
 }
