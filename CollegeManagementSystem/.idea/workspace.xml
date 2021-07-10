@@ -22,38 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="Notification API Updated">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_io_7_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_kernel_7_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_layout_7_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CollegeManagementSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CollegeManagementSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_13_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Dto/StudentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Dto/StudentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/implementation/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/implementation/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/PaymentDetailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/PaymentDetailController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/StudentAttendanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/StudentAttendanceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/CollegeDetailsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/CollegeDetailsDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/PrincipalDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/PrincipalDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/RoleDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/RoleDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/StudentDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/StudentDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/UserRegistrationDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/UserRegistrationDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/CollegeDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/CollegeDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/Department.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/PrincipalDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/collegeDetailsEntity/PrincipalDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/profileEntity/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/AttendanceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/AttendanceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/CsvToPdf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/PaymentDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/PaymentDetailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/PrincipalServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/PrincipalServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/PrincipalServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/implementation/PrincipalServiceImpl.class" afterDir="false" />
+    <list default="true" id="7864f02e-ccd5-4a01-87ee-2b6dfd56039f" name="Default Changelist" comment="Updated Online Application API">
+      <change afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Controller/OnlineApplicationTypeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Dto/OnlineApplicationTypeDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Entity/OnlineApplicationType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Repository/OnlineApplicationTypeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/CsvToPdf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/collegemanagementsystem/Service/OnlineApplicationTypeService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +58,7 @@
     </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="lazylad" />
+        <entry key="$PROJECT_DIR$/.." value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -249,6 +224,7 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo />
+        <PinnedItemInfo parentTag="com.collegemanagementsystem.Entity.TopicUid" memberName="topic" />
       </pinned-members>
     </pin-to-top-manager>
   </component>
