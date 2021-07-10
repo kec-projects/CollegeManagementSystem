@@ -17,17 +17,11 @@ public class FacultyDto {
     private String name;
     private String employmentId;
     private String department;
-    private String dateOfBirth;
-    private String dateOfJoining;
-    private String dateOfLeaving;
+    private Date dateOfBirth;
+    private Date dateOfJoining;
+    private Date dateOfLeaving;
     private String bloodGroup;
     private Long aadhaarNo;
-    private String address;
-    private String pincode;
-    private Long mobileNo;
-    private String email;
-
-
 
 
 

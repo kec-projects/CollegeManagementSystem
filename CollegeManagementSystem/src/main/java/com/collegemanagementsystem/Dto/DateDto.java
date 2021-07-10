@@ -13,5 +13,4 @@ import java.util.Date;
 public class DateDto {
     private Date startD;
     private Date endD;
-    private String email;
 }
