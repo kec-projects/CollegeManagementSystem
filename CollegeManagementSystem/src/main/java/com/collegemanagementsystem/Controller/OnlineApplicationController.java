@@ -31,9 +31,9 @@ public class OnlineApplicationController {
         return onlineApplicationService.get();
     }
 
-    @GetMapping("/applicationbyid/{UserID}")
-    public List<OnlineApplicationResponseDto> FindById(@PathVariable(value = "UserID") long UserID) {
-        return onlineApplicationService.FindById(UserID);
+    @GetMapping("/applicationbyid/{userID}")
+    public List<OnlineApplicationResponseDto> FindById(@PathVariable(value = "userID") long userID) {
+        return onlineApplicationService.FindById(userID);
     }
 
     @GetMapping("/get/application")
@@ -47,8 +47,9 @@ public class OnlineApplicationController {
     }
 
     @PostMapping("/uploadfile/file")
-    public void uploadFile(@RequestParam("file") MultipartFile multipartFile,@RequestParam("applicationId") Long applicationId) {
-        onlineApplicationService.upload(multipartFile,applicationId);
+    public void uploadFile(@RequestParam("file") MultipartFile multipartFile,@RequestParam("applicationId") String applicationId) {
+
+        onlineApplicationService.upload(multipartFile,Long.valueOf(applicationId));
 
     }
 
