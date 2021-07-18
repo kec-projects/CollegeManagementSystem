@@ -51,7 +51,7 @@
     </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="gourav" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -74,6 +74,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/cmsApi/CollegeManagementSystem/CollegeManagementSystem" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
@@ -101,8 +103,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CmsApplication" />
         <item itemvalue="Application.CmsApplication" />
         <item itemvalue="Application.CmsApplication" />
       </list>
@@ -114,11 +128,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7864f02e-ccd5-4a01-87ee-2b6dfd56039f" name="Default Changelist" comment="Updated Online Application API" />
+      <changelist id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="Notification API Updated" />
       <created>1620974576422</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620974576422</updated>
+      <workItem from="1626620001574" duration="746000" />
     </task>
     <task id="LOCAL-00001" summary="Login, Registration and Notification API">
       <created>1621409420976</created>
@@ -211,8 +226,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625938069653</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="changes in acedamic section">
+      <created>1626623311417</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1626623311417</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -233,7 +258,8 @@
     <MESSAGE value="Payment API Updated" />
     <MESSAGE value="Notification API Updated" />
     <MESSAGE value="Updated Online Application API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Online Application API" />
+    <MESSAGE value="changes in acedamic section" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in acedamic section" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
