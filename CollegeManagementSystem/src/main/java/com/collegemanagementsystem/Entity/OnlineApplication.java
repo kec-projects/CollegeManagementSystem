@@ -18,7 +18,7 @@ import java.util.Date;
 public class OnlineApplication {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ApplicationId")
     private Long applicationId;
     @Column(name = "UserId")
@@ -52,6 +52,8 @@ public class OnlineApplication {
     @Lob
     @Column(name = "uploadedfile")
     private byte[] file;
+    @Column(name="comment")
+    private String comment;
 
 
 

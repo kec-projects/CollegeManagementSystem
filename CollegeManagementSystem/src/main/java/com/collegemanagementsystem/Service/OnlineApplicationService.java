@@ -24,6 +24,7 @@ public class OnlineApplicationService {
     @Autowired
     ModelMapper mapper;
 
+
     public String  update(String oldstatus,String newstatus, Long applicationId){
         repo.updateStatus(oldstatus,newstatus,applicationId);
         if(newstatus=="Approved"){
@@ -37,7 +38,11 @@ public class OnlineApplicationService {
 
     public OnlineApplicationDto addDto(OnlineApplicationDto dto) {
         OnlineApplication onlineApplications = mapper.map(dto, OnlineApplication.class);
+        Long millis = System.currentTimeMillis();
+        java.sql.Date date = new java.sql.Date(millis);
+        onlineApplications.setAppliedDate(date);
         repo.save(onlineApplications);
+        System.out.println(onlineApplications);
         return mapper.map(onlineApplications, OnlineApplicationDto.class);
     }
 
