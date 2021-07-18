@@ -13,11 +13,10 @@ import javax.persistence.*;
 
 @Table(name="Department")
 public class Department {
-
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="Department_sr")
     private Long sr;
-    @Id
     @Column(name="Department_id")
     private Long id;
     @Column(name="Department_name")

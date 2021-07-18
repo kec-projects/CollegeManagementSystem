@@ -30,7 +30,8 @@ public class TokenRegistarationController {
 }
     @DeleteMapping("/token")
     public String deleteAllStudents(){
-        return service.delete();
+         service.delete();
+         return "deleted";
 
     }
 

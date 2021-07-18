@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Type;
-import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,8 +30,7 @@ public class CollegeDetialsServiceImpl implements CollegeDetailsService {
             newCollege.setId(collegeDetailsDto.getId());
             newCollege.setName(collegeDetailsDto.getName());
             newCollege.setAddress(collegeDetailsDto.getAddress());
-            Date date=Date.valueOf(collegeDetailsDto.getEstablished());
-            newCollege.setEstablished(date);
+            newCollege.setEstablished(collegeDetailsDto.getEstablished());
             newCollege.setAffiliationTo(collegeDetailsDto.getAffiliationTo());
             newCollege.setPhone(collegeDetailsDto.getPhone());
             collegeRepository.save(newCollege);
