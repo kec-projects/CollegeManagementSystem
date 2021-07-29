@@ -23,8 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f5a07b6-da64-4e3a-bec9-7c8f7aa61a89" name="Default Changelist" comment="Updated code">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/PaymentCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/PaymentCsvtoPdf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/StudentAttendanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Controller/StudentAttendanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/collegeDetailsEntity/CollegeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Entity/collegeDetailsEntity/CollegeDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/OnlineApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/OnlineApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/implementation/CollegeDetialsServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +82,15 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Repository/TransactionHistoryRepository.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1sW3ZNb0YO85nJX1UBtAaiFzcdP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -141,7 +148,7 @@
       <updated>1620974576422</updated>
       <workItem from="1626620001574" duration="746000" />
       <workItem from="1627526658384" duration="3105000" />
-      <workItem from="1627530738348" duration="303000" />
+      <workItem from="1627530738348" duration="1161000" />
     </task>
     <task id="LOCAL-00001" summary="Login, Registration and Notification API">
       <created>1621409420976</created>
@@ -248,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627530451608</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated code">
+      <created>1627531230114</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1627531230114</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +281,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Merged with Notification API" />
     <MESSAGE value="Login, Registration and Notification API" />
     <MESSAGE value="Registration List" />
@@ -282,7 +297,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/collegemanagementsystem/Service/OnlineApplicationService.java</url>
-          <line>42</line>
+          <line>51</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
