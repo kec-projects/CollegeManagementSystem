@@ -1,5 +1,9 @@
 package com.collegemanagementsystem.Config;
 
+import com.collegemanagementsystem.Handler.entryPointHandler;
+import com.collegemanagementsystem.Handler.logoutHandler;
+import com.collegemanagementsystem.Handler.successHandler;
+import com.collegemanagementsystem.Handler.failureHandler;
 import com.collegemanagementsystem.Service.interfaceClass.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,13 +22,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private UserService userService;
 
     @Autowired
-    private com.collegemanagementsystem.Handler.entryPointHandler entryPointHandler;
+    private entryPointHandler entryPointHandler;
     @Autowired
-    private com.collegemanagementsystem.Handler.successHandler successHandler;
+    private successHandler successHandler;
     @Autowired
-    private com.collegemanagementsystem.Handler.failureHandler failureHandler;
+    private failureHandler failureHandler;
     @Autowired
-    private com.collegemanagementsystem.Handler.logoutHandler logoutHandler;
+    private logoutHandler logoutHandler;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {

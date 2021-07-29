@@ -1,7 +1,12 @@
 package com.collegemanagementsystem.Service;
 
+import com.collegemanagementsystem.Dto.FacultyDto;
+import com.collegemanagementsystem.Dto.OnlineApplicationDto;
+import com.collegemanagementsystem.Dto.OnlineApplicationResponseDto;
 import com.collegemanagementsystem.Dto.OnlineApplicationTypeDto;
+import com.collegemanagementsystem.Entity.OnlineApplication;
 import com.collegemanagementsystem.Entity.OnlineApplicationType;
+import com.collegemanagementsystem.Entity.profileEntity.Faculty;
 import com.collegemanagementsystem.Repository.OnlineApplicationTypeRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
