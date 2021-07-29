@@ -7,7 +7,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.time.LocalDate;
 
 @Entity
 @Table(name="User",uniqueConstraints = @UniqueConstraint(columnNames = "User_email"))
@@ -29,9 +28,9 @@ public class User {
     @Column(name = "User_accountstatus")
     private String accountStatus;
     @Column(name = "User_registeredDate")
-    private LocalDate registeredDate;
+    private Date registeredDate;
     @Column(name = "User_updatedDate")
-    private LocalDate updatedDate;
+    private Date updatedDate;
     @Column(name = "User_youAre")
     private String youAre;
     @Column(name = "User_mobile")

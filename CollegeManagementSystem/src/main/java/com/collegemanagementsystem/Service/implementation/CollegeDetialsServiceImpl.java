@@ -3,7 +3,6 @@ package com.collegemanagementsystem.Service.implementation;
 import com.collegemanagementsystem.Dto.CollegeDetailsDto;
 import com.collegemanagementsystem.Entity.collegeDetailsEntity.CollegeDetails;
 import com.collegemanagementsystem.Repository.CollegeRepository;
-import com.collegemanagementsystem.Service.ConstantService;
 import com.collegemanagementsystem.Service.interfaceClass.CollegeDetailsService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -11,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Type;
+import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,8 +21,6 @@ public class CollegeDetialsServiceImpl implements CollegeDetailsService {
     private CollegeRepository collegeRepository;
     @Autowired
     ModelMapper modelMapper;
-    @Autowired
-    private ConstantService constantService;
 
     @Override
     public Map save(CollegeDetailsDto collegeDetailsDto) {
@@ -33,8 +31,8 @@ public class CollegeDetialsServiceImpl implements CollegeDetailsService {
             newCollege.setId(collegeDetailsDto.getId());
             newCollege.setName(collegeDetailsDto.getName());
             newCollege.setAddress(collegeDetailsDto.getAddress());
-
-            newCollege.setEstablished(constantService.getLocalDate());
+            Date date=Date.valueOf(collegeDetailsDto.getEstablished());
+            newCollege.setEstablished(date);
             newCollege.setAffiliationTo(collegeDetailsDto.getAffiliationTo());
             newCollege.setPhone(collegeDetailsDto.getPhone());
             collegeRepository.save(newCollege);

@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
-import java.time.LocalDate;
 import java.util.List;
 
 @Repository
@@ -31,7 +30,7 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     @Modifying
     @Transactional
     @Query("update User r set r.updatedDate=:date where r.userId=:id")
-    void updateDate(@Param("date") LocalDate date, @Param("id")Long id);
+    void updateDate(@Param("date")Date date,@Param("id")Long id);
 
 
 }

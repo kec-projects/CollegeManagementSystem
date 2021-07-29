@@ -6,8 +6,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 @Entity
 @Table(name="Attendance")
@@ -23,9 +21,9 @@ public class StudentAttendanceEntity {
     @Column(name = "StudentAttendance_classId")
     private Long classId;
     @Column(name = "StudentAttendance_date")
-    private LocalDate date;
+    private Date date;
     @Column(name = "StudentAttendance_time")
-    private LocalTime time;
+    private Time time;
     @Column(name = "StudentAttendence_status")
     private String status;
 
