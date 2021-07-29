@@ -11,6 +11,6 @@ import java.util.Map;
 public interface CollegeDetailsService {
 
     Map save(CollegeDetailsDto collegeDetailsDto);
-    public List<CollegeDetailsDto> collegeList();
+    List<CollegeDetailsDto> collegeList();
     CollegeDetails findById(Long id);
 }
