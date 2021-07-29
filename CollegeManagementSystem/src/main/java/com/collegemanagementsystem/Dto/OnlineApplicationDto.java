@@ -23,9 +23,9 @@ public class OnlineApplicationDto {
     private String motherName;
     private String dateOfBirth;
     private String purpose;
+    private String certificateType;
     private Date appliedDate;
     private Date approvedDate;
-    private String certificateType;
     private String status;
     private String file;
 
