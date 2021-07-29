@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.mail.MessagingException;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
@@ -22,11 +23,18 @@ public class StudentAttendanceController {
 
     @Autowired
     private CsvGeneration csvGeneration;
+    @Autowired
+    private PdfGeneration pdfGeneration;
 
     @RequestMapping(value = "/takeAttendance", method = RequestMethod.POST)
     @ResponseBody
-    public void takeAttendance(@RequestBody @Valid StudentAttendanceDto studentAttendanceDto) {
+    public Map takeAttendance(@RequestBody @Valid StudentAttendanceDto studentAttendanceDto) {
         attendanceService.takeAttendence(studentAttendanceDto);
+        Map msg=new HashMap();
+        msg.put("status", "Successfull");
+        msg.put("message", "Attendance successfully taken");
+        return msg;
+
     }
 
     @RequestMapping(value = "/getClassAttendance/{classId}", method = RequestMethod.GET)
@@ -46,6 +54,7 @@ public class StudentAttendanceController {
     @ResponseBody
     public Map getClassStudentAttendance(@PathVariable(value = "classId") Long classId, @PathVariable(value = "email") String email) throws DocumentException, IOException, MessagingException {
         return attendanceService.classStudentAttendance(classId, email);
+       // return pdfGeneration.generatePdf();
 
     }
-}
+    }

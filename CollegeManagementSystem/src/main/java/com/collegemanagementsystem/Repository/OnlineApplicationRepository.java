@@ -10,15 +10,14 @@ import org.springframework.stereotype.Repository;
 import javax.transaction.Transactional;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface OnlineApplicationRepository extends CrudRepository<OnlineApplication, Long> {
     @Modifying(clearAutomatically = true)
     @Transactional
     @Query("update OnlineApplication r set r.status=:news where r.status=:olds and r.applicationId =:id")
-    default void updateStatus(@Param("olds") String olds, @Param("news") String news, @Param("id") Long id) {
-
-    }
+    void updateStatus(@Param("olds")String olds, @Param("news")String news, @Param("id") Long id);
 
     @Modifying(clearAutomatically = true)
     @Transactional

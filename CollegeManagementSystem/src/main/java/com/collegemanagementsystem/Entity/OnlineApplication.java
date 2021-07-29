@@ -18,7 +18,7 @@ import java.util.Date;
 public class OnlineApplication {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     @Column(name = "ApplicationId")
     private Long applicationId;
     @Column(name = "UserId")
@@ -44,17 +44,13 @@ public class OnlineApplication {
     @Column(name = "CertificateTaken")
     private String certificateType;
     @Column(name = "AppliedDate")
-    private Date appliedDate;
+    private Date appliedDate ;
     @Column(name = "approvedDate")
     private Date approvedDate;
     @Column(name = "Status")
     private String status;
-    @Lob
     @Column(name = "uploadedfile")
     private byte[] file;
-    @Column(name="comment")
-    private String comment;
-
 
 
 }

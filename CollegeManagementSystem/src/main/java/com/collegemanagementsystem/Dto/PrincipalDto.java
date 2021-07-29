@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.NotNull;
 import java.sql.Date;
 
 @Getter
@@ -15,8 +16,12 @@ import java.sql.Date;
 public class PrincipalDto {
 
     private Long sr;
+    @NotNull
     private String name;
+    @NotNull
     private String id;
-    private Date startDate;
-    private Date endDate;
+    @NotNull
+    private String startDate;
+    @NotNull
+    private String endDate;
 }

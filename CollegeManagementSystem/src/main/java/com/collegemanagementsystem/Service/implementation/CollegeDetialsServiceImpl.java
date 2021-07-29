@@ -30,7 +30,8 @@ public class CollegeDetialsServiceImpl implements CollegeDetailsService {
             newCollege.setId(collegeDetailsDto.getId());
             newCollege.setName(collegeDetailsDto.getName());
             newCollege.setAddress(collegeDetailsDto.getAddress());
-            newCollege.setEstablished(collegeDetailsDto.getEstablished());
+            Date date=Date.valueOf(collegeDetailsDto.getEstablished());
+            newCollege.setEstablished(date);
             newCollege.setAffiliationTo(collegeDetailsDto.getAffiliationTo());
             newCollege.setPhone(collegeDetailsDto.getPhone());
             collegeRepository.save(newCollege);
