@@ -3,6 +3,7 @@ package com.collegemanagementsystem.Controller;
 import com.collegemanagementsystem.Dto.StudentAttendanceDto;
 import com.collegemanagementsystem.Service.AttendanceService;
 import com.collegemanagementsystem.Service.CsvGeneration;
+import com.collegemanagementsystem.Service.PdfGeneration;
 import com.itextpdf.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
