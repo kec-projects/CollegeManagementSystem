@@ -6,7 +6,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
@@ -32,7 +31,7 @@ public class CollegeDetails {
     @Column(name="College_affiliation")
     private String affiliationTo;
     @Column(name="College_established")
-    private LocalDate established;
+    private Date established;
 
 
 
